@@ -229,7 +229,7 @@ function Nav() {
   }, "Precio"), /*#__PURE__*/React.createElement("a", {
     href: "#roadmap"
   }, "Roadmap"), /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/cartpinger-web",
+    href: "https://github.com/tfreire988/whatscom",
     target: "_blank",
     rel: "noopener",
     "aria-label": "GitHub (abre en nueva pesta\xF1a)",
@@ -381,7 +381,7 @@ function Hero() {
   }), "Core v1.0 \xB7 CI verde \xB7 entrando en Beta Cerrada")), /*#__PURE__*/React.createElement(HeroTitle, null), /*#__PURE__*/React.createElement("p", {
     className: "lede hero-sub reveal in",
     "data-delay": "400"
-  }, "Plugin de WooCommerce que conecta tu WABA propia con la Cloud API de Meta. Detecta carritos abandonados, env\xEDa una plantilla WhatsApp aprobada exactamente 1 hora despu\xE9s, y restaura el carrito en un clic. Pago \xFAnico \u20AC99 al lanzar. Open source MIT."), /*#__PURE__*/React.createElement("div", {
+  }, "Cada carrito abandonado es un cliente que casi compr\xF3. CartPinger le escribe por WhatsApp \u2014desde tu propio n\xFAmero, una hora despu\xE9s\u2014 y le devuelve a tu tienda con un clic. Sin SaaS mensual, sin comisiones sobre ventas, sin que tus datos salgan de tu servidor."), /*#__PURE__*/React.createElement("div", {
     className: "hero-ctas reveal in",
     "data-delay": "480",
     id: "waitlist"
@@ -418,7 +418,7 @@ function Hero() {
     className: "trust reveal in",
     "data-delay": "640"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/cartpinger-web/actions",
+    href: "https://github.com/tfreire988/whatscom/actions",
     target: "_blank",
     rel: "noopener",
     className: "ci-badge",
@@ -686,7 +686,7 @@ function Steps() {
     className: "wz-step pending"
   }, /*#__PURE__*/React.createElement("span", {
     className: "ic"
-  }, "4"), " Generar Access Token"))), /*#__PURE__*/React.createElement("p", null, "Te guiamos paso a paso. V\xEDdeo + screenshots. Si te atascas, soporte directo."), /*#__PURE__*/React.createElement("div", {
+  }, "4"), " Generar Access Token"))), /*#__PURE__*/React.createElement("p", null, "Documentaci\xF3n paso a paso en GitHub. Si te atascas, soporte directo."), /*#__PURE__*/React.createElement("div", {
     className: "step-foot"
   }, /*#__PURE__*/React.createElement("span", {
     className: "chip chip-wa"
@@ -1371,7 +1371,7 @@ const CMP_ROWS = [{
   wc: {
     v: "✓ guiado",
     yes: true,
-    tip: "Vídeo + screenshots paso a paso con soporte directo."
+    tip: "Documentación detallada en GitHub + soporte directo."
   },
   rt: {
     v: "Básico",
@@ -1575,7 +1575,9 @@ function Pricing() {
     className: "price-num"
   }, "\u20AC99"), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "pago \xFAnico \xB7 licencia de por vida"), /*#__PURE__*/React.createElement("ul", {
+  }, "pago \xFAnico \xB7 precio de beta cerrada"), /*#__PURE__*/React.createElement("div", {
+    className: "price-after-beta"
+  }, "Despu\xE9s del lanzamiento: ", /*#__PURE__*/React.createElement("b", null, "\u20AC79/a\xF1o"), " \xB7 Quien entre en beta, precio congelado."), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
@@ -1664,7 +1666,7 @@ function Roadmap() {
     width: "9",
     height: "9"
   }) : "·"), it)))))), /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/cartpinger-web",
+    href: "https://github.com/tfreire988/whatscom",
     target: "_blank",
     rel: "noopener",
     className: "rm-link"
@@ -1686,7 +1688,7 @@ const FAQS = [{
   a: "En v1.0: un único mensaje WhatsApp exactamente 1 hora después del abandono. Es deliberado — es la franja de mayor conversión. Los flujos multi-mensaje (+24h, +72h con cupón) están en el roadmap para versiones posteriores."
 }, {
   q: "¿Qué pasa si Meta no me aprueba como Business?",
-  a: "El 95% de tiendas legítimas son aprobadas. Si tu tienda es legal y operativa, no debería haber problema. Te guío en cada paso con vídeo + screenshots. Si hay un problema, me escribes directamente."
+  a: "El 95% de tiendas legítimas son aprobadas. Si tu tienda es legal y operativa, no debería haber problema. Te guío en cada paso con documentación detallada en GitHub. Si hay un problema, me escribes directamente."
 }, {
   q: "¿Y si no llego a tiempo para mi campaña actual?",
   a: "Lanzamiento público Q3 2026. Si necesitas solución ahora mismo (mayo–junio 2026), todavía no es para ti. La transparencia del estado está en el roadmap público y en GitHub."
@@ -1811,7 +1813,7 @@ function Footer() {
   }, "Precio")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#roadmap"
   }, "Roadmap")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/cartpinger-web",
+    href: "https://github.com/tfreire988/whatscom",
     target: "_blank",
     rel: "noopener"
   }, "GitHub ", /*#__PURE__*/React.createElement(Icon3.Ext, {
@@ -1824,40 +1826,74 @@ function Footer() {
       opacity: 0.6
     }
   }))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "Changelog")))), /*#__PURE__*/React.createElement("div", {
+    href: "https://github.com/tfreire988/whatscom/releases",
+    target: "_blank",
+    rel: "noopener"
+  }, "Changelog ", /*#__PURE__*/React.createElement(Icon3.Ext, {
+    width: "10",
+    height: "10",
+    style: {
+      display: "inline",
+      verticalAlign: -1,
+      marginLeft: 2,
+      opacity: 0.6
+    }
+  }))))), /*#__PURE__*/React.createElement("div", {
     className: "foot-col"
   }, /*#__PURE__*/React.createElement("h5", null, "Recursos"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#faq"
   }, "FAQ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "Documentaci\xF3n")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#"
+    href: "https://github.com/tfreire988/whatscom#readme",
+    target: "_blank",
+    rel: "noopener"
+  }, "Documentaci\xF3n ", /*#__PURE__*/React.createElement(Icon3.Ext, {
+    width: "10",
+    height: "10",
+    style: {
+      display: "inline",
+      verticalAlign: -1,
+      marginLeft: 2,
+      opacity: 0.6
+    }
+  }))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "mailto:info@cartpinger.com"
   }, "Soporte")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#tech"
   }, "Arquitectura")))), /*#__PURE__*/React.createElement("div", {
     className: "foot-col"
-  }, /*#__PURE__*/React.createElement("h5", null, "Legal"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "Privacidad")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "T\xE9rminos")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "RGPD")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "DPA"))))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h5", null, "Legal"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
+    style: {
+      opacity: 0.4,
+      fontSize: "0.85em"
+    }
+  }, "Privacidad \xB7 pr\xF3ximamente")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
+    style: {
+      opacity: 0.4,
+      fontSize: "0.85em"
+    }
+  }, "T\xE9rminos \xB7 pr\xF3ximamente")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
+    style: {
+      opacity: 0.4,
+      fontSize: "0.85em"
+    }
+  }, "RGPD \xB7 pr\xF3ximamente")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
+    style: {
+      opacity: 0.4,
+      fontSize: "0.85em"
+    }
+  }, "DPA \xB7 pr\xF3ximamente"))))), /*#__PURE__*/React.createElement("div", {
     className: "foot-bottom"
   }, /*#__PURE__*/React.createElement("div", {
     className: "copy"
   }, "\xA9 2026 CartPinger. Todos los derechos reservados."), /*#__PURE__*/React.createElement("div", {
     className: "made"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "Privacidad"), " \xB7 ", /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "T\xE9rminos"), " \xB7 ", /*#__PURE__*/React.createElement("a", {
-    href: "#"
-  }, "Contacto")))));
+    href: "mailto:info@cartpinger.com"
+  }, "Contacto"), " \xB7 ", /*#__PURE__*/React.createElement("a", {
+    href: "https://github.com/tfreire988/whatscom",
+    target: "_blank",
+    rel: "noopener"
+  }, "GitHub")))));
 }
 window.WCBot = {
   Comparison,

@@ -107,7 +107,7 @@ function Nav() {
           <a href="#producto">Producto</a>
           <a href="#precio">Precio</a>
           <a href="#roadmap">Roadmap</a>
-          <a href="https://github.com/tfreire988/cartpinger-web" target="_blank" rel="noopener" aria-label="GitHub (abre en nueva pestaña)" style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
+          <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener" aria-label="GitHub (abre en nueva pestaña)" style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
             GitHub <Icon.Ext width="11" height="11"/>
           </a>
         </nav>
@@ -217,9 +217,9 @@ function Hero() {
           </div>
           <HeroTitle/>
           <p className="lede hero-sub reveal in" data-delay="400">
-            Plugin de WooCommerce que conecta tu WABA propia con la Cloud API de Meta.
-            Detecta carritos abandonados, envía una plantilla WhatsApp aprobada exactamente 1 hora después,
-            y restaura el carrito en un clic. Pago único €99 al lanzar. Open source MIT.
+            Cada carrito abandonado es un cliente que casi compró. CartPinger le escribe por WhatsApp
+            —desde tu propio número, una hora después— y le devuelve a tu tienda con un clic.
+            Sin SaaS mensual, sin comisiones sobre ventas, sin que tus datos salgan de tu servidor.
           </p>
           <div className="hero-ctas reveal in" data-delay="480" id="waitlist">
             <div className="waitlist-row">
@@ -237,7 +237,7 @@ function Hero() {
             <span><Icon.Check className="tick" width="13" height="13"/> Sin SaaS mensual</span>
           </div>
           <div className="trust reveal in" data-delay="640">
-            <a href="https://github.com/tfreire988/cartpinger-web/actions" target="_blank" rel="noopener" className="ci-badge" aria-label="Estado CI en GitHub Actions">
+            <a href="https://github.com/tfreire988/whatscom/actions" target="_blank" rel="noopener" className="ci-badge" aria-label="Estado CI en GitHub Actions">
               <span className="ci-dot"/>
               <span className="ci-label mono">CI</span>
               <span className="ci-status">passing</span>

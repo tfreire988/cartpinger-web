@@ -52,7 +52,7 @@ function Steps() {
                 <div className="wz-step pending"><span className="ic">4</span> Generar Access Token</div>
               </div>
             </div>
-            <p>Te guiamos paso a paso. Vídeo + screenshots. Si te atascas, soporte directo.</p>
+            <p>Documentación paso a paso en GitHub. Si te atascas, soporte directo.</p>
             <div className="step-foot">
               <span className="chip chip-wa">30 min</span>
               <span className="chip">Meta verifica en 1–7 días</span>

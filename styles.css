@@ -578,6 +578,8 @@ input[type="range"]::-moz-range-thumb {
 .price-card .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; position: relative; }
 .price-num { font-family: "Geist Mono", monospace; font-size: 64px; letter-spacing: -0.04em; line-height: 1; margin: 18px 0 4px; position: relative; }
 .price-sub { color: var(--text-2); font-size: 14px; position: relative; }
+.price-after-beta { margin-top: 10px; font-size: 13px; color: var(--text-3); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 8px 12px; position: relative; }
+.price-after-beta b { color: var(--cyan); }
 .price-list { list-style: none; padding: 0; margin: 24px 0 28px; display: grid; gap: 10px; position: relative; }
 .price-list li { display: flex; gap: 10px; font-size: 14px; color: var(--text-2); }
 .price-list li .ch { color: var(--wa); flex-shrink: 0; margin-top: 3px; }

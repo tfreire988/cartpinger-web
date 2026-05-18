@@ -40,7 +40,7 @@ const CMP_ROWS = [
     np: { yes: true },
   },
   { f: "Wizard onboarding Meta",
-    wc: { v: "✓ guiado", yes: true, tip: "Vídeo + screenshots paso a paso con soporte directo." },
+    wc: { v: "✓ guiado", yes: true, tip: "Documentación detallada en GitHub + soporte directo." },
     rt: { v: "Básico",   tip: "Docs escritos, sin vídeo guiado." },
     ai: { yes: true },
     nf: { no: true },
@@ -144,7 +144,8 @@ function Pricing() {
               <span className="chip">Sin lista de espera de pago</span>
             </div>
             <div className="price-num">€99</div>
-            <div className="price-sub">pago único · licencia de por vida</div>
+            <div className="price-sub">pago único · precio de beta cerrada</div>
+            <div className="price-after-beta">Después del lanzamiento: <b>€79/año</b> · Quien entre en beta, precio congelado.</div>
 
             <ul className="price-list">
               <li><Icon3.Check className="ch" width="16" height="16"/> Todas las features al lanzar</li>
@@ -224,7 +225,7 @@ function Roadmap() {
             </div>
           ))}
         </div>
-        <a href="https://github.com/tfreire988/cartpinger-web" target="_blank" rel="noopener" className="rm-link">Ver repositorio en GitHub <Icon3.ArrowRight width="15" height="15"/></a>
+        <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener" className="rm-link">Ver repositorio en GitHub <Icon3.ArrowRight width="15" height="15"/></a>
       </div>
     </section>
   );
@@ -239,7 +240,7 @@ const FAQS = [
   { q: "¿Solo envía un mensaje de recuperación o puedo configurar una secuencia?",
     a: "En v1.0: un único mensaje WhatsApp exactamente 1 hora después del abandono. Es deliberado — es la franja de mayor conversión. Los flujos multi-mensaje (+24h, +72h con cupón) están en el roadmap para versiones posteriores." },
   { q: "¿Qué pasa si Meta no me aprueba como Business?",
-    a: "El 95% de tiendas legítimas son aprobadas. Si tu tienda es legal y operativa, no debería haber problema. Te guío en cada paso con vídeo + screenshots. Si hay un problema, me escribes directamente." },
+    a: "El 95% de tiendas legítimas son aprobadas. Si tu tienda es legal y operativa, no debería haber problema. Te guío en cada paso con documentación detallada en GitHub. Si hay un problema, me escribes directamente." },
   { q: "¿Y si no llego a tiempo para mi campaña actual?",
     a: "Lanzamiento público Q3 2026. Si necesitas solución ahora mismo (mayo–junio 2026), todavía no es para ti. La transparencia del estado está en el roadmap público y en GitHub." },
   { q: "¿Cuánto pago a Meta por mensaje?",
@@ -315,33 +316,33 @@ function Footer() {
               <li><a href="#features">Features</a></li>
               <li><a href="#precio">Precio</a></li>
               <li><a href="#roadmap">Roadmap</a></li>
-              <li><a href="https://github.com/tfreire988/cartpinger-web" target="_blank" rel="noopener">GitHub <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
-              <li><a href="#">Changelog</a></li>
+              <li><a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener">GitHub <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
+              <li><a href="https://github.com/tfreire988/whatscom/releases" target="_blank" rel="noopener">Changelog <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
             </ul>
           </div>
           <div className="foot-col">
             <h5>Recursos</h5>
             <ul>
               <li><a href="#faq">FAQ</a></li>
-              <li><a href="#">Documentación</a></li>
-              <li><a href="#">Soporte</a></li>
+              <li><a href="https://github.com/tfreire988/whatscom#readme" target="_blank" rel="noopener">Documentación <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
+              <li><a href="mailto:info@cartpinger.com">Soporte</a></li>
               <li><a href="#tech">Arquitectura</a></li>
             </ul>
           </div>
           <div className="foot-col">
             <h5>Legal</h5>
             <ul>
-              <li><a href="#">Privacidad</a></li>
-              <li><a href="#">Términos</a></li>
-              <li><a href="#">RGPD</a></li>
-              <li><a href="#">DPA</a></li>
+              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>Privacidad · próximamente</span></li>
+              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>Términos · próximamente</span></li>
+              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>RGPD · próximamente</span></li>
+              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>DPA · próximamente</span></li>
             </ul>
           </div>
         </div>
         <div className="foot-bottom">
           <div className="copy">© 2026 CartPinger. Todos los derechos reservados.</div>
           <div className="made">
-            <a href="#">Privacidad</a> · <a href="#">Términos</a> · <a href="#">Contacto</a>
+            <a href="mailto:info@cartpinger.com">Contacto</a> · <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
