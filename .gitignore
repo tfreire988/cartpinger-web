@@ -1,9 +1,10 @@
 # Subscriber data — never commit
 waitlist.json
 
-# Local env
+# Local env (nunca comitear valores reales)
 .env
-.env.*
+.env.local
+.env.production
 
 # OS noise
 .DS_Store

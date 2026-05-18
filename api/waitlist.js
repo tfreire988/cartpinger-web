@@ -58,7 +58,7 @@ export default async function handler(req, res) {
         method: "POST",
         headers,
         body: JSON.stringify({
-          from: "CartPinger Waitlist <waitlist@cartpinger.com>",
+          from: "CartPinger Waitlist <info@cartpinger.com>",
           to: [notifyTo],
           subject: `Nueva suscripción: ${email}`,
           text: `Alguien se ha suscrito al waitlist de CartPinger.\n\nEmail: ${email}\nFecha: ${new Date().toISOString()}\n\nVer todos los contactos → https://resend.com/audiences`,
