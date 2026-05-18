@@ -13,3 +13,7 @@ Thumbs.db
 # Dev artefacts
 design_content.txt
 node_modules/
+*.mp4
+og-image-preview.html
+generate-og.js
+DOCUMENTACION.md
