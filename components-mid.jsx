@@ -52,7 +52,7 @@ function Steps() {
                 <div className="wz-step pending"><span className="ic">4</span> Generar Access Token</div>
               </div>
             </div>
-            <p><a href="https://github.com/tfreire988/whatscom/blob/main/documentacion.md" target="_blank" rel="noopener" style={{ color: "var(--mint)", textDecoration: "underline" }}>Documentación paso a paso en GitHub</a>. Si te atascas, soporte directo.</p>
+            <p><a href="https://github.com/tfreire988/cartpinger-web/blob/main/documentacion.md" target="_blank" rel="noopener" style={{ color: "var(--mint)", textDecoration: "underline" }}>Documentación paso a paso en GitHub</a>. Si te atascas, soporte directo.</p>
             <div className="step-foot">
               <span className="chip chip-wa">30 min</span>
               <span className="chip">Meta verifica en 1–7 días</span>
