@@ -148,11 +148,11 @@ function Pricing() {
             <div className="price-after-beta">Después del lanzamiento: <b>€79/año</b> · Quien entre en beta, precio congelado.</div>
 
             <ul className="price-list">
-              <li><Icon3.Check className="ch" width="16" height="16"/> Todas las features al lanzar</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> Updates ilimitados de por vida</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> Repo público MIT desde día 1</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> Soporte por email, Discord y GitHub</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> Sin SaaS mensual, sin renovación, sin gotchas</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Acceso completo al plugin al lanzar</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> <b style={{color:"var(--text)"}}>1 año de actualizaciones y soporte incluidos</b></li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> El plugin funciona para siempre aunque no renueves</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Repo público MIT — código auditable</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Sin SaaS mensual, sin comisiones sobre ventas</li>
             </ul>
 
             <div style={{ marginTop: 8 }}>
@@ -246,7 +246,7 @@ const FAQS = [
   { q: "¿Cuánto pago a Meta por mensaje?",
     a: "0€ a nosotros por mensajes. A Meta pagas según su pricing oficial. En España, un mensaje de carrito abandonado (categoría marketing) cuesta aproximadamente €0,08. Los primeros 1.000 mensajes al mes son gratis." },
   { q: "¿Es open source de verdad?",
-    a: "Sí, MIT License. Repo público desde día 1. Puedes forkearlo legalmente. La razón para pagar igualmente al lanzar: yo lo mantengo, parcho bugs, gestiono compatibilidad con releases de WooCommerce, mantengo la template aprobada en Meta y doy soporte. Tu pago compra mi atención continuada." },
+    a: "Sí, MIT License. El código es libre y público desde día 1. Los €99 no son por la licencia del código, sino por el servicio: 1 año de actualizaciones, compatibilidad con nuevas versiones de WooCommerce, mantenimiento de la template Meta y soporte directo. El plugin seguirá funcionando aunque no renueves — simplemente no recibirás actualizaciones futuras." },
   { q: "¿El plugin almacena datos de clientes en sus servidores?",
     a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código." },
   { q: "¿Funciona con block-based checkout?",
@@ -332,17 +332,16 @@ function Footer() {
           <div className="foot-col">
             <h5>Legal</h5>
             <ul>
-              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>Privacidad · próximamente</span></li>
-              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>Términos · próximamente</span></li>
-              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>RGPD · próximamente</span></li>
-              <li><span style={{ opacity: 0.4, fontSize: "0.85em" }}>DPA · próximamente</span></li>
+              <li><a href="/privacy.html">Privacidad</a></li>
+              <li><a href="/terms.html">Términos de uso</a></li>
+              <li><a href="/terms.html#7-responsabilidad-del-titular-de-la-tienda-dpa--rgpd">RGPD / DPA</a></li>
             </ul>
           </div>
         </div>
         <div className="foot-bottom">
           <div className="copy">© 2026 CartPinger. Todos los derechos reservados.</div>
           <div className="made">
-            <a href="mailto:info@cartpinger.com">Contacto</a> · <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener">GitHub</a>
+            <a href="/privacy.html">Privacidad</a> · <a href="/terms.html">Términos</a> · <a href="mailto:info@cartpinger.com">Contacto</a>
           </div>
         </div>
       </div>

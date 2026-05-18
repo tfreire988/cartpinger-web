@@ -44,10 +44,13 @@ writeFileSync(path.join(DIST, "bundle.js"), bundle);
 console.log(`\n  bundle.js  (${(bundle.length / 1024).toFixed(1)} KB)`);
 
 // Copy static assets to dist/
-const STATIC = ["styles.css", "WhatsCom Landing.html"];
+const STATIC = ["styles.css", "WhatsCom Landing.html", "privacy.html", "terms.html", "sitemap.xml", "robots.txt"];
 for (const f of STATIC) {
-  const content = readFileSync(path.join(__dir, f));
-  writeFileSync(path.join(DIST, f), content);
+  try {
+    const content = readFileSync(path.join(__dir, f));
+    writeFileSync(path.join(DIST, f), content);
+    if (!["styles.css", "WhatsCom Landing.html"].includes(f)) console.log(`  ${f}`);
+  } catch { /* optional */ }
 }
 
 // Generate production HTML — replace CDN Babel + JSX tags with compiled bundle

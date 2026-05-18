@@ -1591,23 +1591,27 @@ function Pricing() {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Todas las features al lanzar"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Acceso completo al plugin al lanzar"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Updates ilimitados de por vida"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " ", /*#__PURE__*/React.createElement("b", {
+    style: {
+      color: "var(--text)"
+    }
+  }, "1 a\xF1o de actualizaciones y soporte incluidos")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Repo p\xFAblico MIT desde d\xEDa 1"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " El plugin funciona para siempre aunque no renueves"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Soporte por email, Discord y GitHub"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Repo p\xFAblico MIT \u2014 c\xF3digo auditable"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Sin SaaS mensual, sin renovaci\xF3n, sin gotchas")), /*#__PURE__*/React.createElement("div", {
+  }), " Sin SaaS mensual, sin comisiones sobre ventas")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 8
     }
@@ -1705,7 +1709,7 @@ const FAQS = [{
   a: "0€ a nosotros por mensajes. A Meta pagas según su pricing oficial. En España, un mensaje de carrito abandonado (categoría marketing) cuesta aproximadamente €0,08. Los primeros 1.000 mensajes al mes son gratis."
 }, {
   q: "¿Es open source de verdad?",
-  a: "Sí, MIT License. Repo público desde día 1. Puedes forkearlo legalmente. La razón para pagar igualmente al lanzar: yo lo mantengo, parcho bugs, gestiono compatibilidad con releases de WooCommerce, mantengo la template aprobada en Meta y doy soporte. Tu pago compra mi atención continuada."
+  a: "Sí, MIT License. El código es libre y público desde día 1. Los €99 no son por la licencia del código, sino por el servicio: 1 año de actualizaciones, compatibilidad con nuevas versiones de WooCommerce, mantenimiento de la template Meta y soporte directo. El plugin seguirá funcionando aunque no renueves — simplemente no recibirás actualizaciones futuras."
 }, {
   q: "¿El plugin almacena datos de clientes en sus servidores?",
   a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código."
@@ -1869,39 +1873,25 @@ function Footer() {
     href: "#tech"
   }, "Arquitectura")))), /*#__PURE__*/React.createElement("div", {
     className: "foot-col"
-  }, /*#__PURE__*/React.createElement("h5", null, "Legal"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
-    style: {
-      opacity: 0.4,
-      fontSize: "0.85em"
-    }
-  }, "Privacidad \xB7 pr\xF3ximamente")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
-    style: {
-      opacity: 0.4,
-      fontSize: "0.85em"
-    }
-  }, "T\xE9rminos \xB7 pr\xF3ximamente")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
-    style: {
-      opacity: 0.4,
-      fontSize: "0.85em"
-    }
-  }, "RGPD \xB7 pr\xF3ximamente")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("span", {
-    style: {
-      opacity: 0.4,
-      fontSize: "0.85em"
-    }
-  }, "DPA \xB7 pr\xF3ximamente"))))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("h5", null, "Legal"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "/privacy.html"
+  }, "Privacidad")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "/terms.html"
+  }, "T\xE9rminos de uso")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "/terms.html#7-responsabilidad-del-titular-de-la-tienda-dpa--rgpd"
+  }, "RGPD / DPA"))))), /*#__PURE__*/React.createElement("div", {
     className: "foot-bottom"
   }, /*#__PURE__*/React.createElement("div", {
     className: "copy"
   }, "\xA9 2026 CartPinger. Todos los derechos reservados."), /*#__PURE__*/React.createElement("div", {
     className: "made"
   }, /*#__PURE__*/React.createElement("a", {
+    href: "/privacy.html"
+  }, "Privacidad"), " \xB7 ", /*#__PURE__*/React.createElement("a", {
+    href: "/terms.html"
+  }, "T\xE9rminos"), " \xB7 ", /*#__PURE__*/React.createElement("a", {
     href: "mailto:info@cartpinger.com"
-  }, "Contacto"), " \xB7 ", /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/whatscom",
-    target: "_blank",
-    rel: "noopener"
-  }, "GitHub")))));
+  }, "Contacto")))));
 }
 window.WCBot = {
   Comparison,

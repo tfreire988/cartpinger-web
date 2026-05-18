@@ -3,14 +3,112 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>CartPinger — WooCommerce abandoned cart recovery por WhatsApp Cloud API</title>
-  <meta name="description" content="CartPinger: plugin de WooCommerce que detecta carritos abandonados y envía un WhatsApp con template aprobada por Meta 1 hora después. GDPR nativo, open source MIT, pago único €99. Sin SaaS mensual. Beta cerrada — plazas limitadas."/>
-  <meta name="keywords" content="WooCommerce abandoned cart recovery, WhatsApp Cloud API plugin, recuperar carritos abandonados, GDPR checkout WooCommerce, CartPinger, WhatsApp Business WooCommerce, plugin PHP open source"/>
+
+  <!-- Primary SEO -->
+  <title>CartPinger — Plugin WooCommerce para recuperar carritos abandonados por WhatsApp</title>
+  <meta name="description" content="Plugin WooCommerce que envía un WhatsApp desde tu propio número 1 hora después del abandono del carrito. GDPR nativo, open source MIT, sin SaaS mensual. Beta cerrada — 50 plazas."/>
+  <meta name="keywords" content="WooCommerce carrito abandonado WhatsApp, WhatsApp Cloud API plugin WooCommerce, recuperar carritos abandonados, GDPR checkout WooCommerce, CartPinger, WhatsApp Business WooCommerce, plugin PHP open source, abandoned cart recovery WhatsApp"/>
+  <meta name="author" content="CartPinger"/>
+  <meta name="robots" content="index, follow"/>
   <meta name="theme-color" content="#0a0a0a"/>
-  <meta property="og:title" content="CartPinger — WooCommerce abandoned cart recovery por WhatsApp"/>
-  <meta property="og:description" content="Plugin WhatsApp Cloud API para WooCommerce. Recupera el 50% de tus carritos abandonados. Pago único €99, sin SaaS mensual. Beta cerrada."/>
+  <link rel="canonical" href="https://cartpinger.com/"/>
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://cartpinger.com/"/>
+  <meta property="og:site_name" content="CartPinger"/>
+  <meta property="og:locale" content="es_ES"/>
+  <meta property="og:title" content="CartPinger — Recupera carritos WooCommerce por WhatsApp"/>
+  <meta property="og:description" content="Plugin que envía un WhatsApp desde tu propio número 1h después del abandono. GDPR nativo, open source MIT, sin SaaS mensual."/>
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="CartPinger — Recupera carritos WooCommerce por WhatsApp"/>
+  <meta name="twitter:description" content="Plugin WooCommerce que envía un WhatsApp desde tu propio número 1h después del abandono. GDPR nativo, open source MIT."/>
+
+  <!-- JSON-LD: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CartPinger",
+    "url": "https://cartpinger.com",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "WooCommerce Plugin",
+    "operatingSystem": "WordPress 6.2+, WooCommerce 7+, PHP 8.1+",
+    "description": "Plugin de WooCommerce que detecta carritos abandonados y envía un WhatsApp con template aprobada por Meta exactamente 1 hora después. GDPR nativo, open source MIT.",
+    "softwareVersion": "1.0",
+    "license": "https://opensource.org/licenses/MIT",
+    "offers": {
+      "@type": "Offer",
+      "price": "99",
+      "priceCurrency": "EUR",
+      "priceValidUntil": "2026-12-31",
+      "availability": "https://schema.org/PreOrder",
+      "description": "Precio beta cerrada. Incluye plugin + 1 año de actualizaciones y soporte."
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Telmo Freire",
+      "email": "info@cartpinger.com"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage (rich results en Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuándo está disponible CartPinger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lanzamiento público Q3 2026. Puedes apuntarte a la beta cerrada (50 plazas) para recibir acceso anticipado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Tengo que pagar a Meta por enviar WhatsApps con CartPinger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Meta regala 1.000 conversaciones mensuales gratuitas. Para la mayoría de tiendas pequeñas y medianas el coste de la API de Meta es 0€/mes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿CartPinger almacena datos de mis clientes en sus servidores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos se almacenan en tu base de datos MySQL local."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es CartPinger open source?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, MIT License. Repo público en GitHub desde día 1. Puedes auditar el código, forkearlo y usarlo libremente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta CartPinger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "€99 durante la beta cerrada, incluye el plugin y 1 año de actualizaciones y soporte. Después del lanzamiento el precio sube a €79/año."
+        }
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
