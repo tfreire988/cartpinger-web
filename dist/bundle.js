@@ -703,7 +703,7 @@ function Steps() {
   }, /*#__PURE__*/React.createElement("span", {
     className: "ic"
   }, "4"), " Generar Access Token"))), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/whatscom/blob/main/documentacion.md",
+    href: "https://github.com/tfreire988/whatscom/blob/main/DOCUMENTACION.md",
     target: "_blank",
     rel: "noopener",
     style: {
@@ -2000,7 +2000,7 @@ function Footer() {
   }, /*#__PURE__*/React.createElement("h5", null, "Recursos"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#faq"
   }, "FAQ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/whatscom/blob/main/documentacion.md",
+    href: "https://github.com/tfreire988/whatscom/blob/main/DOCUMENTACION.md",
     target: "_blank",
     rel: "noopener"
   }, "Documentaci\xF3n ", /*#__PURE__*/React.createElement(Icon3.Ext, {
