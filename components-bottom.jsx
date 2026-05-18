@@ -375,7 +375,7 @@ function Footer() {
             <h5>Recursos</h5>
             <ul>
               <li><a href="#faq">FAQ</a></li>
-              <li><a href="https://cartpinger.com/docs" target="_blank" rel="noopener">Documentación <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
+              <li><a href="https://github.com/tfreire988/whatscom/blob/main/DOCUMENTACION.md" target="_blank" rel="noopener">Documentación <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
               <li><a href="mailto:info@cartpinger.com">Soporte</a></li>
               <li><a href="#tech">Arquitectura</a></li>
             </ul>

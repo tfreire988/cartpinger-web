@@ -703,14 +703,14 @@ function Steps() {
   }, /*#__PURE__*/React.createElement("span", {
     className: "ic"
   }, "4"), " Generar Access Token"))), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://cartpinger.com/docs",
+    href: "https://github.com/tfreire988/whatscom/blob/main/DOCUMENTACION.md",
     target: "_blank",
     rel: "noopener",
     style: {
       color: "var(--mint)",
       textDecoration: "underline"
     }
-  }, "Documentaci\xF3n paso a paso"), ". Si te atascas, soporte directo."), /*#__PURE__*/React.createElement("div", {
+  }, "Documentaci\xF3n paso a paso en GitHub"), ". Si te atascas, soporte directo."), /*#__PURE__*/React.createElement("div", {
     className: "step-foot"
   }, /*#__PURE__*/React.createElement("span", {
     className: "chip chip-wa"
@@ -2000,7 +2000,7 @@ function Footer() {
   }, /*#__PURE__*/React.createElement("h5", null, "Recursos"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#faq"
   }, "FAQ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://cartpinger.com/docs",
+    href: "https://github.com/tfreire988/whatscom/blob/main/DOCUMENTACION.md",
     target: "_blank",
     rel: "noopener"
   }, "Documentaci\xF3n ", /*#__PURE__*/React.createElement(Icon3.Ext, {
