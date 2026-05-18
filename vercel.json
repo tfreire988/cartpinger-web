@@ -1,6 +1,4 @@
 {
-  "buildCommand": "echo ok",
-  "outputDirectory": "dist",
   "rewrites": [
     { "source": "/waitlist.php", "destination": "/api/waitlist" }
   ]
