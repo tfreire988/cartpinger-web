@@ -181,11 +181,11 @@ function Roadmap() {
       "HMAC-SHA256 webhook",
       "React dashboard (3 KPIs)",
       "Floating WhatsApp widget",
-      "Submitted for review on WordPress.org",
     ]},
     { key: "prog", label: "In Progress", items: [
       "Closed Beta — first 50 stores",
       "Meta onboarding documentation",
+      "Submission for review on WordPress.org",
     ]},
     { key: "next", label: "Next", items: [
       "Templates in ES, PT-BR, FR, IT",

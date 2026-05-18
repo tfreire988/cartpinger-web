@@ -114,7 +114,7 @@ function Nav() {
         <div className="nav-cta">
           <div className="lang" role="group" aria-label="Idioma">
             <button className="active" aria-current="true">ES</button>
-            <button disabled title="Próximamente">EN</button>
+            <a href="/en/" className="lang-link">EN</a>
             <button disabled title="Próximamente">PT-BR</button>
           </div>
           <a href="#waitlist" className="btn btn-primary btn-sm">Solicitar Beta</a>
@@ -347,4 +347,26 @@ function Problem() {
   );
 }
 
-window.WCTop = { Nav, Hero, Logos, Problem, Icon, WaitlistForm };
+/* ---------------- Founder Quote ---------------- */
+function FounderQuote() {
+  return (
+    <section className="founder-section reveal">
+      <div className="container">
+        <blockquote className="founder-quote">
+          <p>
+            "Tenía una tienda WooCommerce. Los plugins de carrito abandonado que probé o cobraban
+            30€/mes o mandaban el WhatsApp desde un número genérico con su marca.
+            Decidí construir lo que necesitaba: envío desde mi propio número, sin SaaS mensual,
+            con el código auditable en GitHub. Eso es CartPinger."
+          </p>
+          <footer>
+            <span className="fq-name">Telmo Freire</span>
+            <span className="fq-role">Fundador · CartPinger</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+  );
+}
+
+window.WCTop = { Nav, Hero, Logos, Problem, FounderQuote, Icon, WaitlistForm };

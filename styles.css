@@ -190,6 +190,8 @@ img { display: block; max-width: 100%; }
 .lang { display: inline-flex; align-items: center; gap: 2px; padding: 4px; border: 1px solid var(--border); border-radius: 8px; background: rgba(255,255,255,0.02); }
 .lang button { background: transparent; color: var(--text-3); border: 0; padding: 4px 8px; border-radius: 5px; font-size: 12px; cursor: pointer; }
 .lang button.active { background: rgba(255,255,255,0.06); color: var(--text-1); }
+.lang-link { background: transparent; color: var(--text-3); border: 0; padding: 4px 8px; border-radius: 5px; font-size: 12px; text-decoration: none; transition: color .15s; }
+.lang-link:hover { color: var(--text-1); }
 .nav-cta { display: flex; align-items: center; gap: 10px; }
 @media (max-width: 860px) {
   .nav-links { display: none; }
@@ -580,6 +582,14 @@ input[type="range"]::-moz-range-thumb {
 .price-sub { color: var(--text-2); font-size: 14px; position: relative; }
 .price-after-beta { margin-top: 10px; font-size: 13px; color: var(--text-3); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 8px 12px; position: relative; }
 .price-after-beta b { color: var(--cyan); }
+
+/* Founder quote */
+.founder-section { padding: 16px 0 40px; }
+.founder-quote { margin: 0 auto; max-width: 720px; border-left: 2px solid var(--mint); padding: 20px 28px; background: rgba(0,229,160,0.04); border-radius: 0 10px 10px 0; }
+.founder-quote p { font-size: 16px; line-height: 1.65; color: var(--text-2); margin: 0 0 16px; font-style: italic; }
+.founder-quote footer { display: flex; flex-direction: column; gap: 2px; }
+.fq-name { font-size: 13px; font-weight: 600; color: var(--text-1); }
+.fq-role { font-size: 12px; color: var(--text-3); }
 .price-list { list-style: none; padding: 0; margin: 24px 0 28px; display: grid; gap: 10px; position: relative; }
 .price-list li { display: flex; gap: 10px; font-size: 14px; color: var(--text-2); }
 .price-list li .ch { color: var(--wa); flex-shrink: 0; margin-top: 3px; }

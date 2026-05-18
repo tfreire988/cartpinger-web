@@ -562,11 +562,27 @@ function Problem() {
     delay: 280
   }))));
 }
+
+/* ---------------- Founder Quote ---------------- */
+function FounderQuote() {
+  return /*#__PURE__*/React.createElement("section", {
+    className: "founder-section reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/React.createElement("blockquote", {
+    className: "founder-quote"
+  }, /*#__PURE__*/React.createElement("p", null, "\"I had a WooCommerce store. The abandoned cart plugins I tried either charged \u20AC30/month or sent the WhatsApp from a generic number with their own branding. So I built what I actually needed: messages from my own number, no monthly SaaS, with the code auditable on GitHub from day one. That's CartPinger.\""), /*#__PURE__*/React.createElement("footer", null, /*#__PURE__*/React.createElement("span", {
+    className: "fq-name"
+  }, "Telmo Freire"), /*#__PURE__*/React.createElement("span", {
+    className: "fq-role"
+  }, "Founder \xB7 CartPinger")))));
+}
 window.WCTop = {
   Nav,
   Hero,
   Logos,
   Problem,
+  FounderQuote,
   Icon,
   WaitlistForm
 };
@@ -1108,6 +1124,7 @@ function fmt(n) {
 function Calculator() {
   const [orders, setOrders] = React.useState(500);
   const [abandon, setAbandon] = React.useState(70);
+  const [aov, setAov] = React.useState(60);
   const [competitor, setCompetitor] = React.useState("aisensy");
   const [years, setYears] = React.useState("3");
   const c = COMPETITORS[competitor];
@@ -1118,7 +1135,6 @@ function Calculator() {
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
   const recoveredYear = recovered * 12;
-  const aov = 60;
   const revenueRecovered = recoveredYear * aov;
   const max = Math.max(wcTotal, compTotal);
   const wcW = wcTotal / max * 100;
@@ -1163,6 +1179,18 @@ function Calculator() {
     value: abandon,
     onChange: e => setAbandon(+e.target.value),
     "aria-label": "Abandoned cart percentage"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "input-group"
+  }, /*#__PURE__*/React.createElement("label", null, "Average order value (AOV) ", /*#__PURE__*/React.createElement("b", {
+    className: "mono"
+  }, "\u20AC", aov)), /*#__PURE__*/React.createElement("input", {
+    type: "range",
+    min: "20",
+    max: "500",
+    step: "5",
+    value: aov,
+    onChange: e => setAov(+e.target.value),
+    "aria-label": "Average order value in euros"
   })), /*#__PURE__*/React.createElement("div", {
     className: "input-group"
   }, /*#__PURE__*/React.createElement("label", null, "Competitor"), /*#__PURE__*/React.createElement("div", {
@@ -1248,7 +1276,7 @@ function Calculator() {
       color: "var(--text-3)",
       marginTop: 6
     }
-  }, "Assuming 50% WhatsApp recovery rate \xB7 AOV \u20AC60 \xB7 indicative estimate, not a guarantee.")))))));
+  }, "Assuming 50% WhatsApp recovery rate \xB7 AOV \u20AC", aov, " \xB7 indicative estimate, not a guarantee.")))))));
 }
 window.WCMid = {
   Steps,
@@ -1620,11 +1648,11 @@ function Roadmap() {
   const cols = [{
     key: "done",
     label: "Done",
-    items: ["Public repo on GitHub", "PSR-4 architecture defined", "PHPUnit + PHPStan lvl 8 passing", "DB schema + migrations", "GDPR opt-in at checkout", "Secure recovery token", "HMAC-SHA256 webhook", "React dashboard (3 KPIs)", "Floating WhatsApp widget", "Submitted for review on WordPress.org"]
+    items: ["Public repo on GitHub", "PSR-4 architecture defined", "PHPUnit + PHPStan lvl 8 passing", "DB schema + migrations", "GDPR opt-in at checkout", "Secure recovery token", "HMAC-SHA256 webhook", "React dashboard (3 KPIs)", "Floating WhatsApp widget"]
   }, {
     key: "prog",
     label: "In Progress",
-    items: ["Closed Beta — first 50 stores", "Meta onboarding documentation"]
+    items: ["Closed Beta — first 50 stores", "Meta onboarding documentation", "Submission for review on WordPress.org"]
   }, {
     key: "next",
     label: "Next",
@@ -1900,7 +1928,8 @@ function App() {
     Nav,
     Hero,
     Logos,
-    Problem
+    Problem,
+    FounderQuote
   } = window.WCTop;
   const {
     Steps,
@@ -1945,7 +1974,7 @@ function App() {
     document.querySelectorAll(".reveal:not(.in)").forEach(el => io.observe(el));
     return () => io.disconnect();
   }, []);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Problem, null), /*#__PURE__*/React.createElement(Steps, null), /*#__PURE__*/React.createElement(Bento, null), /*#__PURE__*/React.createElement(TechSection, null), /*#__PURE__*/React.createElement(Calculator, null), /*#__PURE__*/React.createElement(Comparison, null), /*#__PURE__*/React.createElement(Pricing, null), /*#__PURE__*/React.createElement(Roadmap, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(FinalCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Problem, null), /*#__PURE__*/React.createElement(FounderQuote, null), /*#__PURE__*/React.createElement(Steps, null), /*#__PURE__*/React.createElement(Bento, null), /*#__PURE__*/React.createElement(TechSection, null), /*#__PURE__*/React.createElement(Calculator, null), /*#__PURE__*/React.createElement(Comparison, null), /*#__PURE__*/React.createElement(Pricing, null), /*#__PURE__*/React.createElement(Roadmap, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(FinalCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/React.createElement(App, null));

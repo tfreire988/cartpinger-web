@@ -336,4 +336,26 @@ function Problem() {
   );
 }
 
-window.WCTop = { Nav, Hero, Logos, Problem, Icon, WaitlistForm };
+/* ---------------- Founder Quote ---------------- */
+function FounderQuote() {
+  return (
+    <section className="founder-section reveal">
+      <div className="container">
+        <blockquote className="founder-quote">
+          <p>
+            "I had a WooCommerce store. The abandoned cart plugins I tried either charged €30/month
+            or sent the WhatsApp from a generic number with their own branding.
+            So I built what I actually needed: messages from my own number, no monthly SaaS,
+            with the code auditable on GitHub from day one. That's CartPinger."
+          </p>
+          <footer>
+            <span className="fq-name">Telmo Freire</span>
+            <span className="fq-role">Founder · CartPinger</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+  );
+}
+
+window.WCTop = { Nav, Hero, Logos, Problem, FounderQuote, Icon, WaitlistForm };

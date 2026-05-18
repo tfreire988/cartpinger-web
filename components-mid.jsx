@@ -301,6 +301,7 @@ function fmt(n) { return Math.round(n).toLocaleString("es-ES"); }
 function Calculator() {
   const [orders, setOrders] = React.useState(500);
   const [abandon, setAbandon] = React.useState(70);
+  const [aov, setAov] = React.useState(60);
   const [competitor, setCompetitor] = React.useState("aisensy");
   const [years, setYears] = React.useState("3");
 
@@ -313,7 +314,6 @@ function Calculator() {
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
   const recoveredYear = recovered * 12;
-  const aov = 60;
   const revenueRecovered = recoveredYear * aov;
 
   const max = Math.max(wcTotal, compTotal);
@@ -338,6 +338,10 @@ function Calculator() {
               <div className="input-group">
                 <label>% carritos abandonados <b className="mono">{abandon}%</b></label>
                 <input type="range" min="50" max="80" step="1" value={abandon} onChange={(e) => setAbandon(+e.target.value)} aria-label="Porcentaje de carritos abandonados"/>
+              </div>
+              <div className="input-group">
+                <label>Ticket medio (AOV) <b className="mono">€{aov}</b></label>
+                <input type="range" min="20" max="500" step="5" value={aov} onChange={(e) => setAov(+e.target.value)} aria-label="Ticket medio en euros"/>
               </div>
               <div className="input-group">
                 <label>Competidor</label>
@@ -394,7 +398,7 @@ function Calculator() {
                 Recovery estimado año 1: <b>{fmt(recoveredYear)} carritos</b><br/>
                 Revenue recuperado estimado: <b>{fmtEur(revenueRecovered)}</b>
                 <div style={{ fontSize: 11.5, color: "var(--text-3)", marginTop: 6 }}>
-                  Asumiendo 50% recovery WhatsApp · AOV €60 · cálculo orientativo, no garantía.
+                  Asumiendo 50% recovery WhatsApp · AOV €{aov} · cálculo orientativo, no garantía.
                 </div>
               </div>
             </div>

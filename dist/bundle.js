@@ -250,9 +250,9 @@ function Nav() {
   }, /*#__PURE__*/React.createElement("button", {
     className: "active",
     "aria-current": "true"
-  }, "ES"), /*#__PURE__*/React.createElement("button", {
-    disabled: true,
-    title: "Pr\xF3ximamente"
+  }, "ES"), /*#__PURE__*/React.createElement("a", {
+    href: "/en/",
+    className: "lang-link"
   }, "EN"), /*#__PURE__*/React.createElement("button", {
     disabled: true,
     title: "Pr\xF3ximamente"
@@ -572,11 +572,27 @@ function Problem() {
     delay: 280
   }))));
 }
+
+/* ---------------- Founder Quote ---------------- */
+function FounderQuote() {
+  return /*#__PURE__*/React.createElement("section", {
+    className: "founder-section reveal"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/React.createElement("blockquote", {
+    className: "founder-quote"
+  }, /*#__PURE__*/React.createElement("p", null, "\"Ten\xEDa una tienda WooCommerce. Los plugins de carrito abandonado que prob\xE9 o cobraban 30\u20AC/mes o mandaban el WhatsApp desde un n\xFAmero gen\xE9rico con su marca. Decid\xED construir lo que necesitaba: env\xEDo desde mi propio n\xFAmero, sin SaaS mensual, con el c\xF3digo auditable en GitHub. Eso es CartPinger.\""), /*#__PURE__*/React.createElement("footer", null, /*#__PURE__*/React.createElement("span", {
+    className: "fq-name"
+  }, "Telmo Freire"), /*#__PURE__*/React.createElement("span", {
+    className: "fq-role"
+  }, "Fundador \xB7 CartPinger")))));
+}
 window.WCTop = {
   Nav,
   Hero,
   Logos,
   Problem,
+  FounderQuote,
   Icon,
   WaitlistForm
 };
@@ -1118,6 +1134,7 @@ function fmt(n) {
 function Calculator() {
   const [orders, setOrders] = React.useState(500);
   const [abandon, setAbandon] = React.useState(70);
+  const [aov, setAov] = React.useState(60);
   const [competitor, setCompetitor] = React.useState("aisensy");
   const [years, setYears] = React.useState("3");
   const c = COMPETITORS[competitor];
@@ -1128,7 +1145,6 @@ function Calculator() {
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
   const recoveredYear = recovered * 12;
-  const aov = 60;
   const revenueRecovered = recoveredYear * aov;
   const max = Math.max(wcTotal, compTotal);
   const wcW = wcTotal / max * 100;
@@ -1173,6 +1189,18 @@ function Calculator() {
     value: abandon,
     onChange: e => setAbandon(+e.target.value),
     "aria-label": "Porcentaje de carritos abandonados"
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "input-group"
+  }, /*#__PURE__*/React.createElement("label", null, "Ticket medio (AOV) ", /*#__PURE__*/React.createElement("b", {
+    className: "mono"
+  }, "\u20AC", aov)), /*#__PURE__*/React.createElement("input", {
+    type: "range",
+    min: "20",
+    max: "500",
+    step: "5",
+    value: aov,
+    onChange: e => setAov(+e.target.value),
+    "aria-label": "Ticket medio en euros"
   })), /*#__PURE__*/React.createElement("div", {
     className: "input-group"
   }, /*#__PURE__*/React.createElement("label", null, "Competidor"), /*#__PURE__*/React.createElement("div", {
@@ -1258,7 +1286,7 @@ function Calculator() {
       color: "var(--text-3)",
       marginTop: 6
     }
-  }, "Asumiendo 50% recovery WhatsApp \xB7 AOV \u20AC60 \xB7 c\xE1lculo orientativo, no garant\xEDa.")))))));
+  }, "Asumiendo 50% recovery WhatsApp \xB7 AOV \u20AC", aov, " \xB7 c\xE1lculo orientativo, no garant\xEDa.")))))));
 }
 window.WCMid = {
   Steps,
@@ -1630,11 +1658,11 @@ function Roadmap() {
   const cols = [{
     key: "done",
     label: "Done",
-    items: ["Repo público en GitHub", "Arquitectura PSR-4 definida", "PHPUnit + PHPStan lvl 8 en verde", "DB schema + migrations", "GDPR opt-in en checkout", "Token de recuperación seguro", "Webhook HMAC-SHA256", "Dashboard React (3 KPIs)", "Widget WhatsApp flotante", "Envío a revisión en WordPress.org"]
+    items: ["Repo público en GitHub", "Arquitectura PSR-4 definida", "PHPUnit + PHPStan lvl 8 en verde", "DB schema + migrations", "GDPR opt-in en checkout", "Token de recuperación seguro", "Webhook HMAC-SHA256", "Dashboard React (3 KPIs)", "Widget WhatsApp flotante"]
   }, {
     key: "prog",
     label: "In Progress",
-    items: ["Beta Cerrada — primeras 50 tiendas", "Documentación de onboarding Meta"]
+    items: ["Beta Cerrada — primeras 50 tiendas", "Documentación de onboarding Meta", "Envío a revisión en WordPress.org"]
   }, {
     key: "next",
     label: "Next",
@@ -1910,7 +1938,8 @@ function App() {
     Nav,
     Hero,
     Logos,
-    Problem
+    Problem,
+    FounderQuote
   } = window.WCTop;
   const {
     Steps,
@@ -1955,7 +1984,7 @@ function App() {
     document.querySelectorAll(".reveal:not(.in)").forEach(el => io.observe(el));
     return () => io.disconnect();
   }, []);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Problem, null), /*#__PURE__*/React.createElement(Steps, null), /*#__PURE__*/React.createElement(Bento, null), /*#__PURE__*/React.createElement(TechSection, null), /*#__PURE__*/React.createElement(Calculator, null), /*#__PURE__*/React.createElement(Comparison, null), /*#__PURE__*/React.createElement(Pricing, null), /*#__PURE__*/React.createElement(Roadmap, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(FinalCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement(Hero, null), /*#__PURE__*/React.createElement(Logos, null), /*#__PURE__*/React.createElement(Problem, null), /*#__PURE__*/React.createElement(FounderQuote, null), /*#__PURE__*/React.createElement(Steps, null), /*#__PURE__*/React.createElement(Bento, null), /*#__PURE__*/React.createElement(TechSection, null), /*#__PURE__*/React.createElement(Calculator, null), /*#__PURE__*/React.createElement(Comparison, null), /*#__PURE__*/React.createElement(Pricing, null), /*#__PURE__*/React.createElement(Roadmap, null), /*#__PURE__*/React.createElement(FAQ, null), /*#__PURE__*/React.createElement(FinalCTA, null)), /*#__PURE__*/React.createElement(Footer, null));
 }
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/React.createElement(App, null));

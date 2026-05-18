@@ -181,11 +181,11 @@ function Roadmap() {
       "Webhook HMAC-SHA256",
       "Dashboard React (3 KPIs)",
       "Widget WhatsApp flotante",
-      "Envío a revisión en WordPress.org",
     ]},
     { key: "prog", label: "In Progress", items: [
       "Beta Cerrada — primeras 50 tiendas",
       "Documentación de onboarding Meta",
+      "Envío a revisión en WordPress.org",
     ]},
     { key: "next", label: "Next", items: [
       "Templates en ES, PT-BR, FR, IT",

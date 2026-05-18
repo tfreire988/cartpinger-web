@@ -1,7 +1,7 @@
 /* CartPinger — App composition + scroll reveals (EN) */
 
 function App() {
-  const { Nav, Hero, Logos, Problem } = window.WCTop;
+  const { Nav, Hero, Logos, Problem, FounderQuote } = window.WCTop;
   const { Steps, Bento, TechSection, Calculator } = window.WCMid;
   const { Comparison, Pricing, Roadmap, FAQ, FinalCTA, Footer } = window.WCBot;
 
@@ -43,6 +43,7 @@ function App() {
         <Hero/>
         <Logos/>
         <Problem/>
+        <FounderQuote/>
         <Steps/>
         <Bento/>
         <TechSection/>
