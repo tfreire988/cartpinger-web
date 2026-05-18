@@ -302,6 +302,8 @@ const FAQS = [
     a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código." },
   { q: "¿Funciona con block-based checkout?",
     a: "Sí. La integración GDPR usa la API WooCommerce Additional Checkout Fields, compatible con WooCommerce Blocks desde WooCommerce 9.0+." },
+  { q: "¿Funciona en hosting compartido?",
+    a: "Sí, siempre que el servidor tenga PHP 8.2+ y WP-Cron activo. La mayoría de hostings compartidos modernos (SiteGround, Hostinger, Raiola, etc.) cumplen estos requisitos. Si tu hosting desactiva WP-Cron por defecto, puedes configurarlo vía cron real del sistema — la documentación incluye las instrucciones." },
   { q: "¿Me vais a llenar el email de marketing?",
     a: "No. Te escribo una sola vez: cuando CartPinger esté disponible. Sin newsletter, sin drip, sin upsells. Puedes darte de baja con un click en cualquier momento." },
 ];

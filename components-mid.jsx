@@ -65,6 +65,7 @@ function Steps() {
             <div className="step-visual">
               <div className="toggles">
                 <div className="tg on"><span className="sw"/> Carrito abandonado</div>
+                <div className="tg on"><span className="sw"/> Notificaciones de pedido</div>
                 <div className="tg on"><span className="sw"/> Widget de chat</div>
               </div>
             </div>
@@ -120,7 +121,27 @@ function Bento() {
             </ul>
           </div>
 
-          {/* 2. Widget flotante */}
+          {/* 2. Order Notifications */}
+          <div className="surface b b-6-1 reveal" data-delay="120">
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <h3>Notificaciones de pedido</h3>
+              <span className="chip chip-wa">Core</span>
+            </div>
+            <div className="bento-conv">
+              <div className="conv-row">
+                <span className="stamp mono">Pedido #1042</span>
+                <div className="conv-bubble">
+                  ✅ ¡Tu pedido ha sido confirmado!
+                  <br/><br/>
+                  Total: <b>€127,50</b> · Envío estimado: 2–3 días hábiles.
+                  <span className="time">10:14 ✓✓</span>
+                </div>
+              </div>
+            </div>
+            <p>Envía un WhatsApp automático al confirmar el pedido. El cliente recibe el total, los productos y el tiempo de envío estimado. Sin plugins adicionales.</p>
+          </div>
+
+          {/* 3. Widget flotante */}
           <div className="surface b b-6-1 reveal" data-delay="120">
             <h3>Widget WhatsApp flotante</h3>
             <div className="widget-mock">
@@ -325,7 +346,7 @@ function Calculator() {
       <div className="container">
         <div className="section-hed reveal">
           <h2 className="h2">Calcula lo que ahorras vs SaaS recurrente.</h2>
-          <p className="lede">Pagas una vez €99 al lanzar. Las alternativas cobran cada mes. La diferencia compone.</p>
+          <p className="lede">Pagas €79 una vez. Las alternativas cobran cada mes. La diferencia compone.</p>
         </div>
 
         <div className="surface calc reveal" data-delay="80">

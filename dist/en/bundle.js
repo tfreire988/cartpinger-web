@@ -724,6 +724,10 @@ function Steps() {
     className: "tg on"
   }, /*#__PURE__*/React.createElement("span", {
     className: "sw"
+  }), " Order notifications"), /*#__PURE__*/React.createElement("div", {
+    className: "tg on"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "sw"
   }), " Chat widget"))), /*#__PURE__*/React.createElement("p", null, "Two toggles in your WordPress panel. Live in minutes, no code required."), /*#__PURE__*/React.createElement("div", {
     className: "step-foot"
   }, /*#__PURE__*/React.createElement("span", {
@@ -813,6 +817,27 @@ function Bento() {
       fontSize: 12
     }
   }, "pending \u2192 sent \u2192 recovered")))), /*#__PURE__*/React.createElement("div", {
+    className: "surface b b-6-1 reveal",
+    "data-delay": "120"
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "center",
+      gap: 10
+    }
+  }, /*#__PURE__*/React.createElement("h3", null, "Order notifications"), /*#__PURE__*/React.createElement("span", {
+    className: "chip chip-wa"
+  }, "Core")), /*#__PURE__*/React.createElement("div", {
+    className: "bento-conv"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "conv-row"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "stamp mono"
+  }, "Order #1042"), /*#__PURE__*/React.createElement("div", {
+    className: "conv-bubble"
+  }, "\u2705 Your order has been confirmed!", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "Total: ", /*#__PURE__*/React.createElement("b", null, "\u20AC127.50"), " \xB7 Estimated shipping: 2\u20133 business days.", /*#__PURE__*/React.createElement("span", {
+    className: "time"
+  }, "10:14 \u2713\u2713")))), /*#__PURE__*/React.createElement("p", null, "Sends a WhatsApp automatically when an order is confirmed. The customer receives the total, items and estimated shipping time. No extra plugins needed.")), /*#__PURE__*/React.createElement("div", {
     className: "surface b b-6-1 reveal",
     "data-delay": "120"
   }, /*#__PURE__*/React.createElement("h3", null, "Floating WhatsApp widget"), /*#__PURE__*/React.createElement("div", {
@@ -1151,7 +1176,7 @@ function Calculator() {
     className: "h2"
   }, "Calculate what you save vs. recurring SaaS."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "You pay \u20AC99 once at launch. Alternatives charge every month. The difference compounds.")), /*#__PURE__*/React.createElement("div", {
+  }, "You pay \u20AC79 once. Alternatives charge every month. The difference compounds.")), /*#__PURE__*/React.createElement("div", {
     className: "surface calc reveal",
     "data-delay": "80"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1852,6 +1877,9 @@ const FAQS = [{
 }, {
   q: "Does it work with block-based checkout?",
   a: "Yes. The GDPR integration uses the WooCommerce Additional Checkout Fields API, compatible with WooCommerce Blocks since WooCommerce 9.0+."
+}, {
+  q: "Does it work on shared hosting?",
+  a: "Yes, as long as the server has PHP 8.2+ and WP-Cron active. Most modern shared hosts (SiteGround, Hostinger, Bluehost, etc.) meet these requirements. If your host disables WP-Cron by default, you can configure it via a real system cron job — the documentation includes instructions."
 }, {
   q: "Will you spam me with marketing emails?",
   a: "No. I'll email you once: when CartPinger is available. No newsletter, no drip campaigns, no upsells. You can unsubscribe with one click at any time."
