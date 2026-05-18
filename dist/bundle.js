@@ -687,7 +687,7 @@ function Steps() {
   }, /*#__PURE__*/React.createElement("span", {
     className: "ic"
   }, "4"), " Generar Access Token"))), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/whatscom/blob/main/DOCUMENTACION.md",
+    href: "https://github.com/tfreire988/whatscom/blob/main/documentacion.md",
     target: "_blank",
     rel: "noopener",
     style: {
