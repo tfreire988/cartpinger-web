@@ -308,7 +308,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 99;
+  const wcTotal = 49;
   const diff = compTotal - wcTotal;
 
   const abandoned = orders * (abandon / 100);
@@ -367,7 +367,7 @@ function Calculator() {
 
             <div className="calc-out">
               <div className="out-row">
-                <span className="l">CartPinger · lifetime license</span>
+                <span className="l">CartPinger Pro · one-time</span>
                 <span className="v">€99</span>
               </div>
               <div className="out-row">
@@ -383,7 +383,7 @@ function Calculator() {
 
               <div className="calc-bars">
                 <div className="bar wa">
-                  <div className="label">CartPinger</div>
+                  <div className="label">CartPinger Pro</div>
                   <div className="track"><div className="fill" style={{ width: wcW + "%" }}/></div>
                   <div className="val">€99</div>
                 </div>

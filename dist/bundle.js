@@ -1140,7 +1140,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 99;
+  const wcTotal = 49;
   const diff = compTotal - wcTotal;
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
@@ -1231,9 +1231,9 @@ function Calculator() {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "CartPinger \xB7 licencia lifetime"), /*#__PURE__*/React.createElement("span", {
+  }, "CartPinger Pro \xB7 pago \xFAnico"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "\u20AC99")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC49")), /*#__PURE__*/React.createElement("div", {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
@@ -1256,7 +1256,7 @@ function Calculator() {
     className: "bar wa"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
-  }, "CartPinger"), /*#__PURE__*/React.createElement("div", {
+  }, "CartPinger Pro"), /*#__PURE__*/React.createElement("div", {
     className: "track"
   }, /*#__PURE__*/React.createElement("div", {
     className: "fill",
@@ -1265,7 +1265,7 @@ function Calculator() {
     }
   })), /*#__PURE__*/React.createElement("div", {
     className: "val"
-  }, "\u20AC99")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC49")), /*#__PURE__*/React.createElement("div", {
     className: "bar comp"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
@@ -1304,8 +1304,8 @@ const Icon3 = window.WCTop?.Icon;
 const CMP_ROWS = [{
   f: "Precio",
   wc: {
-    v: "€99 lifetime",
-    tip: "Pago único al lanzar. Acceso de por vida, sin renovación."
+    v: "Gratis · Pro €49",
+    tip: "Free para siempre con funciones core. Pro €49 pago único: secuencias, cupones dinámicos, CSV y soporte prioritario."
   },
   rt: {
     v: "$14/mes",
@@ -1327,6 +1327,7 @@ const CMP_ROWS = [{
   f: "Carrito abandonado WhatsApp",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Detección via WP-Cron 1h tras abandono. Template aprobada por Meta."
   },
   rt: {
@@ -1345,10 +1346,11 @@ const CMP_ROWS = [{
     yes: true
   }
 }, {
-  f: "Template WhatsApp pre-aprobada",
+  f: "Templates WhatsApp (4 idiomas)",
   wc: {
-    v: "EN (en_US)",
-    tip: "Template abandoned_cart_recovery aprobada por Meta. Más idiomas en roadmap."
+    v: "en_US · es_ES · es_MX · pt_BR",
+    tier: "free",
+    tip: "Templates aprobadas por Meta en inglés, español (ES y MX) y portugués BR."
   },
   rt: {
     v: "EN",
@@ -1369,6 +1371,7 @@ const CMP_ROWS = [{
   f: "GDPR opt-in nativo en checkout",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Checkbox inyectado en WooCommerce checkout. Revocación inmediata en DB."
   },
   rt: {
@@ -1388,6 +1391,7 @@ const CMP_ROWS = [{
   f: "Logs de entrega webhook",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Webhook Meta validado con HMAC-SHA256. Estados delivered/read/failed por wamid."
   },
   rt: {
@@ -1405,9 +1409,9 @@ const CMP_ROWS = [{
 }, {
   f: "Wizard onboarding Meta",
   wc: {
-    v: "✓ guiado",
     yes: true,
-    tip: "Documentación detallada en GitHub + soporte directo."
+    tier: "free",
+    tip: "Documentación detallada en cartpinger.com/docs + soporte directo."
   },
   rt: {
     v: "Básico",
@@ -1426,6 +1430,7 @@ const CMP_ROWS = [{
   f: "Calculadora costes integrada",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Estimas tu factura Meta antes de enviar."
   },
   rt: {
@@ -1441,10 +1446,10 @@ const CMP_ROWS = [{
     no: true
   }
 }, {
-  f: "Open source",
+  f: "Open source MIT",
   wc: {
-    v: "✓ MIT",
     yes: true,
+    tier: "free",
     tip: "Repo público desde día 1, código auditable, forkeable."
   },
   rt: {
@@ -1463,6 +1468,7 @@ const CMP_ROWS = [{
   f: "Tu propio número (BYO-WABA)",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Conectas tu propio Meta WABA. Tu marca, tu data."
   },
   rt: {
@@ -1478,28 +1484,67 @@ const CMP_ROWS = [{
     yes: true
   }
 }, {
-  f: "Mercados foco",
+  f: "Secuencia multi-mensaje (+24h con cupón · +48h)",
   wc: {
-    v: "LATAM · ES · global",
-    tip: "Soporte en español y documentación localizada. Global vía plugin."
+    yes: true,
+    tier: "pro",
+    tip: "Flujo automático: mensaje inicial 1h + recordatorio 24h con cupón dinámico + recordatorio final 48h."
   },
   rt: {
-    v: "Global"
+    yes: true
   },
   ai: {
-    v: "India · global"
+    yes: true
   },
   nf: {
-    v: "India · global"
+    no: true
   },
   np: {
-    v: "India · global"
+    yes: true
+  }
+}, {
+  f: "Cupones dinámicos automáticos",
+  wc: {
+    yes: true,
+    tier: "pro",
+    tip: "Cupón 10% descuento, un solo uso, validez 48h. Generado y adjuntado automáticamente al mensaje +24h."
+  },
+  rt: {
+    yes: true
+  },
+  ai: {
+    v: "Parcial"
+  },
+  nf: {
+    no: true
+  },
+  np: {
+    yes: true
+  }
+}, {
+  f: "Exportación CSV",
+  wc: {
+    yes: true,
+    tier: "pro",
+    tip: "Export completo de recuperaciones: email, carrito, token, estado, timestamp."
+  },
+  rt: {
+    yes: true
+  },
+  ai: {
+    no: true
+  },
+  nf: {
+    no: true
+  },
+  np: {
+    yes: true
   }
 }, {
   f: "Soporte",
   wc: {
-    v: "Email · Discord · GitHub",
-    tip: "Discord privado del proyecto + GitHub issues públicos."
+    v: "Issues · Email prioritario Pro",
+    tip: "GitHub issues públicos en Free. Email prioritario incluido en Pro."
   },
   rt: {
     v: "Email"
@@ -1514,6 +1559,17 @@ const CMP_ROWS = [{
     v: "Email"
   }
 }];
+function TierBadge({
+  tier
+}) {
+  if (tier === "free") return /*#__PURE__*/React.createElement("span", {
+    className: "tier-badge tier-free"
+  }, "Free");
+  if (tier === "pro") return /*#__PURE__*/React.createElement("span", {
+    className: "tier-badge tier-pro"
+  }, "Pro");
+  return null;
+}
 function Cell({
   data,
   highlight
@@ -1526,6 +1582,8 @@ function Cell({
   }, /*#__PURE__*/React.createElement(Icon3.Check, {
     width: "14",
     height: "14"
+  }), /*#__PURE__*/React.createElement(TierBadge, {
+    tier: data.tier
   }), data.tip && /*#__PURE__*/React.createElement("span", {
     className: "tip"
   }, data.tip)) : data.no ? /*#__PURE__*/React.createElement("span", {
@@ -1535,7 +1593,9 @@ function Cell({
     height: "14"
   })) : /*#__PURE__*/React.createElement("span", {
     className: "cell"
-  }, data.v, data.tip && /*#__PURE__*/React.createElement("span", {
+  }, data.v, /*#__PURE__*/React.createElement(TierBadge, {
+    tier: data.tier
+  }), data.tip && /*#__PURE__*/React.createElement("span", {
     className: "tip"
   }, data.tip));
   return /*#__PURE__*/React.createElement("td", {
@@ -1589,13 +1649,68 @@ function Pricing() {
     className: "section-hed reveal"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h2"
-  }, "Beta Cerrada: \u20AC99 una vez. Despu\xE9s, \u20AC79/a\xF1o."), /*#__PURE__*/React.createElement("p", {
+  }, "Empieza gratis. Actualiza cuando quieras."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Quienes entren en beta se quedan en \u20AC99 para siempre \u2014 sin renovaci\xF3n. El precio anual es para quien llegue despu\xE9s del lanzamiento.")), /*#__PURE__*/React.createElement("div", {
-    className: "pricing-grid pricing-grid-single"
+  }, "Free para siempre con recuperaci\xF3n de carrito completa. Pro \u20AC49 pago \xFAnico para secuencias avanzadas y cupones autom\xE1ticos.")), /*#__PURE__*/React.createElement("div", {
+    className: "pricing-grid reveal",
+    "data-delay": "60"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "surface price-card founder reveal",
-    "data-delay": "80"
+    className: "surface price-card"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "top"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "badge"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "dot",
+    style: {
+      background: "var(--mint)"
+    }
+  }), "Disponible Q3 2026")), /*#__PURE__*/React.createElement("div", {
+    className: "price-num",
+    style: {
+      fontSize: 40
+    }
+  }, "Gratis"), /*#__PURE__*/React.createElement("div", {
+    className: "price-sub"
+  }, "para siempre \xB7 open source MIT"), /*#__PURE__*/React.createElement("ul", {
+    className: "price-list"
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Recuperaci\xF3n de carrito completa (1 mensaje \xB7 1h)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Multi-idioma: en_US \xB7 es_ES \xB7 es_MX \xB7 pt_BR"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Dashboard KPIs (enviados \xB7 recuperados \xB7 conversi\xF3n)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " GDPR opt-in nativo en checkout"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Widget flotante de WhatsApp"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Repo p\xFAblico MIT \u2014 c\xF3digo auditable")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 8
+    }
+  }, /*#__PURE__*/React.createElement(WaitlistForm, {
+    cta: "Solicitar acceso Beta"
+  }), /*#__PURE__*/React.createElement("p", {
+    className: "micro",
+    style: {
+      marginTop: 10
+    }
+  }, "Sin tarjeta. Sin compromiso. Te aviso cuando est\xE9 disponible."))), /*#__PURE__*/React.createElement("div", {
+    className: "surface price-card founder"
   }, /*#__PURE__*/React.createElement("div", {
     className: "top"
   }, /*#__PURE__*/React.createElement("span", {
@@ -1606,20 +1721,18 @@ function Pricing() {
       background: "var(--cyan)"
     }
   }), "Disponible Q3 2026"), /*#__PURE__*/React.createElement("span", {
-    className: "chip"
-  }, "Sin lista de espera de pago")), /*#__PURE__*/React.createElement("div", {
+    className: "chip chip-pro"
+  }, "Pro")), /*#__PURE__*/React.createElement("div", {
     className: "price-num"
-  }, "\u20AC99"), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC49"), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "pago \xFAnico \xB7 precio de beta cerrada"), /*#__PURE__*/React.createElement("div", {
-    className: "price-after-beta"
-  }, "Despu\xE9s del lanzamiento: ", /*#__PURE__*/React.createElement("b", null, "\u20AC79/a\xF1o"), " \xB7 Quien entre en beta, precio congelado."), /*#__PURE__*/React.createElement("ul", {
+  }, "pago \xFAnico \xB7 sin renovaci\xF3n"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Acceso completo al plugin al lanzar"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Todo lo de Free"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
@@ -1627,30 +1740,34 @@ function Pricing() {
     style: {
       color: "var(--text)"
     }
-  }, "1 a\xF1o de actualizaciones y soporte incluidos")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }, "Secuencia multi-mensaje: +24h con cup\xF3n \xB7 +48h recordatorio")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " El plugin funciona para siempre aunque no renueves"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Cupones din\xE1micos autom\xE1ticos (10% \xB7 1 uso \xB7 48h validez)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Repo p\xFAblico MIT \u2014 c\xF3digo auditable"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Exportaci\xF3n CSV de todas las recuperaciones"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Sin SaaS mensual, sin comisiones sobre ventas")), /*#__PURE__*/React.createElement("div", {
+  }), " Soporte prioritario por email"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Updates garantizados 1 a\xF1o")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 8
     }
   }, /*#__PURE__*/React.createElement(WaitlistForm, {
-    cta: "Solicitar acceso a la Beta Cerrada"
+    cta: "Solicitar acceso Beta Pro"
   }), /*#__PURE__*/React.createElement("p", {
     className: "micro",
     style: {
       marginTop: 10
     }
-  }, "Plazas limitadas a las primeras 50 tiendas. Te escribo una sola vez: cuando CartPinger abra la beta y cuando la licencia lifetime est\xE9 disponible."))))));
+  }, "Plazas limitadas a las primeras 50 tiendas. Pago \xFAnico al lanzar \u2014 no antes."))))));
 }
 
 /* ---------------- Roadmap ---------------- */
@@ -1725,7 +1842,7 @@ const FAQS = [{
   a: "No para empezar. Meta regala 1.000 conversaciones mensuales 100% gratis a cada cuenta Business. Para la inmensa mayoría de tiendas pequeñas y medianas, usar CartPinger tendrá un coste de 0€ al mes en la API de Meta."
 }, {
   q: "¿Solo envía un mensaje de recuperación o puedo configurar una secuencia?",
-  a: "En v1.0: un único mensaje WhatsApp exactamente 1 hora después del abandono. Es deliberado — es la franja de mayor conversión. Los flujos multi-mensaje (+24h, +72h con cupón) están en el roadmap para versiones posteriores."
+  a: "Free: un único mensaje 1 hora después del abandono — la franja de mayor conversión. Pro: secuencia completa de tres mensajes — inicial (1h), recordatorio con cupón dinámico del 10% (+24h) y recordatorio final (+48h)."
 }, {
   q: "¿Qué pasa si Meta no me aprueba como Business?",
   a: "El 95% de tiendas legítimas son aprobadas. Si tu tienda es legal y operativa, no debería haber problema. Te guío en cada paso con documentación detallada en GitHub. Si hay un problema, me escribes directamente."
@@ -1737,7 +1854,7 @@ const FAQS = [{
   a: "0€ a nosotros por mensajes. A Meta pagas según su pricing oficial. En España, un mensaje de carrito abandonado (categoría marketing) cuesta aproximadamente €0,08. Los primeros 1.000 mensajes al mes son gratis."
 }, {
   q: "¿Es open source de verdad?",
-  a: "Sí, MIT License. El código es libre y público desde día 1. Los €99 no son por la licencia del código, sino por el servicio: 1 año de actualizaciones, compatibilidad con nuevas versiones de WooCommerce, mantenimiento de la template Meta y soporte directo. El plugin seguirá funcionando aunque no renueves — simplemente no recibirás actualizaciones futuras."
+  a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€49 pago único) no es por la licencia del código, sino por las funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario."
 }, {
   q: "¿El plugin almacena datos de clientes en sus servidores?",
   a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código."
@@ -1781,10 +1898,10 @@ function FinalCTA() {
     className: "container"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h1 reveal"
-  }, "Beta: \u20AC99 una vez. Precio congelado para siempre."), /*#__PURE__*/React.createElement("p", {
+  }, "Empieza gratis. Actualiza cuando quieras."), /*#__PURE__*/React.createElement("p", {
     className: "lede reveal",
     "data-delay": "100"
-  }, "Despu\xE9s del lanzamiento sube a \u20AC79/a\xF1o. Los de beta no pagan m\xE1s nunca. Disponible Q3 2026."), /*#__PURE__*/React.createElement("div", {
+  }, "Free para siempre con recuperaci\xF3n completa. Pro \u20AC49 pago \xFAnico para secuencias y cupones autom\xE1ticos. Disponible Q3 2026."), /*#__PURE__*/React.createElement("div", {
     className: "reveal",
     "data-delay": "200",
     style: {
@@ -1794,7 +1911,7 @@ function FinalCTA() {
     }
   }, /*#__PURE__*/React.createElement(WaitlistForm, {
     size: "lg",
-    cta: "Solicitar acceso a la Beta Cerrada"
+    cta: "Apuntarme a la Beta"
   })), /*#__PURE__*/React.createElement("div", {
     className: "micro-row reveal",
     "data-delay": "400"
@@ -1806,7 +1923,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Sin pre-\xF3rdenes"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Free para siempre \xB7 sin tarjeta"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",
@@ -1814,7 +1931,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Un solo email cuando lance"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Pro \u20AC49 pago \xFAnico \xB7 sin SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",
@@ -1822,7 +1939,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Repo p\xFAblico en GitHub"))));
+  }), " Un solo email cuando lance"))));
 }
 
 /* ---------------- Footer ---------------- */

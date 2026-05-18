@@ -1130,7 +1130,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 99;
+  const wcTotal = 49;
   const diff = compTotal - wcTotal;
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
@@ -1221,7 +1221,7 @@ function Calculator() {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "CartPinger \xB7 lifetime license"), /*#__PURE__*/React.createElement("span", {
+  }, "CartPinger Pro \xB7 one-time"), /*#__PURE__*/React.createElement("span", {
     className: "v"
   }, "\u20AC99")), /*#__PURE__*/React.createElement("div", {
     className: "out-row"
@@ -1246,7 +1246,7 @@ function Calculator() {
     className: "bar wa"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
-  }, "CartPinger"), /*#__PURE__*/React.createElement("div", {
+  }, "CartPinger Pro"), /*#__PURE__*/React.createElement("div", {
     className: "track"
   }, /*#__PURE__*/React.createElement("div", {
     className: "fill",
@@ -1294,8 +1294,8 @@ const Icon3 = window.WCTop?.Icon;
 const CMP_ROWS = [{
   f: "Price",
   wc: {
-    v: "€99 lifetime",
-    tip: "One-time payment at launch. Lifetime access, no renewal."
+    v: "Free · Pro €49",
+    tip: "Free forever for core features. Pro €49 one-time: sequences, dynamic coupons, CSV, priority support."
   },
   rt: {
     v: "$14/mo",
@@ -1317,6 +1317,7 @@ const CMP_ROWS = [{
   f: "Abandoned cart via WhatsApp",
   wc: {
     yes: true,
+    tier: "free",
     tip: "WP-Cron detection 1h after abandonment. Meta-approved template."
   },
   rt: {
@@ -1335,10 +1336,11 @@ const CMP_ROWS = [{
     yes: true
   }
 }, {
-  f: "Pre-approved WhatsApp template",
+  f: "WhatsApp templates (4 languages)",
   wc: {
-    v: "EN (en_US)",
-    tip: "abandoned_cart_recovery template approved by Meta. More languages on roadmap."
+    v: "en_US · es_ES · es_MX · pt_BR",
+    tier: "free",
+    tip: "Meta-approved templates in English, Spanish (ES & MX), and Portuguese BR."
   },
   rt: {
     v: "EN",
@@ -1359,6 +1361,7 @@ const CMP_ROWS = [{
   f: "Native GDPR opt-in at checkout",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Checkbox injected into WooCommerce checkout. Immediate revocation in DB."
   },
   rt: {
@@ -1378,6 +1381,7 @@ const CMP_ROWS = [{
   f: "Webhook delivery logs",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Meta webhook validated with HMAC-SHA256. delivered/read/failed states by wamid."
   },
   rt: {
@@ -1395,9 +1399,9 @@ const CMP_ROWS = [{
 }, {
   f: "Meta onboarding wizard",
   wc: {
-    v: "✓ guided",
     yes: true,
-    tip: "Detailed documentation on GitHub + direct support."
+    tier: "free",
+    tip: "Detailed documentation at cartpinger.com/docs + direct support."
   },
   rt: {
     v: "Basic",
@@ -1416,6 +1420,7 @@ const CMP_ROWS = [{
   f: "Built-in cost calculator",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Estimate your Meta bill before sending."
   },
   rt: {
@@ -1431,10 +1436,10 @@ const CMP_ROWS = [{
     no: true
   }
 }, {
-  f: "Open source",
+  f: "Open source MIT",
   wc: {
-    v: "✓ MIT",
     yes: true,
+    tier: "free",
     tip: "Public repo from day 1, auditable and forkable code."
   },
   rt: {
@@ -1453,6 +1458,7 @@ const CMP_ROWS = [{
   f: "Your own number (BYO-WABA)",
   wc: {
     yes: true,
+    tier: "free",
     tip: "Connect your own Meta WABA. Your brand, your data."
   },
   rt: {
@@ -1468,28 +1474,67 @@ const CMP_ROWS = [{
     yes: true
   }
 }, {
-  f: "Target markets",
+  f: "Multi-message sequence (+24h with coupon · +48h)",
   wc: {
-    v: "LATAM · ES · global",
-    tip: "Spanish support and localized documentation. Global via plugin."
+    yes: true,
+    tier: "pro",
+    tip: "Automatic flow: initial message (1h) + coupon reminder (24h) + final reminder (48h)."
   },
   rt: {
-    v: "Global"
+    yes: true
   },
   ai: {
-    v: "India · global"
+    yes: true
   },
   nf: {
-    v: "India · global"
+    no: true
   },
   np: {
-    v: "India · global"
+    yes: true
+  }
+}, {
+  f: "Automatic dynamic coupons",
+  wc: {
+    yes: true,
+    tier: "pro",
+    tip: "10% discount coupon, single-use, 48h validity. Auto-generated and attached to the +24h message."
+  },
+  rt: {
+    yes: true
+  },
+  ai: {
+    v: "Partial"
+  },
+  nf: {
+    no: true
+  },
+  np: {
+    yes: true
+  }
+}, {
+  f: "CSV export",
+  wc: {
+    yes: true,
+    tier: "pro",
+    tip: "Full export of recoveries: email, cart, token, status, timestamp."
+  },
+  rt: {
+    yes: true
+  },
+  ai: {
+    no: true
+  },
+  nf: {
+    no: true
+  },
+  np: {
+    yes: true
   }
 }, {
   f: "Support",
   wc: {
-    v: "Email · Discord · GitHub",
-    tip: "Private project Discord + public GitHub issues."
+    v: "Issues · Priority email Pro",
+    tip: "Public GitHub issues on Free. Priority email support included in Pro."
   },
   rt: {
     v: "Email"
@@ -1504,6 +1549,17 @@ const CMP_ROWS = [{
     v: "Email"
   }
 }];
+function TierBadge({
+  tier
+}) {
+  if (tier === "free") return /*#__PURE__*/React.createElement("span", {
+    className: "tier-badge tier-free"
+  }, "Free");
+  if (tier === "pro") return /*#__PURE__*/React.createElement("span", {
+    className: "tier-badge tier-pro"
+  }, "Pro");
+  return null;
+}
 function Cell({
   data,
   highlight
@@ -1516,6 +1572,8 @@ function Cell({
   }, /*#__PURE__*/React.createElement(Icon3.Check, {
     width: "14",
     height: "14"
+  }), /*#__PURE__*/React.createElement(TierBadge, {
+    tier: data.tier
   }), data.tip && /*#__PURE__*/React.createElement("span", {
     className: "tip"
   }, data.tip)) : data.no ? /*#__PURE__*/React.createElement("span", {
@@ -1525,7 +1583,9 @@ function Cell({
     height: "14"
   })) : /*#__PURE__*/React.createElement("span", {
     className: "cell"
-  }, data.v, data.tip && /*#__PURE__*/React.createElement("span", {
+  }, data.v, /*#__PURE__*/React.createElement(TierBadge, {
+    tier: data.tier
+  }), data.tip && /*#__PURE__*/React.createElement("span", {
     className: "tip"
   }, data.tip));
   return /*#__PURE__*/React.createElement("td", {
@@ -1579,13 +1639,68 @@ function Pricing() {
     className: "section-hed reveal"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h2"
-  }, "Closed Beta: \u20AC99 once. Then \u20AC79/year."), /*#__PURE__*/React.createElement("p", {
+  }, "Start free. Upgrade whenever you want."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Beta members lock in \u20AC99 forever \u2014 no renewal. The annual price is for those who join after launch.")), /*#__PURE__*/React.createElement("div", {
-    className: "pricing-grid pricing-grid-single"
+  }, "Free forever with full cart recovery. Pro \u20AC49 one-time for advanced sequences and automatic coupons.")), /*#__PURE__*/React.createElement("div", {
+    className: "pricing-grid reveal",
+    "data-delay": "60"
   }, /*#__PURE__*/React.createElement("div", {
-    className: "surface price-card founder reveal",
-    "data-delay": "80"
+    className: "surface price-card"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "top"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "badge"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "dot",
+    style: {
+      background: "var(--mint)"
+    }
+  }), "Available Q3 2026")), /*#__PURE__*/React.createElement("div", {
+    className: "price-num",
+    style: {
+      fontSize: 40
+    }
+  }, "Free"), /*#__PURE__*/React.createElement("div", {
+    className: "price-sub"
+  }, "forever \xB7 open source MIT"), /*#__PURE__*/React.createElement("ul", {
+    className: "price-list"
+  }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Full cart recovery (1 message \xB7 1h after abandonment)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Multi-language: en_US \xB7 es_ES \xB7 es_MX \xB7 pt_BR"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " KPI dashboard (sent \xB7 recovered \xB7 conversion rate)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Native GDPR opt-in at checkout"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " Floating WhatsApp widget"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " MIT public repo \u2014 auditable code")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: 8
+    }
+  }, /*#__PURE__*/React.createElement(WaitlistForm, {
+    cta: "Request Beta Access"
+  }), /*#__PURE__*/React.createElement("p", {
+    className: "micro",
+    style: {
+      marginTop: 10
+    }
+  }, "No card. No commitment. I'll notify you when it's available."))), /*#__PURE__*/React.createElement("div", {
+    className: "surface price-card founder"
   }, /*#__PURE__*/React.createElement("div", {
     className: "top"
   }, /*#__PURE__*/React.createElement("span", {
@@ -1596,20 +1711,18 @@ function Pricing() {
       background: "var(--cyan)"
     }
   }), "Available Q3 2026"), /*#__PURE__*/React.createElement("span", {
-    className: "chip"
-  }, "No paid waitlist")), /*#__PURE__*/React.createElement("div", {
+    className: "chip chip-pro"
+  }, "Pro")), /*#__PURE__*/React.createElement("div", {
     className: "price-num"
-  }, "\u20AC99"), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC49"), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "one-time \xB7 closed beta price"), /*#__PURE__*/React.createElement("div", {
-    className: "price-after-beta"
-  }, "After launch: ", /*#__PURE__*/React.createElement("b", null, "\u20AC79/year"), " \xB7 Beta members, price locked forever."), /*#__PURE__*/React.createElement("ul", {
+  }, "one-time \xB7 no renewal"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Full plugin access at launch"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Everything in Free"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
@@ -1617,30 +1730,34 @@ function Pricing() {
     style: {
       color: "var(--text)"
     }
-  }, "1 year of updates and support included")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }, "Multi-message sequence: +24h with coupon \xB7 +48h reminder")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Plugin works forever even if you don't renew"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Automatic dynamic coupons (10% \xB7 single-use \xB7 48h validity)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " MIT public repo \u2014 auditable code"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " CSV export of all recoveries"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " No monthly SaaS, no sales commissions")), /*#__PURE__*/React.createElement("div", {
+  }), " Priority email support"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+    className: "ch",
+    width: "16",
+    height: "16"
+  }), " 1 year guaranteed updates")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 8
     }
   }, /*#__PURE__*/React.createElement(WaitlistForm, {
-    cta: "Request Closed Beta Access"
+    cta: "Request Beta Pro Access"
   }), /*#__PURE__*/React.createElement("p", {
     className: "micro",
     style: {
       marginTop: 10
     }
-  }, "Limited to the first 50 stores. I'll email you once: when CartPinger opens the beta and when the lifetime license is available."))))));
+  }, "Limited to the first 50 stores. One-time payment at launch \u2014 not before."))))));
 }
 
 /* ---------------- Roadmap ---------------- */
@@ -1715,7 +1832,7 @@ const FAQS = [{
   a: "Not to get started. Meta gives every Business account 1,000 free conversations per month. For the vast majority of small and medium stores, using CartPinger will cost €0/month in Meta API fees."
 }, {
   q: "Does it only send one recovery message, or can I set up a sequence?",
-  a: "In v1.0: a single WhatsApp message exactly 1 hour after abandonment. This is deliberate — it's the highest-conversion window. Multi-message flows (+24h, +72h with coupon) are on the roadmap for future versions."
+  a: "Free: a single message 1 hour after abandonment — the highest-conversion window. Pro: a full three-message sequence — initial (1h), coupon reminder with 10% discount (+24h), and final reminder (+48h)."
 }, {
   q: "What if Meta doesn't approve my business?",
   a: "95% of legitimate stores are approved. If your store is legal and operational, there shouldn't be a problem. I guide you through every step with detailed documentation on GitHub. If something goes wrong, reach out directly."
@@ -1727,7 +1844,7 @@ const FAQS = [{
   a: "€0 to us per message. You pay Meta at their official pricing. In the US, an abandoned cart message (marketing category) costs approximately $0.025. The first 1,000 messages per month are free."
 }, {
   q: "Is it really open source?",
-  a: "Yes, MIT License. The code is free and public from day 1. The €99 is not for the code license — it's for the service: 1 year of updates, compatibility with new WooCommerce versions, Meta template maintenance, and direct support. The plugin keeps working even if you don't renew — you just won't receive future updates."
+  a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€49 one-time) is not for the code license — it unlocks the advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support."
 }, {
   q: "Does the plugin store customer data on its servers?",
   a: "No. CartPinger has no servers of its own. It runs entirely on your WordPress. Your customers' data (phone, cart, recovery token) is stored in your local MySQL database. We only provide the code."
@@ -1771,10 +1888,10 @@ function FinalCTA() {
     className: "container"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h1 reveal"
-  }, "Beta: \u20AC99 once. Price locked forever."), /*#__PURE__*/React.createElement("p", {
+  }, "Start free. Upgrade whenever you want."), /*#__PURE__*/React.createElement("p", {
     className: "lede reveal",
     "data-delay": "100"
-  }, "After launch it goes up to \u20AC79/year. Beta members never pay more. Available Q3 2026."), /*#__PURE__*/React.createElement("div", {
+  }, "Free forever with full recovery. Pro \u20AC49 one-time for sequences and automatic coupons. Available Q3 2026."), /*#__PURE__*/React.createElement("div", {
     className: "reveal",
     "data-delay": "200",
     style: {
@@ -1784,7 +1901,7 @@ function FinalCTA() {
     }
   }, /*#__PURE__*/React.createElement(WaitlistForm, {
     size: "lg",
-    cta: "Request Closed Beta Access"
+    cta: "Join the Beta"
   })), /*#__PURE__*/React.createElement("div", {
     className: "micro-row reveal",
     "data-delay": "400"
@@ -1796,7 +1913,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " No pre-orders"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Free forever \xB7 no card"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",
@@ -1804,7 +1921,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " One email when it launches"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Pro \u20AC49 one-time \xB7 no SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",
@@ -1812,7 +1929,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Public repo on GitHub"))));
+  }), " One email when it launches"))));
 }
 
 /* ---------------- Footer ---------------- */

@@ -590,6 +590,13 @@ input[type="range"]::-moz-range-thumb {
 .founder-quote footer { display: flex; flex-direction: column; gap: 2px; }
 .fq-name { font-size: 13px; font-weight: 600; color: var(--text-1); }
 .fq-role { font-size: 12px; color: var(--text-3); }
+/* Tier badges in comparison table */
+.tier-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 4px; margin-left: 5px; vertical-align: 1px; letter-spacing: .3px; }
+.tier-free { background: rgba(0,229,160,0.12); color: var(--mint); }
+.tier-pro  { background: rgba(0,180,255,0.12); color: var(--cyan); }
+/* Pro chip in pricing card header */
+.chip-pro { background: rgba(0,180,255,0.12); color: var(--cyan); border-color: rgba(0,180,255,0.25); }
+
 .price-list { list-style: none; padding: 0; margin: 24px 0 28px; display: grid; gap: 10px; position: relative; }
 .price-list li { display: flex; gap: 10px; font-size: 14px; color: var(--text-2); }
 .price-list li .ch { color: var(--wa); flex-shrink: 0; margin-top: 3px; }

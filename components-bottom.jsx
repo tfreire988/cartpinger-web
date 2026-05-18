@@ -5,68 +5,82 @@ const Icon3 = window.WCTop?.Icon;
 /* ---------------- Comparison ---------------- */
 const CMP_ROWS = [
   { f: "Precio",
-    wc: { v: "€99 lifetime", tip: "Pago único al lanzar. Acceso de por vida, sin renovación." },
-    rt: { v: "$14/mes",      tip: "≈ €156/año recurrente." },
-    ai: { v: "$25/mes",      tip: "≈ €280/año recurrente, plan estándar." },
-    nf: { v: "Gratis",       tip: "Plan limitado con marca Notiqoo en mensajes." },
-    np: { v: "$39/mes",      tip: "≈ €436/año plan Pro." },
+    wc: { v: "Gratis · Pro €49", tip: "Free para siempre con funciones core. Pro €49 pago único: secuencias, cupones dinámicos, CSV y soporte prioritario." },
+    rt: { v: "$14/mes",  tip: "≈ €156/año recurrente." },
+    ai: { v: "$25/mes",  tip: "≈ €280/año recurrente, plan estándar." },
+    nf: { v: "Gratis",   tip: "Plan limitado con marca Notiqoo en mensajes." },
+    np: { v: "$39/mes",  tip: "≈ €436/año plan Pro." },
   },
   { f: "Carrito abandonado WhatsApp",
-    wc: { yes: true, tip: "Detección via WP-Cron 1h tras abandono. Template aprobada por Meta." },
+    wc: { yes: true, tier: "free", tip: "Detección via WP-Cron 1h tras abandono. Template aprobada por Meta." },
     rt: { yes: true, tip: "Feature core de Retainful." },
     ai: { yes: true, tip: "Soporte para flows de carrito." },
     nf: { v: "Limitado", tip: "Sólo 1 mensaje en plan free." },
     np: { yes: true },
   },
-  { f: "Template WhatsApp pre-aprobada",
-    wc: { v: "EN (en_US)", tip: "Template abandoned_cart_recovery aprobada por Meta. Más idiomas en roadmap." },
-    rt: { v: "EN",        tip: "Templates principalmente en inglés." },
-    ai: { v: "EN, HI",    tip: "Foco India + inglés." },
-    nf: { v: "Limitado",  tip: "1–2 templates genéricas." },
+  { f: "Templates WhatsApp (4 idiomas)",
+    wc: { v: "en_US · es_ES · es_MX · pt_BR", tier: "free", tip: "Templates aprobadas por Meta en inglés, español (ES y MX) y portugués BR." },
+    rt: { v: "EN",       tip: "Templates principalmente en inglés." },
+    ai: { v: "EN, HI",   tip: "Foco India + inglés." },
+    nf: { v: "Limitado", tip: "1–2 templates genéricas." },
     np: { v: "EN, HI" },
   },
   { f: "GDPR opt-in nativo en checkout",
-    wc: { yes: true, tip: "Checkbox inyectado en WooCommerce checkout. Revocación inmediata en DB." },
+    wc: { yes: true, tier: "free", tip: "Checkbox inyectado en WooCommerce checkout. Revocación inmediata en DB." },
     rt: { v: "Parcial", tip: "Depende de plugins de privacidad externos." },
     ai: { no: true },
     nf: { no: true },
     np: { v: "Parcial" },
   },
   { f: "Logs de entrega webhook",
-    wc: { yes: true, tip: "Webhook Meta validado con HMAC-SHA256. Estados delivered/read/failed por wamid." },
+    wc: { yes: true, tier: "free", tip: "Webhook Meta validado con HMAC-SHA256. Estados delivered/read/failed por wamid." },
     rt: { v: "Básico" },
     ai: { yes: true },
     nf: { no: true },
     np: { yes: true },
   },
   { f: "Wizard onboarding Meta",
-    wc: { v: "✓ guiado", yes: true, tip: "Documentación detallada en GitHub + soporte directo." },
-    rt: { v: "Básico",   tip: "Docs escritos, sin vídeo guiado." },
+    wc: { yes: true, tier: "free", tip: "Documentación detallada en cartpinger.com/docs + soporte directo." },
+    rt: { v: "Básico", tip: "Docs escritos, sin vídeo guiado." },
     ai: { yes: true },
     nf: { no: true },
     np: { v: "Básico" },
   },
   { f: "Calculadora costes integrada",
-    wc: { yes: true, tip: "Estimas tu factura Meta antes de enviar." },
+    wc: { yes: true, tier: "free", tip: "Estimas tu factura Meta antes de enviar." },
     rt: { no: true }, ai: { no: true }, nf: { no: true }, np: { no: true },
   },
-  { f: "Open source",
-    wc: { v: "✓ MIT", yes: true, tip: "Repo público desde día 1, código auditable, forkeable." },
+  { f: "Open source MIT",
+    wc: { yes: true, tier: "free", tip: "Repo público desde día 1, código auditable, forkeable." },
     rt: { no: true }, ai: { no: true }, nf: { no: true }, np: { no: true },
   },
   { f: "Tu propio número (BYO-WABA)",
-    wc: { yes: true, tip: "Conectas tu propio Meta WABA. Tu marca, tu data." },
+    wc: { yes: true, tier: "free", tip: "Conectas tu propio Meta WABA. Tu marca, tu data." },
     rt: { yes: true }, ai: { yes: true }, nf: { yes: true }, np: { yes: true },
   },
-  { f: "Mercados foco",
-    wc: { v: "LATAM · ES · global", tip: "Soporte en español y documentación localizada. Global vía plugin." },
-    rt: { v: "Global" },
-    ai: { v: "India · global" },
-    nf: { v: "India · global" },
-    np: { v: "India · global" },
+  { f: "Secuencia multi-mensaje (+24h con cupón · +48h)",
+    wc: { yes: true, tier: "pro", tip: "Flujo automático: mensaje inicial 1h + recordatorio 24h con cupón dinámico + recordatorio final 48h." },
+    rt: { yes: true },
+    ai: { yes: true },
+    nf: { no: true },
+    np: { yes: true },
+  },
+  { f: "Cupones dinámicos automáticos",
+    wc: { yes: true, tier: "pro", tip: "Cupón 10% descuento, un solo uso, validez 48h. Generado y adjuntado automáticamente al mensaje +24h." },
+    rt: { yes: true },
+    ai: { v: "Parcial" },
+    nf: { no: true },
+    np: { yes: true },
+  },
+  { f: "Exportación CSV",
+    wc: { yes: true, tier: "pro", tip: "Export completo de recuperaciones: email, carrito, token, estado, timestamp." },
+    rt: { yes: true },
+    ai: { no: true },
+    nf: { no: true },
+    np: { yes: true },
   },
   { f: "Soporte",
-    wc: { v: "Email · Discord · GitHub", tip: "Discord privado del proyecto + GitHub issues públicos." },
+    wc: { v: "Issues · Email prioritario Pro", tip: "GitHub issues públicos en Free. Email prioritario incluido en Pro." },
     rt: { v: "Email" },
     ai: { v: "Email · chat" },
     nf: { v: "Email" },
@@ -74,13 +88,19 @@ const CMP_ROWS = [
   },
 ];
 
+function TierBadge({ tier }) {
+  if (tier === "free") return <span className="tier-badge tier-free">Free</span>;
+  if (tier === "pro")  return <span className="tier-badge tier-pro">Pro</span>;
+  return null;
+}
+
 function Cell({ data, highlight }) {
   if (!data) return <td className={highlight ? "wcol" : ""}>—</td>;
   const inner = data.yes && !data.v
-    ? <span className="cell yes"><Icon3.Check width="14" height="14"/>{data.tip && <span className="tip">{data.tip}</span>}</span>
+    ? <span className="cell yes"><Icon3.Check width="14" height="14"/><TierBadge tier={data.tier}/>{data.tip && <span className="tip">{data.tip}</span>}</span>
     : data.no
     ? <span className="cell no"><Icon3.X width="14" height="14"/></span>
-    : <span className="cell">{data.v}{data.tip && <span className="tip">{data.tip}</span>}</span>;
+    : <span className="cell">{data.v}<TierBadge tier={data.tier}/>{data.tip && <span className="tip">{data.tip}</span>}</span>;
   return <td className={highlight ? "wcol" : ""}>{inner}</td>;
 }
 
@@ -130,38 +150,69 @@ function Pricing() {
     <section className="section" id="precio">
       <div className="container">
         <div className="section-hed reveal">
-          <h2 className="h2">Beta Cerrada: €99 una vez. Después, €79/año.</h2>
-          <p className="lede">Quienes entren en beta se quedan en €99 para siempre — sin renovación. El precio anual es para quien llegue después del lanzamiento.</p>
+          <h2 className="h2">Empieza gratis. Actualiza cuando quieras.</h2>
+          <p className="lede">Free para siempre con recuperación de carrito completa. Pro €49 pago único para secuencias avanzadas y cupones automáticos.</p>
         </div>
 
-        <div className="pricing-grid pricing-grid-single">
-          <div className="surface price-card founder reveal" data-delay="80">
+        <div className="pricing-grid reveal" data-delay="60">
+
+          {/* Free tier */}
+          <div className="surface price-card">
+            <div className="top">
+              <span className="badge">
+                <span className="dot" style={{ background: "var(--mint)" }}/>
+                Disponible Q3 2026
+              </span>
+            </div>
+            <div className="price-num" style={{ fontSize: 40 }}>Gratis</div>
+            <div className="price-sub">para siempre · open source MIT</div>
+
+            <ul className="price-list">
+              <li><Icon3.Check className="ch" width="16" height="16"/> Recuperación de carrito completa (1 mensaje · 1h)</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Multi-idioma: en_US · es_ES · es_MX · pt_BR</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Dashboard KPIs (enviados · recuperados · conversión)</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> GDPR opt-in nativo en checkout</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Widget flotante de WhatsApp</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Repo público MIT — código auditable</li>
+            </ul>
+
+            <div style={{ marginTop: 8 }}>
+              <WaitlistForm cta="Solicitar acceso Beta"/>
+              <p className="micro" style={{ marginTop: 10 }}>
+                Sin tarjeta. Sin compromiso. Te aviso cuando esté disponible.
+              </p>
+            </div>
+          </div>
+
+          {/* Pro tier */}
+          <div className="surface price-card founder">
             <div className="top">
               <span className="badge">
                 <span className="dot" style={{ background: "var(--cyan)" }}/>
                 Disponible Q3 2026
               </span>
-              <span className="chip">Sin lista de espera de pago</span>
+              <span className="chip chip-pro">Pro</span>
             </div>
-            <div className="price-num">€99</div>
-            <div className="price-sub">pago único · precio de beta cerrada</div>
-            <div className="price-after-beta">Después del lanzamiento: <b>€79/año</b> · Quien entre en beta, precio congelado.</div>
+            <div className="price-num">€49</div>
+            <div className="price-sub">pago único · sin renovación</div>
 
             <ul className="price-list">
-              <li><Icon3.Check className="ch" width="16" height="16"/> Acceso completo al plugin al lanzar</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> <b style={{color:"var(--text)"}}>1 año de actualizaciones y soporte incluidos</b></li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> El plugin funciona para siempre aunque no renueves</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> Repo público MIT — código auditable</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> Sin SaaS mensual, sin comisiones sobre ventas</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Todo lo de Free</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> <b style={{color:"var(--text)"}}>Secuencia multi-mensaje: +24h con cupón · +48h recordatorio</b></li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Cupones dinámicos automáticos (10% · 1 uso · 48h validez)</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Exportación CSV de todas las recuperaciones</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Soporte prioritario por email</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Updates garantizados 1 año</li>
             </ul>
 
             <div style={{ marginTop: 8 }}>
-              <WaitlistForm cta="Solicitar acceso a la Beta Cerrada"/>
+              <WaitlistForm cta="Solicitar acceso Beta Pro"/>
               <p className="micro" style={{ marginTop: 10 }}>
-                Plazas limitadas a las primeras 50 tiendas. Te escribo una sola vez: cuando CartPinger abra la beta y cuando la licencia lifetime esté disponible.
+                Plazas limitadas a las primeras 50 tiendas. Pago único al lanzar — no antes.
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -238,7 +289,7 @@ const FAQS = [
   { q: "¿Tengo que pagar a Meta por enviar WhatsApps?",
     a: "No para empezar. Meta regala 1.000 conversaciones mensuales 100% gratis a cada cuenta Business. Para la inmensa mayoría de tiendas pequeñas y medianas, usar CartPinger tendrá un coste de 0€ al mes en la API de Meta." },
   { q: "¿Solo envía un mensaje de recuperación o puedo configurar una secuencia?",
-    a: "En v1.0: un único mensaje WhatsApp exactamente 1 hora después del abandono. Es deliberado — es la franja de mayor conversión. Los flujos multi-mensaje (+24h, +72h con cupón) están en el roadmap para versiones posteriores." },
+    a: "Free: un único mensaje 1 hora después del abandono — la franja de mayor conversión. Pro: secuencia completa de tres mensajes — inicial (1h), recordatorio con cupón dinámico del 10% (+24h) y recordatorio final (+48h)." },
   { q: "¿Qué pasa si Meta no me aprueba como Business?",
     a: "El 95% de tiendas legítimas son aprobadas. Si tu tienda es legal y operativa, no debería haber problema. Te guío en cada paso con documentación detallada en GitHub. Si hay un problema, me escribes directamente." },
   { q: "¿Y si no llego a tiempo para mi campaña actual?",
@@ -246,7 +297,7 @@ const FAQS = [
   { q: "¿Cuánto pago a Meta por mensaje?",
     a: "0€ a nosotros por mensajes. A Meta pagas según su pricing oficial. En España, un mensaje de carrito abandonado (categoría marketing) cuesta aproximadamente €0,08. Los primeros 1.000 mensajes al mes son gratis." },
   { q: "¿Es open source de verdad?",
-    a: "Sí, MIT License. El código es libre y público desde día 1. Los €99 no son por la licencia del código, sino por el servicio: 1 año de actualizaciones, compatibilidad con nuevas versiones de WooCommerce, mantenimiento de la template Meta y soporte directo. El plugin seguirá funcionando aunque no renueves — simplemente no recibirás actualizaciones futuras." },
+    a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€49 pago único) no es por la licencia del código, sino por las funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario." },
   { q: "¿El plugin almacena datos de clientes en sus servidores?",
     a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código." },
   { q: "¿Funciona con block-based checkout?",
@@ -282,15 +333,15 @@ function FinalCTA() {
   return (
     <section className="final" id="cta">
       <div className="container">
-        <h2 className="h1 reveal">Beta: €99 una vez. Precio congelado para siempre.</h2>
-        <p className="lede reveal" data-delay="100">Después del lanzamiento sube a €79/año. Los de beta no pagan más nunca. Disponible Q3 2026.</p>
+        <h2 className="h1 reveal">Empieza gratis. Actualiza cuando quieras.</h2>
+        <p className="lede reveal" data-delay="100">Free para siempre con recuperación completa. Pro €49 pago único para secuencias y cupones automáticos. Disponible Q3 2026.</p>
         <div className="reveal" data-delay="200" style={{ display: "flex", justifyContent: "center", marginTop: 14 }}>
-          <WaitlistForm size="lg" cta="Solicitar acceso a la Beta Cerrada"/>
+          <WaitlistForm size="lg" cta="Apuntarme a la Beta"/>
         </div>
         <div className="micro-row reveal" data-delay="400">
-          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Sin pre-órdenes</span>
+          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Free para siempre · sin tarjeta</span>
+          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Pro €49 pago único · sin SaaS</span>
           <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Un solo email cuando lance</span>
-          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Repo público en GitHub</span>
         </div>
       </div>
     </section>
