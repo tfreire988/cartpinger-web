@@ -40,7 +40,7 @@ const CMP_ROWS = [
     np: { yes: true },
   },
   { f: "Meta onboarding wizard",
-    wc: { yes: true, tier: "free", tip: "Detailed documentation at cartpinger.com/docs + direct support." },
+    wc: { yes: true, tier: "free", tip: "Detailed documentation on GitHub + direct support." },
     rt: { v: "Basic", tip: "Written docs, no guided video." },
     ai: { yes: true },
     nf: { no: true },
@@ -375,7 +375,7 @@ function Footer() {
             <h5>Resources</h5>
             <ul>
               <li><a href="#faq">FAQ</a></li>
-              <li><a href="https://cartpinger.com/docs" target="_blank" rel="noopener">Documentation <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
+              <li><a href="https://github.com/tfreire988/whatscom/blob/main/documentation.md" target="_blank" rel="noopener">Documentation <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
               <li><a href="mailto:info@cartpinger.com">Support</a></li>
               <li><a href="#tech">Architecture</a></li>
             </ul>
