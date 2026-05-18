@@ -1553,9 +1553,9 @@ function Pricing() {
     className: "section-hed reveal"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h2"
-  }, "Pago \xFAnico. \u20AC99 lifetime. Cuando est\xE9 listo."), /*#__PURE__*/React.createElement("p", {
+  }, "Beta Cerrada: \u20AC99 una vez. Despu\xE9s, \u20AC79/a\xF1o."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Construy\xE9ndose en p\xFAblico. Sin pre-\xF3rdenes. Cuando est\xE9 listo, lo anuncio aqu\xED.")), /*#__PURE__*/React.createElement("div", {
+  }, "Quienes entren en beta se quedan en \u20AC99 para siempre \u2014 sin renovaci\xF3n. El precio anual es para quien llegue despu\xE9s del lanzamiento.")), /*#__PURE__*/React.createElement("div", {
     className: "pricing-grid pricing-grid-single"
   }, /*#__PURE__*/React.createElement("div", {
     className: "surface price-card founder reveal",
@@ -1741,10 +1741,10 @@ function FinalCTA() {
     className: "container"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h1 reveal"
-  }, "Pagas una vez. Lo usas para siempre. Sin SaaS."), /*#__PURE__*/React.createElement("p", {
+  }, "Beta: \u20AC99 una vez. Precio congelado para siempre."), /*#__PURE__*/React.createElement("p", {
     className: "lede reveal",
     "data-delay": "100"
-  }, "\u20AC99 lifetime \xB7 disponible Q3 2026 \xB7 te aviso cuando lance."), /*#__PURE__*/React.createElement("div", {
+  }, "Despu\xE9s del lanzamiento sube a \u20AC79/a\xF1o. Los de beta no pagan m\xE1s nunca. Disponible Q3 2026."), /*#__PURE__*/React.createElement("div", {
     className: "reveal",
     "data-delay": "200",
     style: {

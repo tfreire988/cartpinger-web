@@ -130,8 +130,8 @@ function Pricing() {
     <section className="section" id="precio">
       <div className="container">
         <div className="section-hed reveal">
-          <h2 className="h2">Pago único. €99 lifetime. Cuando esté listo.</h2>
-          <p className="lede">Construyéndose en público. Sin pre-órdenes. Cuando esté listo, lo anuncio aquí.</p>
+          <h2 className="h2">Beta Cerrada: €99 una vez. Después, €79/año.</h2>
+          <p className="lede">Quienes entren en beta se quedan en €99 para siempre — sin renovación. El precio anual es para quien llegue después del lanzamiento.</p>
         </div>
 
         <div className="pricing-grid pricing-grid-single">
@@ -282,8 +282,8 @@ function FinalCTA() {
   return (
     <section className="final" id="cta">
       <div className="container">
-        <h2 className="h1 reveal">Pagas una vez. Lo usas para siempre. Sin SaaS.</h2>
-        <p className="lede reveal" data-delay="100">€99 lifetime · disponible Q3 2026 · te aviso cuando lance.</p>
+        <h2 className="h1 reveal">Beta: €99 una vez. Precio congelado para siempre.</h2>
+        <p className="lede reveal" data-delay="100">Después del lanzamiento sube a €79/año. Los de beta no pagan más nunca. Disponible Q3 2026.</p>
         <div className="reveal" data-delay="200" style={{ display: "flex", justifyContent: "center", marginTop: 14 }}>
           <WaitlistForm size="lg" cta="Solicitar acceso a la Beta Cerrada"/>
         </div>
