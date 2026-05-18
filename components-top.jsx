@@ -360,8 +360,7 @@ function FounderQuote() {
             con el código auditable en GitHub. Eso es CartPinger."
           </p>
           <footer>
-            <span className="fq-name">Telmo Freire</span>
-            <span className="fq-role">Fundador · CartPinger</span>
+            <span className="fq-name">Fundador · CartPinger</span>
           </footer>
         </blockquote>
       </div>

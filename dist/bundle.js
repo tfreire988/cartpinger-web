@@ -584,8 +584,6 @@ function FounderQuote() {
     className: "founder-quote"
   }, /*#__PURE__*/React.createElement("p", null, "\"Ten\xEDa una tienda WooCommerce. Los plugins de carrito abandonado que prob\xE9 o cobraban 30\u20AC/mes o mandaban el WhatsApp desde un n\xFAmero gen\xE9rico con su marca. Decid\xED construir lo que necesitaba: env\xEDo desde mi propio n\xFAmero, sin SaaS mensual, con el c\xF3digo auditable en GitHub. Eso es CartPinger.\""), /*#__PURE__*/React.createElement("footer", null, /*#__PURE__*/React.createElement("span", {
     className: "fq-name"
-  }, "Telmo Freire"), /*#__PURE__*/React.createElement("span", {
-    className: "fq-role"
   }, "Fundador \xB7 CartPinger")))));
 }
 window.WCTop = {

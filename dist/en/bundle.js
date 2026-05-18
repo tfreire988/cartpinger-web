@@ -576,8 +576,6 @@ function FounderQuote() {
     className: "founder-quote"
   }, /*#__PURE__*/React.createElement("p", null, "\"I had a WooCommerce store. The abandoned cart plugins I tried either charged \u20AC30/month or sent the WhatsApp from a generic number with their own branding. So I built what I actually needed: messages from my own number, no monthly SaaS, with the code auditable on GitHub from day one. That's CartPinger.\""), /*#__PURE__*/React.createElement("footer", null, /*#__PURE__*/React.createElement("span", {
     className: "fq-name"
-  }, "Telmo Freire"), /*#__PURE__*/React.createElement("span", {
-    className: "fq-role"
   }, "Founder \xB7 CartPinger")))));
 }
 window.WCTop = {

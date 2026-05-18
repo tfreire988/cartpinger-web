@@ -349,8 +349,7 @@ function FounderQuote() {
             with the code auditable on GitHub from day one. That's CartPinger."
           </p>
           <footer>
-            <span className="fq-name">Telmo Freire</span>
-            <span className="fq-role">Founder · CartPinger</span>
+            <span className="fq-name">Founder · CartPinger</span>
           </footer>
         </blockquote>
       </div>
