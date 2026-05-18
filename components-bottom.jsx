@@ -5,7 +5,7 @@ const Icon3 = window.WCTop?.Icon;
 /* ---------------- Comparison ---------------- */
 const CMP_ROWS = [
   { f: "Precio",
-    wc: { v: "Gratis · Pro €49", tip: "Free para siempre con funciones core. Pro €49 pago único: secuencias, cupones dinámicos, CSV y soporte prioritario." },
+    wc: { v: "Gratis · Pro €79", tip: "Free para siempre hasta 50 recuperaciones/mes. Pro €79 pago único: sin límite + secuencias, cupones dinámicos, CSV y soporte prioritario." },
     rt: { v: "$14/mes",  tip: "≈ €156/año recurrente." },
     ai: { v: "$25/mes",  tip: "≈ €280/año recurrente, plan estándar." },
     nf: { v: "Gratis",   tip: "Plan limitado con marca Notiqoo en mensajes." },
@@ -151,7 +151,7 @@ function Pricing() {
       <div className="container">
         <div className="section-hed reveal">
           <h2 className="h2">Empieza gratis. Actualiza cuando quieras.</h2>
-          <p className="lede">Free para siempre con recuperación de carrito completa. Pro €49 pago único para secuencias avanzadas y cupones automáticos.</p>
+          <p className="lede">Free para siempre hasta 50 recuperaciones/mes. Pro €79 pago único: sin límite + secuencias avanzadas y cupones automáticos.</p>
         </div>
 
         <div className="pricing-grid reveal" data-delay="60">
@@ -165,10 +165,10 @@ function Pricing() {
               </span>
             </div>
             <div className="price-num" style={{ fontSize: 40 }}>Gratis</div>
-            <div className="price-sub">para siempre · open source MIT</div>
+            <div className="price-sub">para siempre · hasta 50 recuperaciones/mes</div>
 
             <ul className="price-list">
-              <li><Icon3.Check className="ch" width="16" height="16"/> Recuperación de carrito completa (1 mensaje · 1h)</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Recuperación de carrito (1 mensaje · 1h · hasta 50/mes)</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> Multi-idioma: en_US · es_ES · es_MX · pt_BR</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> Dashboard KPIs (enviados · recuperados · conversión)</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> GDPR opt-in nativo en checkout</li>
@@ -193,8 +193,8 @@ function Pricing() {
               </span>
               <span className="chip chip-pro">Pro</span>
             </div>
-            <div className="price-num">€49</div>
-            <div className="price-sub">pago único · sin renovación</div>
+            <div className="price-num">€79</div>
+            <div className="price-sub">pago único · sin renovación · sin límite</div>
 
             <ul className="price-list">
               <li><Icon3.Check className="ch" width="16" height="16"/> Todo lo de Free</li>
@@ -297,7 +297,7 @@ const FAQS = [
   { q: "¿Cuánto pago a Meta por mensaje?",
     a: "0€ a nosotros por mensajes. A Meta pagas según su pricing oficial. En España, un mensaje de carrito abandonado (categoría marketing) cuesta aproximadamente €0,08. Los primeros 1.000 mensajes al mes son gratis." },
   { q: "¿Es open source de verdad?",
-    a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€49 pago único) no es por la licencia del código, sino por las funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario." },
+    a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€79 pago único) no es por la licencia del código, sino por quitar el límite mensual de 50 recuperaciones y añadir funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario." },
   { q: "¿El plugin almacena datos de clientes en sus servidores?",
     a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código." },
   { q: "¿Funciona con block-based checkout?",
@@ -334,13 +334,13 @@ function FinalCTA() {
     <section className="final" id="cta">
       <div className="container">
         <h2 className="h1 reveal">Empieza gratis. Actualiza cuando quieras.</h2>
-        <p className="lede reveal" data-delay="100">Free para siempre con recuperación completa. Pro €49 pago único para secuencias y cupones automáticos. Disponible Q3 2026.</p>
+        <p className="lede reveal" data-delay="100">Free para siempre hasta 50 recuperaciones/mes. Pro €79 pago único: sin límite, secuencias y cupones automáticos. Disponible Q3 2026.</p>
         <div className="reveal" data-delay="200" style={{ display: "flex", justifyContent: "center", marginTop: 14 }}>
           <WaitlistForm size="lg" cta="Apuntarme a la Beta"/>
         </div>
         <div className="micro-row reveal" data-delay="400">
           <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Free para siempre · sin tarjeta</span>
-          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Pro €49 pago único · sin SaaS</span>
+          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Pro €79 pago único · sin SaaS</span>
           <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Un solo email cuando lance</span>
         </div>
       </div>

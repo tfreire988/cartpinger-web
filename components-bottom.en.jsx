@@ -5,7 +5,7 @@ const Icon3 = window.WCTop?.Icon;
 /* ---------------- Comparison ---------------- */
 const CMP_ROWS = [
   { f: "Price",
-    wc: { v: "Free · Pro €49", tip: "Free forever for core features. Pro €49 one-time: sequences, dynamic coupons, CSV, priority support." },
+    wc: { v: "Free · Pro €79", tip: "Free forever up to 50 recoveries/month. Pro €79 one-time: no limit + sequences, dynamic coupons, CSV, priority support." },
     rt: { v: "$14/mo",  tip: "≈ €156/year recurring." },
     ai: { v: "$25/mo",  tip: "≈ €280/year recurring, standard plan." },
     nf: { v: "Free",    tip: "Limited plan with Notiqoo branding in messages." },
@@ -151,7 +151,7 @@ function Pricing() {
       <div className="container">
         <div className="section-hed reveal">
           <h2 className="h2">Start free. Upgrade whenever you want.</h2>
-          <p className="lede">Free forever with full cart recovery. Pro €49 one-time for advanced sequences and automatic coupons.</p>
+          <p className="lede">Free forever up to 50 recoveries/month. Pro €79 one-time: no limit + advanced sequences and automatic coupons.</p>
         </div>
 
         <div className="pricing-grid reveal" data-delay="60">
@@ -165,10 +165,10 @@ function Pricing() {
               </span>
             </div>
             <div className="price-num" style={{ fontSize: 40 }}>Free</div>
-            <div className="price-sub">forever · open source MIT</div>
+            <div className="price-sub">forever · up to 50 recoveries/month</div>
 
             <ul className="price-list">
-              <li><Icon3.Check className="ch" width="16" height="16"/> Full cart recovery (1 message · 1h after abandonment)</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Cart recovery (1 message · 1h · up to 50/month)</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> Multi-language: en_US · es_ES · es_MX · pt_BR</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> KPI dashboard (sent · recovered · conversion rate)</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> Native GDPR opt-in at checkout</li>
@@ -193,8 +193,8 @@ function Pricing() {
               </span>
               <span className="chip chip-pro">Pro</span>
             </div>
-            <div className="price-num">€49</div>
-            <div className="price-sub">one-time · no renewal</div>
+            <div className="price-num">€79</div>
+            <div className="price-sub">one-time · no renewal · no limit</div>
 
             <ul className="price-list">
               <li><Icon3.Check className="ch" width="16" height="16"/> Everything in Free</li>
@@ -297,7 +297,7 @@ const FAQS = [
   { q: "How much does Meta charge per message?",
     a: "€0 to us per message. You pay Meta at their official pricing. In the US, an abandoned cart message (marketing category) costs approximately $0.025. The first 1,000 messages per month are free." },
   { q: "Is it really open source?",
-    a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€49 one-time) is not for the code license — it unlocks the advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support." },
+    a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€79 one-time) is not for the code license — it removes the 50 recoveries/month limit and unlocks advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support." },
   { q: "Does the plugin store customer data on its servers?",
     a: "No. CartPinger has no servers of its own. It runs entirely on your WordPress. Your customers' data (phone, cart, recovery token) is stored in your local MySQL database. We only provide the code." },
   { q: "Does it work with block-based checkout?",
@@ -334,13 +334,13 @@ function FinalCTA() {
     <section className="final" id="cta">
       <div className="container">
         <h2 className="h1 reveal">Start free. Upgrade whenever you want.</h2>
-        <p className="lede reveal" data-delay="100">Free forever with full recovery. Pro €49 one-time for sequences and automatic coupons. Available Q3 2026.</p>
+        <p className="lede reveal" data-delay="100">Free forever up to 50 recoveries/month. Pro €79 one-time: no limit, sequences and automatic coupons. Available Q3 2026.</p>
         <div className="reveal" data-delay="200" style={{ display: "flex", justifyContent: "center", marginTop: 14 }}>
           <WaitlistForm size="lg" cta="Join the Beta"/>
         </div>
         <div className="micro-row reveal" data-delay="400">
           <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Free forever · no card</span>
-          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Pro €49 one-time · no SaaS</span>
+          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Pro €79 one-time · no SaaS</span>
           <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> One email when it launches</span>
         </div>
       </div>

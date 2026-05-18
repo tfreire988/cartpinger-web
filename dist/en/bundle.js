@@ -1131,7 +1131,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 49;
+  const wcTotal = 79;
   const diff = compTotal - wcTotal;
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
@@ -1224,7 +1224,7 @@ function Calculator() {
     className: "l"
   }, "CartPinger Pro \xB7 one-time"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "\u20AC99")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
@@ -1256,7 +1256,7 @@ function Calculator() {
     }
   })), /*#__PURE__*/React.createElement("div", {
     className: "val"
-  }, "\u20AC99")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
     className: "bar comp"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
@@ -1295,8 +1295,8 @@ const Icon3 = window.WCTop?.Icon;
 const CMP_ROWS = [{
   f: "Price",
   wc: {
-    v: "Free · Pro €49",
-    tip: "Free forever for core features. Pro €49 one-time: sequences, dynamic coupons, CSV, priority support."
+    v: "Free · Pro €79",
+    tip: "Free forever up to 50 recoveries/month. Pro €79 one-time: no limit + sequences, dynamic coupons, CSV, priority support."
   },
   rt: {
     v: "$14/mo",
@@ -1642,7 +1642,7 @@ function Pricing() {
     className: "h2"
   }, "Start free. Upgrade whenever you want."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Free forever with full cart recovery. Pro \u20AC49 one-time for advanced sequences and automatic coupons.")), /*#__PURE__*/React.createElement("div", {
+  }, "Free forever up to 50 recoveries/month. Pro \u20AC79 one-time: no limit + advanced sequences and automatic coupons.")), /*#__PURE__*/React.createElement("div", {
     className: "pricing-grid reveal",
     "data-delay": "60"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1663,13 +1663,13 @@ function Pricing() {
     }
   }, "Free"), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "forever \xB7 open source MIT"), /*#__PURE__*/React.createElement("ul", {
+  }, "forever \xB7 up to 50 recoveries/month"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Full cart recovery (1 message \xB7 1h after abandonment)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Cart recovery (1 message \xB7 1h \xB7 up to 50/month)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
@@ -1715,9 +1715,9 @@ function Pricing() {
     className: "chip chip-pro"
   }, "Pro")), /*#__PURE__*/React.createElement("div", {
     className: "price-num"
-  }, "\u20AC49"), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC79"), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "one-time \xB7 no renewal"), /*#__PURE__*/React.createElement("ul", {
+  }, "one-time \xB7 no renewal \xB7 no limit"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
@@ -1845,7 +1845,7 @@ const FAQS = [{
   a: "€0 to us per message. You pay Meta at their official pricing. In the US, an abandoned cart message (marketing category) costs approximately $0.025. The first 1,000 messages per month are free."
 }, {
   q: "Is it really open source?",
-  a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€49 one-time) is not for the code license — it unlocks the advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support."
+  a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€79 one-time) is not for the code license — it removes the 50 recoveries/month limit and unlocks advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support."
 }, {
   q: "Does the plugin store customer data on its servers?",
   a: "No. CartPinger has no servers of its own. It runs entirely on your WordPress. Your customers' data (phone, cart, recovery token) is stored in your local MySQL database. We only provide the code."
@@ -1892,7 +1892,7 @@ function FinalCTA() {
   }, "Start free. Upgrade whenever you want."), /*#__PURE__*/React.createElement("p", {
     className: "lede reveal",
     "data-delay": "100"
-  }, "Free forever with full recovery. Pro \u20AC49 one-time for sequences and automatic coupons. Available Q3 2026."), /*#__PURE__*/React.createElement("div", {
+  }, "Free forever up to 50 recoveries/month. Pro \u20AC79 one-time: no limit, sequences and automatic coupons. Available Q3 2026."), /*#__PURE__*/React.createElement("div", {
     className: "reveal",
     "data-delay": "200",
     style: {
@@ -1922,7 +1922,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Pro \u20AC49 one-time \xB7 no SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Pro \u20AC79 one-time \xB7 no SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",

@@ -1139,7 +1139,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 49;
+  const wcTotal = 79;
   const diff = compTotal - wcTotal;
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
@@ -1232,7 +1232,7 @@ function Calculator() {
     className: "l"
   }, "CartPinger Pro \xB7 pago \xFAnico"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "\u20AC49")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
@@ -1264,7 +1264,7 @@ function Calculator() {
     }
   })), /*#__PURE__*/React.createElement("div", {
     className: "val"
-  }, "\u20AC49")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
     className: "bar comp"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
@@ -1303,8 +1303,8 @@ const Icon3 = window.WCTop?.Icon;
 const CMP_ROWS = [{
   f: "Precio",
   wc: {
-    v: "Gratis · Pro €49",
-    tip: "Free para siempre con funciones core. Pro €49 pago único: secuencias, cupones dinámicos, CSV y soporte prioritario."
+    v: "Gratis · Pro €79",
+    tip: "Free para siempre hasta 50 recuperaciones/mes. Pro €79 pago único: sin límite + secuencias, cupones dinámicos, CSV y soporte prioritario."
   },
   rt: {
     v: "$14/mes",
@@ -1650,7 +1650,7 @@ function Pricing() {
     className: "h2"
   }, "Empieza gratis. Actualiza cuando quieras."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Free para siempre con recuperaci\xF3n de carrito completa. Pro \u20AC49 pago \xFAnico para secuencias avanzadas y cupones autom\xE1ticos.")), /*#__PURE__*/React.createElement("div", {
+  }, "Free para siempre hasta 50 recuperaciones/mes. Pro \u20AC79 pago \xFAnico: sin l\xEDmite + secuencias avanzadas y cupones autom\xE1ticos.")), /*#__PURE__*/React.createElement("div", {
     className: "pricing-grid reveal",
     "data-delay": "60"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1671,13 +1671,13 @@ function Pricing() {
     }
   }, "Gratis"), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "para siempre \xB7 open source MIT"), /*#__PURE__*/React.createElement("ul", {
+  }, "para siempre \xB7 hasta 50 recuperaciones/mes"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Recuperaci\xF3n de carrito completa (1 mensaje \xB7 1h)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Recuperaci\xF3n de carrito (1 mensaje \xB7 1h \xB7 hasta 50/mes)"), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
     width: "16",
     height: "16"
@@ -1723,9 +1723,9 @@ function Pricing() {
     className: "chip chip-pro"
   }, "Pro")), /*#__PURE__*/React.createElement("div", {
     className: "price-num"
-  }, "\u20AC49"), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC79"), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "pago \xFAnico \xB7 sin renovaci\xF3n"), /*#__PURE__*/React.createElement("ul", {
+  }, "pago \xFAnico \xB7 sin renovaci\xF3n \xB7 sin l\xEDmite"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
@@ -1853,7 +1853,7 @@ const FAQS = [{
   a: "0€ a nosotros por mensajes. A Meta pagas según su pricing oficial. En España, un mensaje de carrito abandonado (categoría marketing) cuesta aproximadamente €0,08. Los primeros 1.000 mensajes al mes son gratis."
 }, {
   q: "¿Es open source de verdad?",
-  a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€49 pago único) no es por la licencia del código, sino por las funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario."
+  a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€79 pago único) no es por la licencia del código, sino por quitar el límite mensual de 50 recuperaciones y añadir funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario."
 }, {
   q: "¿El plugin almacena datos de clientes en sus servidores?",
   a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código."
@@ -1900,7 +1900,7 @@ function FinalCTA() {
   }, "Empieza gratis. Actualiza cuando quieras."), /*#__PURE__*/React.createElement("p", {
     className: "lede reveal",
     "data-delay": "100"
-  }, "Free para siempre con recuperaci\xF3n completa. Pro \u20AC49 pago \xFAnico para secuencias y cupones autom\xE1ticos. Disponible Q3 2026."), /*#__PURE__*/React.createElement("div", {
+  }, "Free para siempre hasta 50 recuperaciones/mes. Pro \u20AC79 pago \xFAnico: sin l\xEDmite, secuencias y cupones autom\xE1ticos. Disponible Q3 2026."), /*#__PURE__*/React.createElement("div", {
     className: "reveal",
     "data-delay": "200",
     style: {
@@ -1930,7 +1930,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Pro \u20AC49 pago \xFAnico \xB7 sin SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Pro \u20AC79 pago \xFAnico \xB7 sin SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",
