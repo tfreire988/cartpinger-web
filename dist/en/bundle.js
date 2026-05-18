@@ -693,14 +693,14 @@ function Steps() {
   }, /*#__PURE__*/React.createElement("span", {
     className: "ic"
   }, "4"), " Generate Access Token"))), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/whatscom/blob/main/documentacion.md",
+    href: "https://cartpinger.com/docs",
     target: "_blank",
     rel: "noopener",
     style: {
       color: "var(--mint)",
       textDecoration: "underline"
     }
-  }, "Step-by-step documentation on GitHub"), ". Stuck? Direct support."), /*#__PURE__*/React.createElement("div", {
+  }, "Step-by-step documentation"), ". Stuck? Direct support."), /*#__PURE__*/React.createElement("div", {
     className: "step-foot"
   }, /*#__PURE__*/React.createElement("span", {
     className: "chip chip-wa"
@@ -1873,7 +1873,7 @@ function Footer() {
   }, /*#__PURE__*/React.createElement("h5", null, "Resources"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#faq"
   }, "FAQ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/whatscom#readme",
+    href: "https://cartpinger.com/docs",
     target: "_blank",
     rel: "noopener"
   }, "Documentation ", /*#__PURE__*/React.createElement(Icon3.Ext, {
