@@ -1,0 +1,15 @@
+# Subscriber data — never commit
+waitlist.json
+
+# Local env
+.env
+.env.*
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Dev artefacts
+design_content.txt
+node_modules/
+dist/

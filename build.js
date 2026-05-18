@@ -1,0 +1,82 @@
+/**
+ * CartPinger — JSX build script
+ * Transpiles the 4 JSX source files → dist/bundle.js
+ * Generates dist/index.html that loads the bundle (no Babel CDN, instant load)
+ *
+ * Usage: npm run build
+ */
+
+import { transformSync } from "@babel/core";
+import { readFileSync, writeFileSync, mkdirSync } from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dir = path.dirname(fileURLToPath(import.meta.url));
+const DIST = path.join(__dir, "dist");
+
+mkdirSync(DIST, { recursive: true });
+
+const JSX_FILES = [
+  "components-top.jsx",
+  "components-mid.jsx",
+  "components-bottom.jsx",
+  "app.jsx",
+];
+
+console.log("Building CartPinger landing…\n");
+
+const parts = JSX_FILES.map((file) => {
+  const src = readFileSync(path.join(__dir, file), "utf8");
+  const { code } = transformSync(src, {
+    presets: [["@babel/preset-react", { runtime: "classic" }]],
+    filename: file,
+    sourceMaps: false,
+  });
+  console.log(`  ✓ ${file}`);
+  return `/* ── ${file} ── */\n${code}`;
+});
+
+const bundle =
+  `/* CartPinger landing — production bundle */\n"use strict";\n\n` +
+  parts.join("\n\n");
+
+writeFileSync(path.join(DIST, "bundle.js"), bundle);
+console.log(`\n  bundle.js  (${(bundle.length / 1024).toFixed(1)} KB)`);
+
+// Copy static assets to dist/
+const STATIC = ["styles.css", "WhatsCom Landing.html"];
+for (const f of STATIC) {
+  const content = readFileSync(path.join(__dir, f));
+  writeFileSync(path.join(DIST, f), content);
+}
+
+// Generate production HTML — replace CDN Babel + JSX tags with compiled bundle
+const devHtml = readFileSync(path.join(__dir, "WhatsCom Landing.html"), "utf8");
+
+// Split at the first text/babel script tag to get the "before" portion
+const babelTagIndex = devHtml.indexOf('<script type="text/babel"');
+const beforeScripts = devHtml.slice(0, babelTagIndex).trimEnd();
+
+// Also remove the Babel standalone script from beforeScripts
+const cleanHead = beforeScripts.replace(/<script[^>]*babel\.min\.js[^>]*><\/script>\s*/g, "");
+
+const prodHtml =
+  cleanHead +
+  `\n\n  <script src="bundle.js"></script>\n</body>\n</html>\n`;
+
+writeFileSync(path.join(DIST, "index.html"), prodHtml);
+console.log("  index.html (production)");
+
+// Copy waitlist.php and .htaccess for deployment
+for (const f of ["waitlist.php", ".htaccess"]) {
+  try {
+    const content = readFileSync(path.join(__dir, f));
+    writeFileSync(path.join(DIST, f), content);
+    console.log(`  ${f}`);
+  } catch {
+    // optional files
+  }
+}
+
+console.log("\nDone → dist/");
+console.log("Deploy the dist/ folder to your server.");
