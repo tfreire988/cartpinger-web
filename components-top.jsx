@@ -114,7 +114,7 @@ function Nav() {
         <div className="nav-cta">
           <div className="lang" role="group" aria-label="Idioma">
             <button className="active" aria-current="true">ES</button>
-            <a href="/en/" className="lang-link">EN</a>
+            <a href="/en/" className="lang-link" onClick={() => sessionStorage.setItem('cp-lang','en')}>EN</a>
             <button disabled title="Próximamente">PT-BR</button>
           </div>
           <a href="#waitlist" className="btn btn-primary btn-sm">Solicitar Beta</a>

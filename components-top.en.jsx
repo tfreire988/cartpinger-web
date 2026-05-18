@@ -111,7 +111,7 @@ function Nav() {
         </nav>
         <div className="nav-cta">
           <div className="lang" role="group" aria-label="Language">
-            <button onclick="location.href='/'" title="Español">ES</button>
+            <button onClick={() => { sessionStorage.setItem('cp-lang','es'); location.href='/'; }} title="Español">ES</button>
             <button className="active" aria-current="true">EN</button>
             <button disabled title="Coming soon">PT-BR</button>
           </div>

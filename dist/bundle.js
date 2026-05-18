@@ -252,7 +252,8 @@ function Nav() {
     "aria-current": "true"
   }, "ES"), /*#__PURE__*/React.createElement("a", {
     href: "/en/",
-    className: "lang-link"
+    className: "lang-link",
+    onClick: () => sessionStorage.setItem('cp-lang', 'en')
   }, "EN"), /*#__PURE__*/React.createElement("button", {
     disabled: true,
     title: "Pr\xF3ximamente"

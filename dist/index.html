@@ -125,6 +125,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 
   <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Language auto-detection: redirect EN browsers to /en/ unless user manually chose ES -->
+  <script>
+  (function(){
+    if(sessionStorage.getItem('cp-lang'))return;
+    var l=(navigator.language||'').toLowerCase();
+    if(l==='en'||l.startsWith('en-'))window.location.replace('/en/');
+  })();
+  </script>
 </head>
 <body>
   <div id="root"></div>

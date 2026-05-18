@@ -244,7 +244,10 @@ function Nav() {
     role: "group",
     "aria-label": "Language"
   }, /*#__PURE__*/React.createElement("button", {
-    onclick: "location.href='/'",
+    onClick: () => {
+      sessionStorage.setItem('cp-lang', 'es');
+      location.href = '/';
+    },
     title: "Espa\xF1ol"
   }, "ES"), /*#__PURE__*/React.createElement("button", {
     className: "active",
