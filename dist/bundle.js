@@ -686,7 +686,15 @@ function Steps() {
     className: "wz-step pending"
   }, /*#__PURE__*/React.createElement("span", {
     className: "ic"
-  }, "4"), " Generar Access Token"))), /*#__PURE__*/React.createElement("p", null, "Documentaci\xF3n paso a paso en GitHub. Si te atascas, soporte directo."), /*#__PURE__*/React.createElement("div", {
+  }, "4"), " Generar Access Token"))), /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("a", {
+    href: "https://github.com/tfreire988/whatscom/blob/main/DOCUMENTACION.md",
+    target: "_blank",
+    rel: "noopener",
+    style: {
+      color: "var(--mint)",
+      textDecoration: "underline"
+    }
+  }, "Documentaci\xF3n paso a paso en GitHub"), ". Si te atascas, soporte directo."), /*#__PURE__*/React.createElement("div", {
     className: "step-foot"
   }, /*#__PURE__*/React.createElement("span", {
     className: "chip chip-wa"
