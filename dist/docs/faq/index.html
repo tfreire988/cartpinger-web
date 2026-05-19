@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>FAQ — CartPinger Docs</title>
+  <meta name="description" content="Answers to the most common questions about CartPinger: WhatsApp number requirements, API costs, message templates, data handling, and Free vs Pro."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#0a0a0a"/>
+  <link rel="canonical" href="https://cartpinger.com/docs/faq/"/>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://cartpinger.com/docs/faq/"/>
+  <meta property="og:site_name" content="CartPinger"/>
+  <meta property="og:title" content="FAQ — CartPinger Docs"/>
+  <meta property="og:description" content="Answers to the most common questions about CartPinger."/>
+  <meta property="og:image" content="https://cartpinger.com/og-image.png"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="FAQ — CartPinger Docs"/>
+  <meta name="twitter:description" content="Answers to the most common questions about CartPinger."/>
+  <meta name="twitter:image" content="https://cartpinger.com/og-image.png"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do I need a new WhatsApp phone number?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The number used by CartPinger must be separate from any personal WhatsApp account. It can be a mobile or a landline — Meta will verify it via SMS or voice call. Once verified, the number is bound to the WhatsApp Business API and cannot be used on the regular WhatsApp app at the same time." } },
+      { "@type": "Question", "name": "Is the WhatsApp API free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Meta gives 1,000 free service conversations per month per WABA. After that, you pay Meta directly per message — roughly $0.005 to $0.08 depending on the country and category. For most small and medium stores, the monthly Meta cost stays at €0." } },
+      { "@type": "Question", "name": "What happens to my data if I uninstall CartPinger?",
+        "acceptedAnswer": { "@type": "Answer", "text": "By default the plugin keeps your data in the WordPress database so you can reinstall without losing history. If you want a full wipe, open CartPinger > Settings > Advanced and toggle 'Delete data on uninstall' before removing the plugin." } },
+      { "@type": "Question", "name": "Why didn't my message arrive?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Check four things in order: 1) the template is approved in Meta, 2) if you're still in sandbox mode, the recipient phone is registered as a test recipient, 3) the language code in the template matches your site locale, 4) all four credentials in the CartPinger setup are correct and saved." } },
+      { "@type": "Question", "name": "What's the difference between Free and Pro?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Free: 50 cart recoveries per month, single 1-hour message, order updates. Pro (€14/month or €99/year): unlimited recoveries, full 3-message sequence with auto coupons at +24h, final reminder at +48h, CSV export, priority support, and access to future Pro features." } },
+      { "@type": "Question", "name": "Can I customize the message templates?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Edit the body in Meta Template Manager. The only constraints: keep the template Name exactly as CartPinger expects, and keep the number and order of variables ({{1}}, {{2}}, ...) the same. CartPinger fills them in the same positions regardless of wording." } },
+      { "@type": "Question", "name": "Does CartPinger work with block checkout?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both the classic shortcode checkout and the block-based checkout are supported. CartPinger injects the GDPR opt-in via the official WooCommerce Additional Checkout Fields API, which works in both flows from WooCommerce 9.0+." } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+
+<div class="docs-layout">
+
+  <aside class="docs-sidebar">
+    <a href="/" class="brand">
+      <span class="brand-mark">C</span>
+      <span>CartPinger Docs</span>
+    </a>
+    <h4>Get started</h4>
+    <nav>
+      <a href="/docs/setup/">Setup guide</a>
+      <a href="/docs/templates/">Message templates</a>
+      <a href="/docs/faq/" class="active">FAQ</a>
+    </nav>
+    <a href="/" class="back-link">← Back to cartpinger.com</a>
+  </aside>
+
+  <main class="docs-main">
+    <header class="docs-hero">
+      <span class="eyebrow">FAQ</span>
+      <h1>Frequently asked questions</h1>
+      <p class="lede">The objections we hear most often. If something here isn't covered, write to <a href="mailto:info@cartpinger.com">info@cartpinger.com</a>.</p>
+    </header>
+
+    <h2 id="setup">Setup &amp; account</h2>
+
+    <details class="faq-item" id="phone-number">
+      <summary>Do I need a new WhatsApp phone number?</summary>
+      <div class="a">
+        <p>Yes. The number used by CartPinger must be separate from any personal WhatsApp account. It can be a mobile or a landline — Meta will verify it via SMS or voice call.</p>
+        <p>Once verified, the number is bound to the WhatsApp Business API and cannot be used on the regular WhatsApp app at the same time. If you only have one number, get a second SIM or use a landline.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="api-cost">
+      <summary>Is the WhatsApp API free?</summary>
+      <div class="a">
+        <p>Meta gives <strong>1,000 free service conversations per month</strong> per WABA. A conversation is a 24-hour window per customer, not a single message.</p>
+        <p>After the free tier, you pay Meta directly — roughly <strong>$0.005 to $0.08 per message</strong> depending on country and category. CartPinger doesn't take a cut. For most small and medium stores, the monthly Meta cost stays at €0.</p>
+      </div>
+    </details>
+
+    <h2 id="data">Data &amp; privacy</h2>
+
+    <details class="faq-item" id="uninstall-data">
+      <summary>What happens to my data if I uninstall CartPinger?</summary>
+      <div class="a">
+        <p>By default the plugin keeps your data in the WordPress database, so you can reinstall without losing history.</p>
+        <p>If you want a full wipe, open <strong>CartPinger → Settings → Advanced</strong> and toggle <strong>"Delete data on uninstall"</strong> <em>before</em> removing the plugin. After deletion, all CartPinger tables and options are dropped from your database.</p>
+      </div>
+    </details>
+
+    <h2 id="messaging">Messaging</h2>
+
+    <details class="faq-item" id="message-not-arriving">
+      <summary>Why didn't my message arrive?</summary>
+      <div class="a">
+        <p>Check four things in order:</p>
+        <ol>
+          <li>The template is <strong>approved</strong> in Meta (not pending or rejected).</li>
+          <li>If you're still in <strong>sandbox mode</strong>, the recipient phone is registered as a test recipient.</li>
+          <li>The <strong>language code</strong> in the template matches your site locale (e.g. <code>en</code> not <code>en_US</code>).</li>
+          <li>All four <strong>credentials</strong> in CartPinger setup are correct and saved (Phone Number ID, WABA ID, Access Token, App Secret).</li>
+        </ol>
+        <p>If all four check out, look at <strong>CartPinger → Logs</strong> for the Meta API response — it almost always explains what went wrong.</p>
+      </div>
+    </details>
+
+    <details class="faq-item" id="customize-templates">
+      <summary>Can I customize the message templates?</summary>
+      <div class="a">
+        <p>Yes. Edit the body in <a href="https://business.facebook.com/wa/manage/message-templates" target="_blank" rel="noopener">Meta Template Manager</a>. The only constraints:</p>
+        <ul>
+          <li>Keep the template <strong>Name</strong> exactly as CartPinger expects (see <a href="/docs/templates/">/docs/templates</a>).</li>
+          <li>Keep the number and order of variables (<code>{{1}}</code>, <code>{{2}}</code>, …) the same. CartPinger fills them in the same positions regardless of how you reword the rest.</li>
+        </ul>
+        <p>Adding or removing variables will break sending.</p>
+      </div>
+    </details>
+
+    <h2 id="compatibility">Compatibility</h2>
+
+    <details class="faq-item" id="block-checkout">
+      <summary>Does CartPinger work with block checkout?</summary>
+      <div class="a">
+        <p>Yes. Both the classic shortcode checkout and the block-based checkout are supported.</p>
+        <p>CartPinger injects the GDPR opt-in via the official <a href="https://developer.woocommerce.com/docs/cart-and-checkout-additional-checkout-fields/" target="_blank" rel="noopener">WooCommerce Additional Checkout Fields API</a>, which works in both flows from <strong>WooCommerce 9.0+</strong>.</p>
+      </div>
+    </details>
+
+    <h2 id="pricing">Plans &amp; pricing</h2>
+
+    <details class="faq-item" id="free-vs-pro">
+      <summary>What's the difference between Free and Pro?</summary>
+      <div class="a">
+        <p><strong>Free</strong> — 50 cart recoveries per month, single 1-hour message, order confirmation / shipped / cancelled notifications. Forever, no card required.</p>
+        <p><strong>Pro</strong> — €14/month or €99/year (≈ €8.25/month annual). Removes the 50-recovery limit and unlocks: the full 3-message sequence (1h, +24h with auto coupon, +48h reminder), CSV export of recoveries, priority email support, and access to future Pro features as they ship.</p>
+        <p>You can upgrade or downgrade at any time. Cancelling Pro returns you to Free at the end of the current billing period — your data stays intact.</p>
+      </div>
+    </details>
+
+    <div class="docs-cta">
+      <h3>Still stuck?</h3>
+      <p>Write to <a href="mailto:info@cartpinger.com" style="color: var(--wa);">info@cartpinger.com</a> or open an issue on <a href="https://github.com/tfreire988/whatscom/issues" target="_blank" rel="noopener" style="color: var(--wa);">GitHub</a>. Replies in 24h on business days.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="/docs/setup/">Read the setup guide</a>
+        <a class="btn" style="background: var(--surface-2); color: var(--text-1); border: 1px solid var(--border);" href="/">Back to homepage</a>
+      </div>
+    </div>
+
+  </main>
+
+  <aside class="docs-toc">
+    <h5>FAQ sections</h5>
+    <a href="#setup">Setup &amp; account</a>
+    <a href="#data">Data &amp; privacy</a>
+    <a href="#messaging">Messaging</a>
+    <a href="#compatibility">Compatibility</a>
+    <a href="#pricing">Plans &amp; pricing</a>
+  </aside>
+
+</div>
+
+<script>
+  const headings = document.querySelectorAll('.docs-main h2[id]');
+  const tocLinks = document.querySelectorAll('.docs-toc a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  headings.forEach(h => observer.observe(h));
+</script>
+
+</body>
+</html>

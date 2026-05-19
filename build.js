@@ -80,6 +80,13 @@ for (const f of STATIC) {
   } catch { /* optional */ }
 }
 
+// Copy docs/ tree recursively
+import { cpSync, existsSync } from "fs";
+if (existsSync(path.join(__dir, "docs"))) {
+  cpSync(path.join(__dir, "docs"), path.join(DIST, "docs"), { recursive: true });
+  console.log("  docs/ (setup, templates, faq)");
+}
+
 // Generate production HTML — replace CDN Babel + JSX tags with compiled bundle
 const devHtml = readFileSync(path.join(__dir, "WhatsCom Landing.html"), "utf8");
 

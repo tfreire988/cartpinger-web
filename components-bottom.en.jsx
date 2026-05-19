@@ -376,10 +376,10 @@ function Footer() {
           <div className="foot-col">
             <h5>Resources</h5>
             <ul>
-              <li><a href="#faq">FAQ</a></li>
-              <li><a href="https://github.com/tfreire988/cartpinger-web/blob/main/DOCUMENTATION.md" target="_blank" rel="noopener">Documentation <Icon3.Ext width="10" height="10" style={{ display: "inline", verticalAlign: -1, marginLeft: 2, opacity: 0.6 }}/></a></li>
+              <li><a href="/docs/setup/">Setup guide</a></li>
+              <li><a href="/docs/templates/">Message templates</a></li>
+              <li><a href="/docs/faq/">Technical FAQ</a></li>
               <li><a href="mailto:info@cartpinger.com">Support</a></li>
-              <li><a href="#tech">Architecture</a></li>
             </ul>
           </div>
           <div className="foot-col">

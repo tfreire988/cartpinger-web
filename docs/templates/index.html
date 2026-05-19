@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>Message Templates — CartPinger Docs</title>
+  <meta name="description" content="Copy-paste the exact WhatsApp templates CartPinger uses to recover abandoned carts and send order updates. 5 languages, ready for Meta approval."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#0a0a0a"/>
+  <link rel="canonical" href="https://cartpinger.com/docs/templates/"/>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://cartpinger.com/docs/templates/"/>
+  <meta property="og:site_name" content="CartPinger"/>
+  <meta property="og:title" content="Message Templates — CartPinger Docs"/>
+  <meta property="og:description" content="Copy-paste the exact WhatsApp templates CartPinger uses. 5 languages, ready for Meta approval."/>
+  <meta property="og:image" content="https://cartpinger.com/og-image.png"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Message Templates — CartPinger Docs"/>
+  <meta name="twitter:description" content="Copy-paste the exact WhatsApp templates CartPinger uses."/>
+  <meta name="twitter:image" content="https://cartpinger.com/og-image.png"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+
+<div class="docs-layout">
+
+  <aside class="docs-sidebar">
+    <a href="/" class="brand">
+      <span class="brand-mark">C</span>
+      <span>CartPinger Docs</span>
+    </a>
+    <h4>Get started</h4>
+    <nav>
+      <a href="/docs/setup/">Setup guide</a>
+      <a href="/docs/templates/" class="active">Message templates</a>
+      <a href="/docs/faq/">FAQ</a>
+    </nav>
+    <a href="/" class="back-link">← Back to cartpinger.com</a>
+  </aside>
+
+  <main class="docs-main">
+    <header class="docs-hero">
+      <span class="eyebrow">Templates</span>
+      <h1>Message templates</h1>
+      <p class="lede">CartPinger uses 6 WhatsApp templates. Meta must approve each one before it can be sent. Copy-paste the exact bodies below.</p>
+    </header>
+
+    <h2 id="how-to-submit">How to submit each template</h2>
+    <ol>
+      <li>Open <a href="https://business.facebook.com/wa/manage/message-templates" target="_blank" rel="noopener">Meta Template Manager</a>.</li>
+      <li>Click <strong>Create template</strong>.</li>
+      <li>Use the <strong>exact Name</strong> shown here. CartPinger looks templates up by name — a typo means CartPinger can't find them.</li>
+      <li>Choose the matching <strong>Category</strong> (MARKETING or UTILITY).</li>
+      <li>Pick the <strong>Language</strong> (one submission per language you ship in).</li>
+      <li>Paste the <strong>Body</strong>. Adapt the wording if you want — keep the variables (<code>{{1}}</code>, <code>{{2}}</code>, …) in the same order.</li>
+      <li>Submit. Utility templates approve in minutes. Marketing in a few hours.</li>
+    </ol>
+
+    <div class="callout info">
+      <p><strong>Languages:</strong> CartPinger ships with <code>en</code>, <code>es</code>, <code>pt_BR</code>, <code>fr</code>, <code>de</code>. Only submit the languages your customers actually receive — Meta has limits on pending templates.</p>
+    </div>
+
+    <h2 id="templates">The 6 templates</h2>
+
+    <!-- 1 -->
+    <div class="tpl-card" id="abandoned_cart_recovery">
+      <div class="tpl-head">
+        <span class="tpl-name">abandoned_cart_recovery</span>
+        <span class="tpl-badge marketing">Marketing</span>
+        <span class="tpl-badge free">Free</span>
+      </div>
+      <p>Sent <strong>1 hour</strong> after a cart is detected as abandoned. The single message in the Free plan.</p>
+      <div class="tpl-vars">
+        Variables: <code>{{1}}</code> customer first name · <code>{{2}}</code> store name · <code>{{3}}</code> recovery URL
+      </div>
+      <div class="tpl-langs">
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">English (en)</div>
+          <pre>Hi {{1}}! You left some items in your cart at {{2}}. They're still waiting for you — finish your order here: {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Español (es)</div>
+          <pre>¡Hola {{1}}! Dejaste algunos artículos en tu carrito de {{2}}. Siguen esperándote — termina tu pedido aquí: {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Português (pt_BR)</div>
+          <pre>Oi {{1}}! Você deixou alguns itens no seu carrinho da {{2}}. Eles ainda estão esperando — finalize seu pedido aqui: {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Français (fr)</div>
+          <pre>Bonjour {{1}} ! Vous avez laissé des articles dans votre panier sur {{2}}. Ils vous attendent encore — finalisez votre commande ici : {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Deutsch (de)</div>
+          <pre>Hallo {{1}}! Du hast Artikel in deinem Warenkorb bei {{2}} liegen lassen. Sie warten noch auf dich — Bestellung hier abschließen: {{3}}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="tpl-card" id="order_confirmed">
+      <div class="tpl-head">
+        <span class="tpl-name">order_confirmed</span>
+        <span class="tpl-badge utility">Utility</span>
+        <span class="tpl-badge free">Free</span>
+      </div>
+      <p>Sent the moment a WooCommerce order moves to <code>processing</code> (payment received).</p>
+      <div class="tpl-vars">
+        Variables: <code>{{1}}</code> customer first name · <code>{{2}}</code> order number · <code>{{3}}</code> total · <code>{{4}}</code> store name
+      </div>
+      <div class="tpl-langs">
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">English (en)</div>
+          <pre>Thanks {{1}}! We received your order #{{2}} for {{3}} at {{4}}. We'll let you know as soon as it ships.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Español (es)</div>
+          <pre>¡Gracias {{1}}! Hemos recibido tu pedido #{{2}} por {{3}} en {{4}}. Te avisamos en cuanto salga el envío.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Português (pt_BR)</div>
+          <pre>Obrigado {{1}}! Recebemos seu pedido #{{2}} no valor de {{3}} na {{4}}. Avisaremos assim que for enviado.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Français (fr)</div>
+          <pre>Merci {{1}} ! Nous avons reçu votre commande #{{2}} de {{3}} sur {{4}}. Nous vous préviendrons dès l'expédition.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Deutsch (de)</div>
+          <pre>Danke {{1}}! Wir haben deine Bestellung #{{2}} über {{3}} bei {{4}} erhalten. Wir melden uns, sobald sie versandt wird.</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="tpl-card" id="order_completed">
+      <div class="tpl-head">
+        <span class="tpl-name">order_completed</span>
+        <span class="tpl-badge utility">Utility</span>
+        <span class="tpl-badge free">Free</span>
+      </div>
+      <p>Sent when WooCommerce marks the order as <code>completed</code> (shipped or delivered).</p>
+      <div class="tpl-vars">
+        Variables: <code>{{1}}</code> customer first name · <code>{{2}}</code> order number · <code>{{3}}</code> tracking URL (optional, can be store URL)
+      </div>
+      <div class="tpl-langs">
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">English (en)</div>
+          <pre>Good news {{1}}, your order #{{2}} has shipped. Track it here: {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Español (es)</div>
+          <pre>Buenas noticias {{1}}, tu pedido #{{2}} ya está en camino. Sigue el envío aquí: {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Português (pt_BR)</div>
+          <pre>Boa notícia {{1}}, seu pedido #{{2}} foi enviado. Acompanhe aqui: {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Français (fr)</div>
+          <pre>Bonne nouvelle {{1}}, votre commande #{{2}} est en route. Suivez-la ici : {{3}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Deutsch (de)</div>
+          <pre>Gute Nachricht {{1}}, deine Bestellung #{{2}} ist unterwegs. Sendung hier verfolgen: {{3}}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="tpl-card" id="order_cancelled">
+      <div class="tpl-head">
+        <span class="tpl-name">order_cancelled</span>
+        <span class="tpl-badge utility">Utility</span>
+        <span class="tpl-badge free">Free</span>
+      </div>
+      <p>Sent when an order is cancelled in WooCommerce.</p>
+      <div class="tpl-vars">
+        Variables: <code>{{1}}</code> customer first name · <code>{{2}}</code> order number · <code>{{3}}</code> store name
+      </div>
+      <div class="tpl-langs">
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">English (en)</div>
+          <pre>Hi {{1}}, your order #{{2}} at {{3}} has been cancelled. If this wasn't you, just reply to this message and we'll help.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Español (es)</div>
+          <pre>Hola {{1}}, tu pedido #{{2}} en {{3}} ha sido cancelado. Si no has sido tú, responde a este mensaje y te ayudamos.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Português (pt_BR)</div>
+          <pre>Oi {{1}}, seu pedido #{{2}} na {{3}} foi cancelado. Se não foi você, responda esta mensagem e te ajudamos.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Français (fr)</div>
+          <pre>Bonjour {{1}}, votre commande #{{2}} sur {{3}} a été annulée. Si ce n'était pas vous, répondez à ce message et nous vous aiderons.</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Deutsch (de)</div>
+          <pre>Hallo {{1}}, deine Bestellung #{{2}} bei {{3}} wurde storniert. Falls nicht durch dich, antworte einfach auf diese Nachricht.</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="tpl-card" id="abandoned_cart_recovery_24h">
+      <div class="tpl-head">
+        <span class="tpl-name">abandoned_cart_recovery_24h</span>
+        <span class="tpl-badge marketing">Marketing</span>
+        <span class="tpl-badge pro">Pro</span>
+      </div>
+      <p>Second touchpoint in the Pro sequence — sent <strong>24 hours</strong> after the first message if the cart is still open. Carries the auto-generated coupon.</p>
+      <div class="tpl-vars">
+        Variables: <code>{{1}}</code> customer first name · <code>{{2}}</code> coupon code · <code>{{3}}</code> discount % · <code>{{4}}</code> recovery URL
+      </div>
+      <div class="tpl-langs">
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">English (en)</div>
+          <pre>{{1}}, still thinking about it? Here's {{3}}% off with code {{2}} — valid for 48 hours. Finish your order: {{4}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Español (es)</div>
+          <pre>{{1}}, ¿sigues pensándolo? Te dejamos un {{3}}% de descuento con el código {{2}} — válido 48 horas. Termina tu pedido: {{4}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Português (pt_BR)</div>
+          <pre>{{1}}, ainda pensando? Toma {{3}}% de desconto com o código {{2}} — válido por 48 horas. Finalize seu pedido: {{4}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Français (fr)</div>
+          <pre>{{1}}, vous y réfléchissez encore ? Voici {{3}}% de réduction avec le code {{2}} — valable 48 heures. Finalisez : {{4}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Deutsch (de)</div>
+          <pre>{{1}}, noch am Überlegen? {{3}}% Rabatt mit Code {{2}} — 48 Stunden gültig. Bestellung abschließen: {{4}}</pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="tpl-card" id="abandoned_cart_recovery_48h">
+      <div class="tpl-head">
+        <span class="tpl-name">abandoned_cart_recovery_48h</span>
+        <span class="tpl-badge marketing">Marketing</span>
+        <span class="tpl-badge pro">Pro</span>
+      </div>
+      <p>Final touchpoint — sent <strong>48 hours</strong> after the first message. Last reminder before CartPinger gives up on the cart.</p>
+      <div class="tpl-vars">
+        Variables: <code>{{1}}</code> customer first name · <code>{{2}}</code> recovery URL
+      </div>
+      <div class="tpl-langs">
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">English (en)</div>
+          <pre>Last reminder, {{1}} — your cart will expire soon. If you still want it, finish here: {{2}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Español (es)</div>
+          <pre>Último aviso, {{1}} — tu carrito caducará pronto. Si todavía lo quieres, termina aquí: {{2}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Português (pt_BR)</div>
+          <pre>Último aviso, {{1}} — seu carrinho vai expirar em breve. Se ainda quiser, finalize aqui: {{2}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Français (fr)</div>
+          <pre>Dernier rappel, {{1}} — votre panier expire bientôt. Si vous le voulez encore, finalisez ici : {{2}}</pre>
+        </div>
+        <div class="tpl-lang"><button class="copy-btn" data-copy>Copy</button>
+          <div class="tpl-lang-label">Deutsch (de)</div>
+          <pre>Letzte Erinnerung, {{1}} — dein Warenkorb läuft bald ab. Falls du ihn noch willst, hier abschließen: {{2}}</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="docs-cta">
+      <h3>Templates ready? You're done.</h3>
+      <p>Once Meta approves, CartPinger starts using them automatically — no extra config.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="/docs/setup/">Back to setup guide</a>
+        <a class="btn" style="background: var(--surface-2); color: var(--text-1); border: 1px solid var(--border);" href="/docs/faq/">Read the FAQ</a>
+      </div>
+    </div>
+
+  </main>
+
+  <aside class="docs-toc">
+    <h5>Templates</h5>
+    <a href="#how-to-submit">How to submit</a>
+    <a href="#abandoned_cart_recovery">abandoned_cart_recovery</a>
+    <a href="#order_confirmed">order_confirmed</a>
+    <a href="#order_completed">order_completed</a>
+    <a href="#order_cancelled">order_cancelled</a>
+    <a href="#abandoned_cart_recovery_24h">abandoned_cart_recovery_24h</a>
+    <a href="#abandoned_cart_recovery_48h">abandoned_cart_recovery_48h</a>
+  </aside>
+
+</div>
+
+<script>
+  // Copy buttons
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const pre = btn.parentElement.querySelector('pre');
+      try {
+        await navigator.clipboard.writeText(pre.textContent.trim());
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+      } catch {
+        btn.textContent = 'Press Ctrl+C';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+      }
+    });
+  });
+
+  // TOC active state
+  const headings = document.querySelectorAll('.docs-main h2[id], .tpl-card[id]');
+  const tocLinks = document.querySelectorAll('.docs-toc a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-15% 0px -75% 0px' });
+  headings.forEach(h => observer.observe(h));
+</script>
+
+</body>
+</html>

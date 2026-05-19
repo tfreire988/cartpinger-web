@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>CartPinger Setup Guide — WhatsApp for WooCommerce</title>
+  <meta name="description" content="Step-by-step guide to connect your WooCommerce store to WhatsApp Cloud API. 15-minute setup with video walkthrough."/>
+  <meta name="keywords" content="CartPinger setup, WhatsApp Cloud API WooCommerce setup, Meta Business app setup, WABA configuration, abandoned cart WhatsApp"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#0a0a0a"/>
+  <link rel="canonical" href="https://cartpinger.com/docs/setup/"/>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://cartpinger.com/docs/setup/"/>
+  <meta property="og:site_name" content="CartPinger"/>
+  <meta property="og:title" content="CartPinger Setup Guide — WhatsApp for WooCommerce"/>
+  <meta property="og:description" content="Step-by-step guide to connect your WooCommerce store to WhatsApp Cloud API. 15-minute setup with video walkthrough."/>
+  <meta property="og:image" content="https://cartpinger.com/og-image.png"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="CartPinger Setup Guide — WhatsApp for WooCommerce"/>
+  <meta name="twitter:description" content="Step-by-step guide to connect your WooCommerce store to WhatsApp Cloud API."/>
+  <meta name="twitter:image" content="https://cartpinger.com/og-image.png"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Connect WooCommerce to WhatsApp Cloud API with CartPinger",
+    "description": "Step-by-step setup guide to get CartPinger running on your WooCommerce store in about 15 minutes.",
+    "image": "https://cartpinger.com/og-image.png",
+    "totalTime": "PT15M",
+    "estimatedCost": { "@type": "MonetaryAmount", "currency": "EUR", "value": "0" },
+    "tool": [
+      { "@type": "HowToTool", "name": "Meta Business Manager account" },
+      { "@type": "HowToTool", "name": "WordPress + WooCommerce store" },
+      { "@type": "HowToTool", "name": "A phone number not currently on WhatsApp" }
+    ],
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Create a Meta Business Account",
+        "text": "Go to business.facebook.com and create a Business Account. This is the legal entity that will own your WhatsApp Business Account (WABA).",
+        "url": "https://cartpinger.com/docs/setup/#step-1" },
+      { "@type": "HowToStep", "position": 2, "name": "Create an app at developers.facebook.com",
+        "text": "Choose the Business app type and add the WhatsApp product to it.",
+        "url": "https://cartpinger.com/docs/setup/#step-2" },
+      { "@type": "HowToStep", "position": 3, "name": "Get Phone Number ID and WABA ID",
+        "text": "In your app, open WhatsApp > API Setup. Copy the Phone Number ID and WhatsApp Business Account ID.",
+        "url": "https://cartpinger.com/docs/setup/#step-3" },
+      { "@type": "HowToStep", "position": 4, "name": "Generate an Access Token",
+        "text": "Use the 24h temporary token for testing. For production, create a System User token in Business Settings so it never expires.",
+        "url": "https://cartpinger.com/docs/setup/#step-4" },
+      { "@type": "HowToStep", "position": 5, "name": "Get the App Secret",
+        "text": "In Meta App Dashboard > App settings > Basic, copy the App Secret. CartPinger uses it to validate Meta webhooks.",
+        "url": "https://cartpinger.com/docs/setup/#step-5" },
+      { "@type": "HowToStep", "position": 6, "name": "Install CartPinger in WooCommerce",
+        "text": "Install CartPinger from WordPress > Plugins, then paste your four credentials in the Setup wizard.",
+        "url": "https://cartpinger.com/docs/setup/#step-6" },
+      { "@type": "HowToStep", "position": 7, "name": "Create message templates in Meta",
+        "text": "Create the templates CartPinger uses (names must match exactly) and submit them for Meta approval.",
+        "url": "https://cartpinger.com/docs/setup/#step-7" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+
+<div class="docs-layout">
+
+  <!-- Sidebar -->
+  <aside class="docs-sidebar">
+    <a href="/" class="brand">
+      <span class="brand-mark">C</span>
+      <span>CartPinger Docs</span>
+    </a>
+
+    <h4>Get started</h4>
+    <nav>
+      <a href="/docs/setup/" class="active">Setup guide</a>
+      <a href="/docs/templates/">Message templates</a>
+      <a href="/docs/faq/">FAQ</a>
+    </nav>
+
+    <a href="/" class="back-link">← Back to cartpinger.com</a>
+  </aside>
+
+  <!-- Main -->
+  <main class="docs-main">
+    <header class="docs-hero">
+      <span class="eyebrow">Setup guide</span>
+      <h1>Get CartPinger running in 15 minutes</h1>
+      <p class="lede">Connect your WooCommerce store to WhatsApp Cloud API end-to-end. Follow the video, or the written steps below — they say the same thing.</p>
+      <div class="meta">
+        <span>⏱ ~15 minutes</span>
+        <span>💶 €0 in Meta credits (1,000 free conversations/month)</span>
+        <span>🔧 No code required</span>
+      </div>
+    </header>
+
+    <div class="docs-video">
+      <iframe src="https://www.youtube.com/embed/2C99NvvOg_k" title="WhatsApp Business API Setup 2026 — walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <p class="micro" style="color: var(--text-3); margin-top: 8px;">External video walkthrough. The steps below stay in sync with the latest Meta dashboard.</p>
+
+    <h2 id="before-you-start">Before you start</h2>
+    <p>You'll need three things ready:</p>
+    <ul>
+      <li>A <strong>Meta Business Account</strong> (free — you can create it during step 1).</li>
+      <li>A <strong>phone number</strong> that is <em>not</em> currently used on personal WhatsApp. A landline works.</li>
+      <li>Access to your <strong>WordPress admin</strong> to install the plugin.</li>
+    </ul>
+    <div class="callout info">
+      <p><strong>Tip:</strong> open Meta in one tab and your WordPress admin in another. You'll be jumping between them.</p>
+    </div>
+
+    <h2 id="steps">The 7 steps</h2>
+
+    <div class="docs-steps">
+
+      <div class="docs-step" id="step-1">
+        <h3>Create a Meta Business Account</h3>
+        <p>Go to <a href="https://business.facebook.com" target="_blank" rel="noopener">business.facebook.com</a> and click <strong>Create account</strong>. Use your real business name and email — Meta verifies this later.</p>
+        <p>This account is the legal owner of your WhatsApp Business Account (WABA). If you already have a Business Manager set up, skip to step 2.</p>
+      </div>
+
+      <div class="docs-step" id="step-2">
+        <h3>Create an app at developers.facebook.com</h3>
+        <p>Go to <a href="https://developers.facebook.com/apps" target="_blank" rel="noopener">developers.facebook.com/apps</a> → <strong>Create app</strong>.</p>
+        <ul>
+          <li>App type: <strong>Business</strong>.</li>
+          <li>Add use case: <strong>Other</strong> → continue → on the next screen add the <strong>WhatsApp</strong> product.</li>
+          <li>When prompted, link the Business Account you created in step 1.</li>
+        </ul>
+        <p>You're now in the WhatsApp setup section of your new app.</p>
+      </div>
+
+      <div class="docs-step" id="step-3">
+        <h3>Get Phone Number ID and WABA ID</h3>
+        <p>From the left menu, open <strong>WhatsApp → API Setup</strong>. You'll see a test phone number Meta provides for free.</p>
+        <p>Copy these two values somewhere safe:</p>
+        <ul>
+          <li><code>Phone number ID</code> — the long number under "From".</li>
+          <li><code>WhatsApp Business Account ID</code> — the WABA ID at the top.</li>
+        </ul>
+        <p>Below, click <strong>Add phone number</strong> to register your own number (the one from "Before you start"). Verify it via SMS or voice call.</p>
+        <div class="callout">
+          <p><strong>Important:</strong> once verified, this number is bound to the WhatsApp Business API. You cannot use it on the regular WhatsApp app anymore.</p>
+        </div>
+      </div>
+
+      <div class="docs-step" id="step-4">
+        <h3>Generate an Access Token</h3>
+        <p>On the same <strong>API Setup</strong> screen there's a 24-hour <strong>Temporary access token</strong>. Copy it — it's enough to test CartPinger right now.</p>
+        <p><strong>For production</strong>, you need a permanent token:</p>
+        <ol>
+          <li>Open <a href="https://business.facebook.com/settings/system-users" target="_blank" rel="noopener">business.facebook.com/settings/system-users</a>.</li>
+          <li>Click <strong>Add</strong> → create a System User (Admin role).</li>
+          <li>On that user → <strong>Generate new token</strong> → select your app → permissions: <code>whatsapp_business_messaging</code> and <code>whatsapp_business_management</code>.</li>
+          <li>Set expiry to <strong>Never</strong>. Copy the token immediately — Meta only shows it once.</li>
+        </ol>
+      </div>
+
+      <div class="docs-step" id="step-5">
+        <h3>Get the App Secret</h3>
+        <p>In <a href="https://developers.facebook.com/apps" target="_blank" rel="noopener">developers.facebook.com/apps</a> open your app → <strong>App settings → Basic</strong>.</p>
+        <p>Find <strong>App secret</strong> → click <strong>Show</strong> → confirm with your Facebook password → copy the value.</p>
+        <p>CartPinger uses the App Secret to validate the <code>X-Hub-Signature-256</code> on Meta webhooks (HMAC-SHA256). Without it, delivery and read receipts won't update.</p>
+      </div>
+
+      <div class="docs-step" id="step-6">
+        <h3>Install CartPinger and paste the credentials</h3>
+        <p>In your WordPress admin: <strong>Plugins → Add new → Search "CartPinger"</strong> → Install → Activate.</p>
+        <p>Open <strong>CartPinger → Setup</strong>. Paste the four values:</p>
+        <ul>
+          <li>Phone Number ID</li>
+          <li>WhatsApp Business Account ID (WABA ID)</li>
+          <li>Access Token</li>
+          <li>App Secret</li>
+        </ul>
+        <p>Click <strong>Save and test</strong>. CartPinger sends a test message to verify everything connects. If the test succeeds you're 90% done.</p>
+        <div class="callout warn">
+          <p><strong>If the test fails:</strong> see <a href="#common-issues">Common issues</a> below.</p>
+        </div>
+      </div>
+
+      <div class="docs-step" id="step-7">
+        <h3>Create message templates in Meta</h3>
+        <p>Meta requires every outgoing template to be approved before it can be sent. CartPinger ships with the exact wording — you just copy-paste it.</p>
+        <p>Open <a href="https://business.facebook.com/wa/manage/message-templates" target="_blank" rel="noopener">Meta Template Manager</a> and create the templates listed in <a href="/docs/templates/">/docs/templates</a>. Use the exact names — CartPinger looks them up by name.</p>
+        <p>Approval times: <strong>utility templates</strong> (order updates) are usually approved in minutes. <strong>Marketing templates</strong> (cart recovery) can take a few hours.</p>
+      </div>
+
+    </div>
+
+    <h2 id="common-issues">Common issues</h2>
+
+    <h3>Test message doesn't arrive</h3>
+    <p>Meta's sandbox mode only delivers to phone numbers explicitly registered as <strong>test recipients</strong>. In your app go to <strong>WhatsApp → API Setup → To</strong> and add your personal phone number. Re-run the test from CartPinger.</p>
+
+    <h3>Templates rejected by Meta</h3>
+    <p>The most frequent reason: the template contains promotional language but you submitted it under category <strong>UTILITY</strong>. Cart recovery messages must be <strong>MARKETING</strong>. Order confirmations stay UTILITY.</p>
+    <p>Marketing templates also take longer — wait at least 4 hours before retrying.</p>
+
+    <h3>Plugin shows "not configured"</h3>
+    <p>Verify that all four credentials are saved (open <strong>CartPinger → Setup</strong> and check there are no empty fields). Pay attention to:</p>
+    <ul>
+      <li>Access token is a single long string with no line breaks.</li>
+      <li>App Secret is the value, not the App ID — they sit next to each other.</li>
+      <li>Phone Number ID and WABA ID are <em>not</em> the same number. WABA ID is shorter and starts with a different prefix.</li>
+    </ul>
+
+    <h3>Delivery and read receipts don't update</h3>
+    <p>Meta sends webhook callbacks to CartPinger when messages are delivered or read. Two common causes:</p>
+    <ul>
+      <li>The webhook URL isn't reachable — your WordPress must be served over HTTPS with a valid certificate.</li>
+      <li>The App Secret is wrong — webhooks fail signature validation and are rejected.</li>
+    </ul>
+
+    <div class="docs-cta">
+      <h3>Ready to recover your first cart?</h3>
+      <p>Free plan: 50 recoveries/month, no card required. Pro unlocks the full sequence and dynamic coupons.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="/#precio">Install CartPinger free</a>
+        <a class="btn" style="background: var(--surface-2); color: var(--text-1); border: 1px solid var(--border);" href="/#precio">Upgrade to Pro · €14/mo or €99/yr</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- TOC -->
+  <aside class="docs-toc">
+    <h5>On this page</h5>
+    <a href="#before-you-start">Before you start</a>
+    <a href="#steps">The 7 steps</a>
+    <a href="#step-1" style="padding-left: 24px;">1. Business Account</a>
+    <a href="#step-2" style="padding-left: 24px;">2. Create app</a>
+    <a href="#step-3" style="padding-left: 24px;">3. Phone & WABA ID</a>
+    <a href="#step-4" style="padding-left: 24px;">4. Access Token</a>
+    <a href="#step-5" style="padding-left: 24px;">5. App Secret</a>
+    <a href="#step-6" style="padding-left: 24px;">6. Install plugin</a>
+    <a href="#step-7" style="padding-left: 24px;">7. Templates</a>
+    <a href="#common-issues">Common issues</a>
+  </aside>
+
+</div>
+
+<script>
+  // TOC active state on scroll
+  const headings = document.querySelectorAll('.docs-main h2[id], .docs-main h3[id]');
+  const tocLinks = document.querySelectorAll('.docs-toc a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        tocLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  headings.forEach(h => observer.observe(h));
+</script>
+
+</body>
+</html>

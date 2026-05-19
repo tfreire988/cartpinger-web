@@ -2023,25 +2023,14 @@ function Footer() {
   }))))), /*#__PURE__*/React.createElement("div", {
     className: "foot-col"
   }, /*#__PURE__*/React.createElement("h5", null, "Resources"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#faq"
-  }, "FAQ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "https://github.com/tfreire988/cartpinger-web/blob/main/DOCUMENTATION.md",
-    target: "_blank",
-    rel: "noopener"
-  }, "Documentation ", /*#__PURE__*/React.createElement(Icon3.Ext, {
-    width: "10",
-    height: "10",
-    style: {
-      display: "inline",
-      verticalAlign: -1,
-      marginLeft: 2,
-      opacity: 0.6
-    }
-  }))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/"
+  }, "Setup guide")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "/docs/templates/"
+  }, "Message templates")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
+    href: "/docs/faq/"
+  }, "Technical FAQ")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "mailto:info@cartpinger.com"
-  }, "Support")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
-    href: "#tech"
-  }, "Architecture")))), /*#__PURE__*/React.createElement("div", {
+  }, "Support")))), /*#__PURE__*/React.createElement("div", {
     className: "foot-col"
   }, /*#__PURE__*/React.createElement("h5", null, "Legal"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "/privacy.html"
