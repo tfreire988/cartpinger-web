@@ -13,8 +13,9 @@ Tiempo estimado: 30–45 minutos (la mayor parte es esperar la verificación de 
 5. [Obtener el Access Token y el Phone ID](#5-obtener-el-access-token-y-el-phone-id)
 6. [Configurar CartPinger en WordPress](#6-configurar-cartpinger-en-wordpress)
 7. [Activar los flujos](#7-activar-los-flujos)
-8. [Verificar que funciona](#8-verificar-que-funciona)
-9. [Preguntas frecuentes de instalación](#9-preguntas-frecuentes-de-instalación)
+8. [Crear las plantillas de mensaje en Meta](#8-crear-las-plantillas-de-mensaje-en-meta)
+9. [Verificar que funciona](#9-verificar-que-funciona)
+10. [Preguntas frecuentes de instalación](#10-preguntas-frecuentes-de-instalación)
 
 ---
 
@@ -144,7 +145,7 @@ Para recibir confirmaciones de entrega y lectura, Meta necesita saber la URL de 
 1. En Meta for Developers, ve a **WhatsApp → Configuración → Webhooks**.
 2. Haz clic en **Editar**.
 3. Introduce:
-   - **URL de devolución de llamada:** `https://tutienda.com/?cartpinger_webhook=1`
+   - **URL de devolución de llamada:** `https://tutienda.com/wp-json/cartpinger/v1/webhook`
    - **Token de verificación:** el mismo texto que pusiste en WordPress
 4. Haz clic en **Verificar y guardar**.
 5. Suscríbete al campo `messages`.
@@ -159,7 +160,68 @@ Para recibir confirmaciones de entrega y lectura, Meta necesita saber la URL de 
 
 ---
 
-## 8. Verificar que funciona
+## 8. Crear las plantillas de mensaje en Meta
+
+CartPinger usa una plantilla de WhatsApp llamada `abandoned_cart_recovery`. Meta requiere que la crees y apruebe antes de poder enviar mensajes.
+
+### 8.1 Acceder al gestor de plantillas
+
+1. Ve a [business.facebook.com/wa/manage/message-templates](https://business.facebook.com/wa/manage/message-templates).
+2. Selecciona tu cuenta de WhatsApp Business.
+3. Haz clic en **Crear plantilla**.
+
+### 8.2 Configurar la plantilla
+
+| Campo | Valor |
+|-------|-------|
+| **Categoría** | `Utility` (recomendado — aprobación más rápida y menor coste) |
+| **Nombre** | `abandoned_cart_recovery` (exactamente así, en minúsculas) |
+| **Idioma** | El idioma de tu tienda (ver tabla abajo) |
+
+**Contenido del cuerpo según idioma:**
+
+| Idioma de la tienda | Código | Texto del cuerpo |
+|---|---|---|
+| Inglés | `en_US` | `Hi {{1}}! You left something in your cart. Complete your purchase here: {{2}}` |
+| Español (España) | `es_ES` | `¡Hola {{1}}! Dejaste algo en tu carrito. Completa tu compra aquí: {{2}}` |
+| Español (México) | `es_MX` | `¡Hola {{1}}! Dejaste algo en tu carrito. Completa tu compra aquí: {{2}}` |
+| Portugués (Brasil) | `pt_BR` | `Olá {{1}}! Você deixou algo no seu carrinho. Conclua sua compra aqui: {{2}}` |
+
+> `{{1}}` es el nombre del cliente y `{{2}}` es el enlace de recuperación. No cambies esos marcadores.
+
+Cuando Meta te pida ejemplos, introduce:
+- `{{1}}` → `Juan`
+- `{{2}}` → `https://tutienda.com/?cartpinger_recover=ejemplo`
+
+### 8.3 Plantillas Pro (secuencia multi-mensaje)
+
+Si tienes CartPinger Pro, necesitas crear dos plantillas adicionales:
+
+**`abandoned_cart_recovery_24h`** — mensaje con cupón a las 24h:
+
+| Código | Texto del cuerpo |
+|---|---|
+| `en_US` | `Hi {{1}}! Your cart is still waiting. Use code {{2}} for 10% off — valid 48h. Complete your order: {{3}}` |
+| `es_ES` | `¡Hola {{1}}! Tu carrito sigue esperando. Usa el código {{2}} para un 10% de descuento — válido 48h. Completa tu pedido: {{3}}` |
+| `pt_BR` | `Olá {{1}}! Seu carrinho ainda está esperando. Use o código {{2}} para 10% de desconto — válido 48h. Conclua seu pedido: {{3}}` |
+
+**`abandoned_cart_recovery_48h`** — recordatorio final a las 48h:
+
+| Código | Texto del cuerpo |
+|---|---|
+| `en_US` | `Hi {{1}}! Last reminder — your cart expires soon. Complete your purchase: {{2}}` |
+| `es_ES` | `¡Hola {{1}}! Último aviso — tu carrito está a punto de expirar. Completa tu compra: {{2}}` |
+| `pt_BR` | `Olá {{1}}! Último aviso — seu carrinho está prestes a expirar. Conclua sua compra: {{2}}` |
+
+### 8.4 Tiempo de aprobación
+
+Meta tarda entre 1 y 24 horas en revisar la plantilla. Recibirás una notificación cuando esté aprobada. Hasta entonces el plugin no podrá enviar mensajes.
+
+> **Si tu tienda está en un idioma no listado arriba**, crea la plantilla en `en_US` — CartPinger la usará automáticamente como fallback.
+
+---
+
+## 9. Verificar que funciona
 
 Para hacer una prueba rápida:
 
@@ -174,7 +236,7 @@ Para hacer una prueba rápida:
 
 ---
 
-## 9. Preguntas frecuentes de instalación
+## 10. Preguntas frecuentes de instalación
 
 **El webhook no verifica / da error 403**
 Asegúrate de que la URL de tu tienda es accesible desde internet (no vale `localhost`). Si tienes un plugin de seguridad como Wordfence, puede estar bloqueando la petición — añade la IP de Meta a la lista blanca o desactiva temporalmente el firewall para hacer la prueba.
