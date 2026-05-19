@@ -71,7 +71,7 @@ writeFileSync(path.join(DIST_EN, "bundle.js"), bundleEn);
 console.log(`\n  en/bundle.js  (${(bundleEn.length / 1024).toFixed(1)} KB)`);
 
 // Copy static assets to dist/
-const STATIC = ["styles.css", "privacy.html", "terms.html", "sitemap.xml", "robots.txt", "og-image.svg", "logo.png"];
+const STATIC = ["styles.css", "privacy.html", "terms.html", "sitemap.xml", "robots.txt", "og-image.svg", "og-image.png", "logo.png"];
 for (const f of STATIC) {
   try {
     const content = readFileSync(path.join(__dir, f));
