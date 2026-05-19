@@ -8,7 +8,7 @@ function Steps() {
     <section className="section" id="producto">
       <div className="container">
         <div className="section-hed reveal">
-          <h2 className="h2">Tres pasos. Pago único. Sin SaaS.</h2>
+          <h2 className="h2">Tres pasos. Sin sorpresas.</h2>
           <p className="lede">El onboarding de Meta Business es donde otros plugins te abandonan. Aquí no.</p>
         </div>
         <div className="steps">
@@ -329,7 +329,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 79;
+  const wcTotal = 99 * parseInt(years);
   const diff = compTotal - wcTotal;
 
   const abandoned = orders * (abandon / 100);
@@ -346,7 +346,7 @@ function Calculator() {
       <div className="container">
         <div className="section-hed reveal">
           <h2 className="h2">Calcula lo que ahorras vs SaaS recurrente.</h2>
-          <p className="lede">Pagas €79 una vez. Las alternativas cobran cada mes. La diferencia compone.</p>
+          <p className="lede">€99/año o €14/mes. Las alternativas cobran 2–5× más. La diferencia compone.</p>
         </div>
 
         <div className="surface calc reveal" data-delay="80">
@@ -388,8 +388,8 @@ function Calculator() {
 
             <div className="calc-out">
               <div className="out-row">
-                <span className="l">CartPinger Pro · pago único</span>
-                <span className="v">€79</span>
+                <span className="l">CartPinger Pro · €99/año</span>
+                <span className="v">{fmtEur(wcTotal)}</span>
               </div>
               <div className="out-row">
                 <span className="l">{c.name} · {years} {years === "1" ? "año" : "años"}</span>
@@ -399,14 +399,14 @@ function Calculator() {
               <div className="diff">
                 <div className="l">Tu diferencia a {years} {years === "1" ? "año" : "años"}</div>
                 <div className="v">{fmtEur(diff)}</div>
-                <div className="sub">menos pagando licencia única</div>
+                <div className="sub">menos eligiendo CartPinger anual</div>
               </div>
 
               <div className="calc-bars">
                 <div className="bar wa">
                   <div className="label">CartPinger Pro</div>
                   <div className="track"><div className="fill" style={{ width: wcW + "%" }}/></div>
-                  <div className="val">€79</div>
+                  <div className="val">{fmtEur(wcTotal)}</div>
                 </div>
                 <div className="bar comp">
                   <div className="label">{c.name}</div>

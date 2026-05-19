@@ -612,7 +612,7 @@ function Steps() {
     className: "section-hed reveal"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h2"
-  }, "Tres pasos. Pago \xFAnico. Sin SaaS."), /*#__PURE__*/React.createElement("p", {
+  }, "Tres pasos. Sin sorpresas."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "El onboarding de Meta Business es donde otros plugins te abandonan. Aqu\xED no.")), /*#__PURE__*/React.createElement("div", {
     className: "steps"
@@ -1164,7 +1164,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 79;
+  const wcTotal = 99 * parseInt(years);
   const diff = compTotal - wcTotal;
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
@@ -1184,7 +1184,7 @@ function Calculator() {
     className: "h2"
   }, "Calcula lo que ahorras vs SaaS recurrente."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Pagas \u20AC79 una vez. Las alternativas cobran cada mes. La diferencia compone.")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC99/a\xF1o o \u20AC14/mes. Las alternativas cobran 2\u20135\xD7 m\xE1s. La diferencia compone.")), /*#__PURE__*/React.createElement("div", {
     className: "surface calc reveal",
     "data-delay": "80"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1255,9 +1255,9 @@ function Calculator() {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "CartPinger Pro \xB7 pago \xFAnico"), /*#__PURE__*/React.createElement("span", {
+  }, "CartPinger Pro \xB7 \u20AC99/a\xF1o"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
+  }, fmtEur(wcTotal))), /*#__PURE__*/React.createElement("div", {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
@@ -1274,7 +1274,7 @@ function Calculator() {
     className: "v"
   }, fmtEur(diff)), /*#__PURE__*/React.createElement("div", {
     className: "sub"
-  }, "menos pagando licencia \xFAnica")), /*#__PURE__*/React.createElement("div", {
+  }, "menos eligiendo CartPinger anual")), /*#__PURE__*/React.createElement("div", {
     className: "calc-bars"
   }, /*#__PURE__*/React.createElement("div", {
     className: "bar wa"
@@ -1289,7 +1289,7 @@ function Calculator() {
     }
   })), /*#__PURE__*/React.createElement("div", {
     className: "val"
-  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
+  }, fmtEur(wcTotal))), /*#__PURE__*/React.createElement("div", {
     className: "bar comp"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
@@ -1328,8 +1328,8 @@ const Icon3 = window.WCTop?.Icon;
 const CMP_ROWS = [{
   f: "Precio",
   wc: {
-    v: "Gratis · Pro €79",
-    tip: "Free para siempre hasta 50 recuperaciones/mes. Pro €79 pago único: sin límite + secuencias, cupones dinámicos, CSV y soporte prioritario."
+    v: "Gratis · Pro desde €8,25/mes",
+    tip: "Free para siempre hasta 50 recuperaciones/mes. Pro €14/mes o €99/año (~€8,25/mes): sin límite + secuencias, cupones dinámicos, CSV y soporte prioritario."
   },
   rt: {
     v: "$14/mes",
@@ -1675,7 +1675,7 @@ function Pricing() {
     className: "h2"
   }, "Empieza gratis. Actualiza cuando quieras."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Free para siempre hasta 50 recuperaciones/mes. Pro \u20AC79 pago \xFAnico: sin l\xEDmite + secuencias avanzadas y cupones autom\xE1ticos.")), /*#__PURE__*/React.createElement("div", {
+  }, "Free para siempre hasta 50 recuperaciones/mes. Pro desde \u20AC8,25/mes (anual) o \u20AC14/mes: sin l\xEDmite + secuencias avanzadas y cupones autom\xE1ticos.")), /*#__PURE__*/React.createElement("div", {
     className: "pricing-grid reveal",
     "data-delay": "60"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1748,9 +1748,15 @@ function Pricing() {
     className: "chip chip-pro"
   }, "Pro")), /*#__PURE__*/React.createElement("div", {
     className: "price-num"
-  }, "\u20AC79"), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC99", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 18,
+      fontWeight: 500,
+      opacity: .7
+    }
+  }, "/a\xF1o")), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "pago \xFAnico \xB7 sin renovaci\xF3n \xB7 sin l\xEDmite"), /*#__PURE__*/React.createElement("ul", {
+  }, "o \u20AC14/mes \xB7 sin permanencia \xB7 sin l\xEDmite"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
@@ -1780,7 +1786,7 @@ function Pricing() {
     className: "ch",
     width: "16",
     height: "16"
-  }), " Updates garantizados 1 a\xF1o")), /*#__PURE__*/React.createElement("div", {
+  }), " Updates incluidos mientras est\xE9 activa")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 8
     }
@@ -1791,7 +1797,7 @@ function Pricing() {
     style: {
       marginTop: 10
     }
-  }, "Plazas limitadas a las primeras 50 tiendas. Pago \xFAnico al lanzar \u2014 no antes."))))));
+  }, "Plazas limitadas a las primeras 50 tiendas. Precio congelado para early access."))))));
 }
 
 /* ---------------- Roadmap ---------------- */
@@ -1878,7 +1884,7 @@ const FAQS = [{
   a: "0€ a nosotros por mensajes. A Meta pagas según su pricing oficial. En España, un mensaje de carrito abandonado (categoría marketing) cuesta aproximadamente €0,08. Los primeros 1.000 mensajes al mes son gratis."
 }, {
   q: "¿Es open source de verdad?",
-  a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€79 pago único) no es por la licencia del código, sino por quitar el límite mensual de 50 recuperaciones y añadir funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario."
+  a: "Sí, MIT License. El código es libre y público desde día 1 — puedes descargarlo, auditarlo y usarlo sin pagar nada. El plan Pro (€14/mes o €99/año) no es por la licencia del código, sino por quitar el límite mensual de 50 recuperaciones y añadir funciones avanzadas: secuencia multi-mensaje, cupones dinámicos, CSV y soporte prioritario."
 }, {
   q: "¿El plugin almacena datos de clientes en sus servidores?",
   a: "No. CartPinger no tiene servidores propios. Corre íntegramente en tu WordPress. Los datos de tus clientes (teléfono, carrito, token de recuperación) se almacenan en tu base de datos MySQL local. Nosotros solo proveemos el código."
@@ -1928,7 +1934,7 @@ function FinalCTA() {
   }, "Empieza gratis. Actualiza cuando quieras."), /*#__PURE__*/React.createElement("p", {
     className: "lede reveal",
     "data-delay": "100"
-  }, "Free para siempre hasta 50 recuperaciones/mes. Pro \u20AC79 pago \xFAnico: sin l\xEDmite, secuencias y cupones autom\xE1ticos. Disponible Q3 2026."), /*#__PURE__*/React.createElement("div", {
+  }, "Free para siempre hasta 50 recuperaciones/mes. Pro \u20AC14/mes o \u20AC99/a\xF1o: sin l\xEDmite, secuencias y cupones autom\xE1ticos. Disponible Q3 2026."), /*#__PURE__*/React.createElement("div", {
     className: "reveal",
     "data-delay": "200",
     style: {
@@ -1958,7 +1964,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Pro \u20AC79 pago \xFAnico \xB7 sin SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Pro \u20AC14/mes o \u20AC99/a\xF1o \xB7 cancela cuando quieras"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",
@@ -1988,7 +1994,7 @@ function Footer() {
     style: {
       color: "#04220f"
     }
-  })), /*#__PURE__*/React.createElement("span", null, "CartPinger")), /*#__PURE__*/React.createElement("div", null, "Plugin de WooCommerce para WhatsApp Cloud API. Recupera carritos abandonados. Pago \xFAnico, sin SaaS.")), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("span", null, "CartPinger")), /*#__PURE__*/React.createElement("div", null, "Plugin de WooCommerce para WhatsApp Cloud API. Recupera carritos abandonados. Tu propio n\xFAmero, tu propia data.")), /*#__PURE__*/React.createElement("div", {
     className: "foot-col"
   }, /*#__PURE__*/React.createElement("h5", null, "Producto"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#features"

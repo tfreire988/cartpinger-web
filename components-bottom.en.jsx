@@ -5,7 +5,7 @@ const Icon3 = window.WCTop?.Icon;
 /* ---------------- Comparison ---------------- */
 const CMP_ROWS = [
   { f: "Price",
-    wc: { v: "Free · Pro €79", tip: "Free forever up to 50 recoveries/month. Pro €79 one-time: no limit + sequences, dynamic coupons, CSV, priority support." },
+    wc: { v: "Free · Pro from €8.25/mo", tip: "Free forever up to 50 recoveries/month. Pro €14/mo or €99/year (~€8.25/mo): no limit + sequences, dynamic coupons, CSV, priority support." },
     rt: { v: "$14/mo",  tip: "≈ €156/year recurring." },
     ai: { v: "$25/mo",  tip: "≈ €280/year recurring, standard plan." },
     nf: { v: "Free",    tip: "Limited plan with Notiqoo branding in messages." },
@@ -151,7 +151,7 @@ function Pricing() {
       <div className="container">
         <div className="section-hed reveal">
           <h2 className="h2">Start free. Upgrade whenever you want.</h2>
-          <p className="lede">Free forever up to 50 recoveries/month. Pro €79 one-time: no limit + advanced sequences and automatic coupons.</p>
+          <p className="lede">Free forever up to 50 recoveries/month. Pro from €8.25/mo (annual) or €14/mo: no limit + advanced sequences and automatic coupons.</p>
         </div>
 
         <div className="pricing-grid reveal" data-delay="60">
@@ -193,8 +193,8 @@ function Pricing() {
               </span>
               <span className="chip chip-pro">Pro</span>
             </div>
-            <div className="price-num">€79</div>
-            <div className="price-sub">one-time · no renewal · no limit</div>
+            <div className="price-num">€99<span style={{fontSize:18,fontWeight:500,opacity:.7}}>/year</span></div>
+            <div className="price-sub">or €14/mo · no lock-in · no limit</div>
 
             <ul className="price-list">
               <li><Icon3.Check className="ch" width="16" height="16"/> Everything in Free</li>
@@ -202,13 +202,13 @@ function Pricing() {
               <li><Icon3.Check className="ch" width="16" height="16"/> Automatic dynamic coupons (10% · single-use · 48h validity)</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> CSV export of all recoveries</li>
               <li><Icon3.Check className="ch" width="16" height="16"/> Priority email support</li>
-              <li><Icon3.Check className="ch" width="16" height="16"/> 1 year guaranteed updates</li>
+              <li><Icon3.Check className="ch" width="16" height="16"/> Updates included while subscription is active</li>
             </ul>
 
             <div style={{ marginTop: 8 }}>
               <WaitlistForm cta="Request Beta Pro Access"/>
               <p className="micro" style={{ marginTop: 10 }}>
-                Limited to the first 50 stores. One-time payment at launch — not before.
+                Limited to the first 50 stores. Price locked for early access.
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ const FAQS = [
   { q: "How much does Meta charge per message?",
     a: "€0 to us per message. You pay Meta at their official pricing. In the US, an abandoned cart message (marketing category) costs approximately $0.025. The first 1,000 messages per month are free." },
   { q: "Is it really open source?",
-    a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€79 one-time) is not for the code license — it removes the 50 recoveries/month limit and unlocks advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support." },
+    a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€14/mo or €99/year) is not for the code license — it removes the 50 recoveries/month limit and unlocks advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support." },
   { q: "Does the plugin store customer data on its servers?",
     a: "No. CartPinger has no servers of its own. It runs entirely on your WordPress. Your customers' data (phone, cart, recovery token) is stored in your local MySQL database. We only provide the code." },
   { q: "Does it work with block-based checkout?",
@@ -336,13 +336,13 @@ function FinalCTA() {
     <section className="final" id="cta">
       <div className="container">
         <h2 className="h1 reveal">Start free. Upgrade whenever you want.</h2>
-        <p className="lede reveal" data-delay="100">Free forever up to 50 recoveries/month. Pro €79 one-time: no limit, sequences and automatic coupons. Available Q3 2026.</p>
+        <p className="lede reveal" data-delay="100">Free forever up to 50 recoveries/month. Pro €14/mo or €99/year: no limit, sequences and automatic coupons. Available Q3 2026.</p>
         <div className="reveal" data-delay="200" style={{ display: "flex", justifyContent: "center", marginTop: 14 }}>
           <WaitlistForm size="lg" cta="Join the Beta"/>
         </div>
         <div className="micro-row reveal" data-delay="400">
           <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Free forever · no card</span>
-          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Pro €79 one-time · no SaaS</span>
+          <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> Pro €14/mo or €99/year · cancel anytime</span>
           <span><Icon3.Check className="tick" width="13" height="13" style={{ display: "inline", verticalAlign: -2 }}/> One email when it launches</span>
         </div>
       </div>
@@ -361,7 +361,7 @@ function Footer() {
               <span className="brand-mark"><Icon3.Whatsapp style={{ color: "#04220f" }}/></span>
               <span>CartPinger</span>
             </a>
-            <div>WooCommerce plugin for WhatsApp Cloud API. Recover abandoned carts. One-time payment, no SaaS.</div>
+            <div>WooCommerce plugin for WhatsApp Cloud API. Recover abandoned carts. Your own number, your own data.</div>
           </div>
           <div className="foot-col">
             <h5>Product</h5>

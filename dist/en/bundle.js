@@ -604,7 +604,7 @@ function Steps() {
     className: "section-hed reveal"
   }, /*#__PURE__*/React.createElement("h2", {
     className: "h2"
-  }, "Three steps. One-time payment. No SaaS."), /*#__PURE__*/React.createElement("p", {
+  }, "Three steps. No surprises."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
   }, "Meta Business onboarding is where other plugins leave you stranded. Not here.")), /*#__PURE__*/React.createElement("div", {
     className: "steps"
@@ -1156,7 +1156,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 79;
+  const wcTotal = 99 * parseInt(years);
   const diff = compTotal - wcTotal;
   const abandoned = orders * (abandon / 100);
   const recovered = abandoned * 0.5;
@@ -1176,7 +1176,7 @@ function Calculator() {
     className: "h2"
   }, "Calculate what you save vs. recurring SaaS."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "You pay \u20AC79 once. Alternatives charge every month. The difference compounds.")), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC99/year or \u20AC14/mo. Alternatives charge 2\u20135\xD7 more. The difference compounds.")), /*#__PURE__*/React.createElement("div", {
     className: "surface calc reveal",
     "data-delay": "80"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1247,9 +1247,9 @@ function Calculator() {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
-  }, "CartPinger Pro \xB7 one-time"), /*#__PURE__*/React.createElement("span", {
+  }, "CartPinger Pro \xB7 \u20AC99/year"), /*#__PURE__*/React.createElement("span", {
     className: "v"
-  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
+  }, fmtEur(wcTotal))), /*#__PURE__*/React.createElement("div", {
     className: "out-row"
   }, /*#__PURE__*/React.createElement("span", {
     className: "l"
@@ -1266,7 +1266,7 @@ function Calculator() {
     className: "v"
   }, fmtEur(diff)), /*#__PURE__*/React.createElement("div", {
     className: "sub"
-  }, "less with a one-time license")), /*#__PURE__*/React.createElement("div", {
+  }, "less choosing CartPinger annual")), /*#__PURE__*/React.createElement("div", {
     className: "calc-bars"
   }, /*#__PURE__*/React.createElement("div", {
     className: "bar wa"
@@ -1281,7 +1281,7 @@ function Calculator() {
     }
   })), /*#__PURE__*/React.createElement("div", {
     className: "val"
-  }, "\u20AC79")), /*#__PURE__*/React.createElement("div", {
+  }, fmtEur(wcTotal))), /*#__PURE__*/React.createElement("div", {
     className: "bar comp"
   }, /*#__PURE__*/React.createElement("div", {
     className: "label"
@@ -1320,8 +1320,8 @@ const Icon3 = window.WCTop?.Icon;
 const CMP_ROWS = [{
   f: "Price",
   wc: {
-    v: "Free · Pro €79",
-    tip: "Free forever up to 50 recoveries/month. Pro €79 one-time: no limit + sequences, dynamic coupons, CSV, priority support."
+    v: "Free · Pro from €8.25/mo",
+    tip: "Free forever up to 50 recoveries/month. Pro €14/mo or €99/year (~€8.25/mo): no limit + sequences, dynamic coupons, CSV, priority support."
   },
   rt: {
     v: "$14/mo",
@@ -1667,7 +1667,7 @@ function Pricing() {
     className: "h2"
   }, "Start free. Upgrade whenever you want."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Free forever up to 50 recoveries/month. Pro \u20AC79 one-time: no limit + advanced sequences and automatic coupons.")), /*#__PURE__*/React.createElement("div", {
+  }, "Free forever up to 50 recoveries/month. Pro from \u20AC8.25/mo (annual) or \u20AC14/mo: no limit + advanced sequences and automatic coupons.")), /*#__PURE__*/React.createElement("div", {
     className: "pricing-grid reveal",
     "data-delay": "60"
   }, /*#__PURE__*/React.createElement("div", {
@@ -1740,9 +1740,15 @@ function Pricing() {
     className: "chip chip-pro"
   }, "Pro")), /*#__PURE__*/React.createElement("div", {
     className: "price-num"
-  }, "\u20AC79"), /*#__PURE__*/React.createElement("div", {
+  }, "\u20AC99", /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 18,
+      fontWeight: 500,
+      opacity: .7
+    }
+  }, "/year")), /*#__PURE__*/React.createElement("div", {
     className: "price-sub"
-  }, "one-time \xB7 no renewal \xB7 no limit"), /*#__PURE__*/React.createElement("ul", {
+  }, "or \u20AC14/mo \xB7 no lock-in \xB7 no limit"), /*#__PURE__*/React.createElement("ul", {
     className: "price-list"
   }, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "ch",
@@ -1772,7 +1778,7 @@ function Pricing() {
     className: "ch",
     width: "16",
     height: "16"
-  }), " 1 year guaranteed updates")), /*#__PURE__*/React.createElement("div", {
+  }), " Updates included while subscription is active")), /*#__PURE__*/React.createElement("div", {
     style: {
       marginTop: 8
     }
@@ -1783,7 +1789,7 @@ function Pricing() {
     style: {
       marginTop: 10
     }
-  }, "Limited to the first 50 stores. One-time payment at launch \u2014 not before."))))));
+  }, "Limited to the first 50 stores. Price locked for early access."))))));
 }
 
 /* ---------------- Roadmap ---------------- */
@@ -1870,7 +1876,7 @@ const FAQS = [{
   a: "€0 to us per message. You pay Meta at their official pricing. In the US, an abandoned cart message (marketing category) costs approximately $0.025. The first 1,000 messages per month are free."
 }, {
   q: "Is it really open source?",
-  a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€79 one-time) is not for the code license — it removes the 50 recoveries/month limit and unlocks advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support."
+  a: "Yes, MIT License. The code is free and public from day 1 — you can download it, audit it, and use it without paying anything. The Pro plan (€14/mo or €99/year) is not for the code license — it removes the 50 recoveries/month limit and unlocks advanced features: multi-message sequences, dynamic coupons, CSV export, and priority support."
 }, {
   q: "Does the plugin store customer data on its servers?",
   a: "No. CartPinger has no servers of its own. It runs entirely on your WordPress. Your customers' data (phone, cart, recovery token) is stored in your local MySQL database. We only provide the code."
@@ -1920,7 +1926,7 @@ function FinalCTA() {
   }, "Start free. Upgrade whenever you want."), /*#__PURE__*/React.createElement("p", {
     className: "lede reveal",
     "data-delay": "100"
-  }, "Free forever up to 50 recoveries/month. Pro \u20AC79 one-time: no limit, sequences and automatic coupons. Available Q3 2026."), /*#__PURE__*/React.createElement("div", {
+  }, "Free forever up to 50 recoveries/month. Pro \u20AC14/mo or \u20AC99/year: no limit, sequences and automatic coupons. Available Q3 2026."), /*#__PURE__*/React.createElement("div", {
     className: "reveal",
     "data-delay": "200",
     style: {
@@ -1950,7 +1956,7 @@ function FinalCTA() {
       display: "inline",
       verticalAlign: -2
     }
-  }), " Pro \u20AC79 one-time \xB7 no SaaS"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
+  }), " Pro \u20AC14/mo or \u20AC99/year \xB7 cancel anytime"), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement(Icon3.Check, {
     className: "tick",
     width: "13",
     height: "13",
@@ -1980,7 +1986,7 @@ function Footer() {
     style: {
       color: "#04220f"
     }
-  })), /*#__PURE__*/React.createElement("span", null, "CartPinger")), /*#__PURE__*/React.createElement("div", null, "WooCommerce plugin for WhatsApp Cloud API. Recover abandoned carts. One-time payment, no SaaS.")), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("span", null, "CartPinger")), /*#__PURE__*/React.createElement("div", null, "WooCommerce plugin for WhatsApp Cloud API. Recover abandoned carts. Your own number, your own data.")), /*#__PURE__*/React.createElement("div", {
     className: "foot-col"
   }, /*#__PURE__*/React.createElement("h5", null, "Product"), /*#__PURE__*/React.createElement("ul", null, /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "#features"

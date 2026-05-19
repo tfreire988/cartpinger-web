@@ -8,7 +8,7 @@ function Steps() {
     <section className="section" id="producto">
       <div className="container">
         <div className="section-hed reveal">
-          <h2 className="h2">Three steps. One-time payment. No SaaS.</h2>
+          <h2 className="h2">Three steps. No surprises.</h2>
           <p className="lede">Meta Business onboarding is where other plugins leave you stranded. Not here.</p>
         </div>
         <div className="steps">
@@ -329,7 +329,7 @@ function Calculator() {
   const c = COMPETITORS[competitor];
   const months = HORIZONS[years];
   const compTotal = c.monthly * months * 0.93;
-  const wcTotal = 79;
+  const wcTotal = 99 * parseInt(years);
   const diff = compTotal - wcTotal;
 
   const abandoned = orders * (abandon / 100);
@@ -346,7 +346,7 @@ function Calculator() {
       <div className="container">
         <div className="section-hed reveal">
           <h2 className="h2">Calculate what you save vs. recurring SaaS.</h2>
-          <p className="lede">You pay €79 once. Alternatives charge every month. The difference compounds.</p>
+          <p className="lede">€99/year or €14/mo. Alternatives charge 2–5× more. The difference compounds.</p>
         </div>
 
         <div className="surface calc reveal" data-delay="80">
@@ -388,8 +388,8 @@ function Calculator() {
 
             <div className="calc-out">
               <div className="out-row">
-                <span className="l">CartPinger Pro · one-time</span>
-                <span className="v">€79</span>
+                <span className="l">CartPinger Pro · €99/year</span>
+                <span className="v">{fmtEur(wcTotal)}</span>
               </div>
               <div className="out-row">
                 <span className="l">{c.name} · {years} {years === "1" ? "year" : "years"}</span>
@@ -399,14 +399,14 @@ function Calculator() {
               <div className="diff">
                 <div className="l">Your savings over {years} {years === "1" ? "year" : "years"}</div>
                 <div className="v">{fmtEur(diff)}</div>
-                <div className="sub">less with a one-time license</div>
+                <div className="sub">less choosing CartPinger annual</div>
               </div>
 
               <div className="calc-bars">
                 <div className="bar wa">
                   <div className="label">CartPinger Pro</div>
                   <div className="track"><div className="fill" style={{ width: wcW + "%" }}/></div>
-                  <div className="val">€79</div>
+                  <div className="val">{fmtEur(wcTotal)}</div>
                 </div>
                 <div className="bar comp">
                   <div className="label">{c.name}</div>
