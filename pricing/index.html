@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>CartPinger Pricing — €14/mo or €99/year for unlimited WhatsApp recovery</title>
+  <meta name="description" content="Start free with 50 cart recoveries per month. Upgrade to Pro for unlimited recoveries, follow-up sequences, and dynamic coupons. €14/month or €99/year."/>
+  <meta name="keywords" content="CartPinger pricing, WhatsApp WooCommerce price, abandoned cart plugin pricing, cart recovery cost"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#0a0a0a"/>
+  <link rel="canonical" href="https://cartpinger.com/pricing/"/>
+  <link rel="icon" href="/logo.png" type="image/png"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://cartpinger.com/pricing/"/>
+  <meta property="og:site_name" content="CartPinger"/>
+  <meta property="og:title" content="CartPinger Pricing — Free + Pro €14/mo or €99/year"/>
+  <meta property="og:description" content="Start free with 50 cart recoveries per month. Pro: unlimited recoveries, follow-up sequences, dynamic coupons."/>
+  <meta property="og:image" content="https://cartpinger.com/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="CartPinger Pricing — Free + Pro €14/mo or €99/year"/>
+  <meta name="twitter:description" content="Simple, transparent pricing. Start free, upgrade when you outgrow it."/>
+  <meta name="twitter:image" content="https://cartpinger.com/og-image.png"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "CartPinger Pro",
+    "description": "WooCommerce plugin for WhatsApp cart recovery. Pro plan unlocks unlimited recoveries, multi-message sequences, dynamic coupons, CSV export and priority support.",
+    "brand": { "@type": "Brand", "name": "CartPinger" },
+    "image": "https://cartpinger.com/og-image.png",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "CartPinger Pro — Monthly",
+        "price": "14",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://cartpinger.com/pricing/"
+      },
+      {
+        "@type": "Offer",
+        "name": "CartPinger Pro — Yearly",
+        "price": "99",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://cartpinger.com/pricing/"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/styles.css"/>
+
+  <style>
+    /* Pricing-specific styles */
+    .pricing-page { padding: 64px 0 96px; }
+    .pricing-hed { text-align: center; max-width: 720px; margin: 0 auto 40px; padding: 0 24px; }
+    .pricing-hed h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 600; margin: 16px 0 14px; }
+    .pricing-hed p { color: var(--text-2); font-size: 19px; line-height: 1.5; margin: 0; }
+
+    /* Toggle */
+    .billing-toggle {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: var(--surface-1); border: 1px solid var(--border);
+      padding: 4px; border-radius: 999px;
+      margin: 32px auto 0; display: flex; width: max-content;
+    }
+    .billing-toggle button {
+      background: transparent; border: 0; color: var(--text-2);
+      padding: 8px 20px; border-radius: 999px; font-size: 14px;
+      font-weight: 500; cursor: pointer; transition: all 180ms;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .billing-toggle button.active { background: var(--wa); color: #04220f; box-shadow: 0 4px 12px -4px rgba(37,211,102,0.55); }
+    .billing-toggle .save-pill {
+      font-size: 11px; padding: 2px 7px; border-radius: 999px;
+      background: rgba(0,0,0,0.15); color: inherit; font-weight: 600;
+    }
+
+    /* Grid */
+    .price-grid {
+      max-width: 920px; margin: 48px auto 0;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      padding: 0 24px;
+    }
+    @media (max-width: 720px) { .price-grid { grid-template-columns: 1fr; } }
+
+    .pcard {
+      position: relative;
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex; flex-direction: column;
+    }
+    .pcard.pro {
+      border: 2px solid var(--wa);
+      box-shadow: 0 12px 40px -12px rgba(37,211,102,0.25);
+    }
+    .pcard-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--wa); color: #04220f;
+      font-size: 12px; font-weight: 600;
+      padding: 5px 12px; border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+    .pcard-eyebrow {
+      display: inline-block;
+      font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-3); font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .pcard h2 { margin: 0 0 4px; font-size: 22px; font-weight: 600; }
+    .pcard .price {
+      display: flex; align-items: baseline; gap: 6px;
+      margin: 14px 0 4px;
+    }
+    .pcard .price-num {
+      font-size: 52px; font-weight: 600; line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .pcard .price-unit { color: var(--text-3); font-size: 16px; }
+    .pcard .price-sub { color: var(--text-3); font-size: 13px; min-height: 18px; margin-bottom: 24px; }
+    .pcard .pro-savings { color: var(--wa); font-weight: 500; }
+
+    .pcard ul { list-style: none; padding: 0; margin: 0 0 28px; }
+    .pcard li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 14.5px; line-height: 1.5;
+      color: var(--text-2);
+      padding: 7px 0;
+    }
+    .pcard li.first { color: var(--text-1); font-weight: 600; padding-top: 4px; }
+    .pcard li .check {
+      flex: 0 0 18px; width: 18px; height: 18px;
+      border-radius: 50%; background: var(--wa-soft);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--wa); font-size: 11px; font-weight: 700;
+      margin-top: 2px;
+    }
+    .pcard li.first .check { background: var(--wa); color: #04220f; }
+    .pcard li strong { color: var(--text-1); }
+
+    .pcard .cta {
+      display: block; text-align: center;
+      padding: 14px 20px; border-radius: 10px;
+      font-weight: 500; font-size: 15px;
+      cursor: pointer; border: 1px solid;
+      transition: all 180ms;
+      margin-top: auto;
+    }
+    .pcard .cta.primary { background: var(--wa); color: #04220f; border-color: var(--wa); }
+    .pcard .cta.primary:hover { background: #2bdc6e; }
+    .pcard .cta.secondary { background: transparent; color: var(--text-1); border-color: var(--border-strong); }
+    .pcard .cta.secondary:hover { border-color: var(--wa); color: var(--wa); }
+
+    /* FAQ */
+    .price-faq { max-width: 720px; margin: 80px auto 0; padding: 0 24px; }
+    .price-faq h2 { font-size: 28px; font-weight: 600; text-align: center; margin: 0 0 32px; }
+    .price-faq details {
+      border: 1px solid var(--border); background: var(--surface-1);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    .price-faq summary {
+      list-style: none; cursor: pointer; font-weight: 600;
+      color: var(--text-1); position: relative; padding-right: 24px;
+    }
+    .price-faq summary::-webkit-details-marker { display: none; }
+    .price-faq summary::after {
+      content: "+"; position: absolute; right: 0; top: -4px;
+      font-size: 22px; color: var(--text-3); transition: transform 200ms;
+    }
+    .price-faq details[open] summary::after { transform: rotate(45deg); }
+    .price-faq .a { margin-top: 12px; color: var(--text-2); line-height: 1.65; font-size: 15px; }
+
+    .final-line {
+      text-align: center; margin: 64px auto 0;
+      color: var(--text-2); font-size: 15px;
+    }
+    .final-line a { color: var(--wa); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
+      display: none; align-items: center; justify-content: center;
+      z-index: 1000; padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; animation: fadeIn 180ms ease-out; }
+    .modal {
+      background: var(--surface-1);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      width: 100%; max-width: 440px;
+      padding: 28px;
+      position: relative;
+      animation: slideUp 200ms cubic-bezier(0.16,1,0.3,1);
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .modal h3 { margin: 0 0 6px; font-size: 22px; font-weight: 600; }
+    .modal p { color: var(--text-2); font-size: 14.5px; line-height: 1.55; margin: 0 0 20px; }
+    .modal-close {
+      position: absolute; top: 12px; right: 12px;
+      background: transparent; border: 0; color: var(--text-3);
+      width: 32px; height: 32px; border-radius: 8px;
+      cursor: pointer; font-size: 18px;
+      transition: background 160ms, color 160ms;
+    }
+    .modal-close:hover { background: var(--surface-2); color: var(--text-1); }
+    .modal label { display: block; font-size: 13px; color: var(--text-2); margin-bottom: 6px; font-weight: 500; }
+    .modal input {
+      width: 100%; padding: 12px 14px;
+      background: var(--bg);
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      color: var(--text-1); font-size: 15px; font-family: inherit;
+      margin-bottom: 14px;
+      transition: border-color 160ms;
+    }
+    .modal input:focus { outline: 0; border-color: var(--wa); }
+    .modal button[type=submit] {
+      width: 100%; padding: 13px;
+      background: var(--wa); color: #04220f;
+      border: 0; border-radius: 8px; font-weight: 600; font-size: 15px;
+      cursor: pointer; transition: background 160ms;
+    }
+    .modal button[type=submit]:hover { background: #2bdc6e; }
+    .modal button[type=submit]:disabled { opacity: 0.6; cursor: wait; }
+    .modal .msg { font-size: 13px; margin-top: 10px; min-height: 18px; }
+    .modal .msg.err { color: var(--coral); }
+    .modal .msg.ok { color: var(--wa); }
+    .modal .success-state { text-align: center; padding: 20px 0; }
+    .modal .success-state .ico {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--wa-soft); color: var(--wa);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 28px; margin-bottom: 14px;
+    }
+
+    /* Nav back */
+    .pricing-nav {
+      max-width: 1200px; margin: 0 auto;
+      padding: 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .pricing-nav .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-1); }
+    .pricing-nav .brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--wa); display: inline-flex; align-items: center; justify-content: center; color: #04220f; font-weight: 700; }
+    .pricing-nav .links a { color: var(--text-2); margin-left: 24px; font-size: 14.5px; transition: color 160ms; }
+    .pricing-nav .links a:hover { color: var(--text-1); }
+  </style>
+</head>
+<body>
+
+<header class="pricing-nav">
+  <a href="/" class="brand">
+    <span class="brand-mark">C</span>
+    <span>CartPinger</span>
+  </a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/docs/setup/">Docs</a>
+    <a href="/docs/faq/">FAQ</a>
+    <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<main class="pricing-page">
+
+  <div class="pricing-hed">
+    <h1>Simple, transparent pricing</h1>
+    <p>Start free. Upgrade when you outgrow it.</p>
+  </div>
+
+  <div class="billing-toggle" role="tablist" aria-label="Billing period">
+    <button type="button" id="toggle-monthly" role="tab" aria-selected="false">Monthly</button>
+    <button type="button" id="toggle-yearly" class="active" role="tab" aria-selected="true">
+      Yearly
+      <span class="save-pill">Save 41%</span>
+    </button>
+  </div>
+
+  <div class="price-grid">
+
+    <!-- FREE -->
+    <div class="pcard">
+      <span class="pcard-eyebrow">Free forever</span>
+      <h2>Free</h2>
+      <div class="price">
+        <span class="price-num">€0</span>
+      </div>
+      <p class="price-sub">per month</p>
+
+      <ul>
+        <li><span class="check">✓</span> 50 cart recoveries / month</li>
+        <li><span class="check">✓</span> Order notifications (processing, completed, cancelled)</li>
+        <li><span class="check">✓</span> WhatsApp chat widget</li>
+        <li><span class="check">✓</span> 1 message per abandoned cart</li>
+        <li><span class="check">✓</span> Open source MIT</li>
+      </ul>
+
+      <a href="/docs/setup/" class="cta secondary">Download free</a>
+    </div>
+
+    <!-- PRO -->
+    <div class="pcard pro">
+      <span class="pcard-badge">Most popular</span>
+      <span class="pcard-eyebrow">For growing stores</span>
+      <h2>Pro</h2>
+      <div class="price">
+        <span class="price-num" id="price-num">€8.25</span>
+        <span class="price-unit">/mo</span>
+      </div>
+      <p class="price-sub" id="price-sub">Billed <strong>€99/year</strong> — <span class="pro-savings">save 41%</span></p>
+
+      <ul>
+        <li class="first"><span class="check">✓</span> Everything in Free, plus:</li>
+        <li><span class="check">✓</span> <strong>Unlimited</strong> cart recoveries</li>
+        <li><span class="check">✓</span> 3-step follow-up sequence (+24h with coupon, +48h reminder)</li>
+        <li><span class="check">✓</span> Auto-generated WooCommerce discount coupons</li>
+        <li><span class="check">✓</span> Priority email support</li>
+        <li><span class="check">✓</span> CSV export of all data</li>
+        <li><span class="check">✓</span> Future Pro features included</li>
+      </ul>
+
+      <button type="button" class="cta primary" id="join-waitlist">Join waitlist</button>
+    </div>
+
+  </div>
+
+  <section class="price-faq">
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Can I switch between plans?</summary>
+      <p class="a">Yes, anytime from your CartPinger dashboard. Upgrading takes effect immediately. Downgrading keeps Pro active until the end of the current billing period, then returns to Free — your data stays intact.</p>
+    </details>
+
+    <details>
+      <summary>What payment methods do you accept?</summary>
+      <p class="a">All major cards, via Lemon Squeezy (VAT MoSS handled for EU customers). Lemon Squeezy acts as Merchant of Record, so invoices include the correct VAT for your country automatically.</p>
+    </details>
+
+    <details>
+      <summary>Is there a refund policy?</summary>
+      <p class="a">Yes — 14-day no-questions-asked refund on your first payment. Email <a href="mailto:hello@cartpinger.com">hello@cartpinger.com</a> and we process it the same business day.</p>
+    </details>
+
+    <details>
+      <summary>Do I need to provide my own WhatsApp Business Account?</summary>
+      <p class="a">Yes. CartPinger uses your Meta credentials so you stay in control of the messaging. We provide a <a href="/docs/setup/">setup wizard</a> and a 15-minute video walkthrough to make it easy. Most stores are up and running in under 20 minutes.</p>
+    </details>
+  </section>
+
+  <p class="final-line">
+    Still have questions? Email <a href="mailto:hello@cartpinger.com">hello@cartpinger.com</a>
+  </p>
+
+</main>
+
+<!-- Waitlist modal -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+    <div id="modal-form-wrap">
+      <h3 id="modal-title">Get notified when Pro launches</h3>
+      <p>CartPinger is in private beta. Drop your email and we'll let you know the moment Pro is available for purchase — with locked-in early access pricing.</p>
+
+      <form id="waitlist-form" novalidate>
+        <label for="wl-email">Email</label>
+        <input type="email" id="wl-email" name="email" required placeholder="you@yourstore.com" autocomplete="email"/>
+
+        <label for="wl-store">Store name <span style="color: var(--text-3); font-weight: 400;">(optional)</span></label>
+        <input type="text" id="wl-store" name="storeName" placeholder="My WooCommerce Store" autocomplete="organization"/>
+
+        <button type="submit" id="wl-submit">Notify me when Pro launches</button>
+        <div class="msg" id="wl-msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <div id="modal-success" class="success-state" style="display: none;">
+      <div class="ico">✓</div>
+      <h3>You're on the list</h3>
+      <p>We'll email you the moment Pro is available. In the meantime, you can already install the Free plan.</p>
+      <a href="/docs/setup/" class="cta primary" style="display: inline-block; margin-top: 8px; text-decoration: none;">Install Free now</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Billing toggle
+  const btnM = document.getElementById('toggle-monthly');
+  const btnY = document.getElementById('toggle-yearly');
+  const priceNum = document.getElementById('price-num');
+  const priceSub = document.getElementById('price-sub');
+
+  function setBilling(period) {
+    if (period === 'monthly') {
+      btnM.classList.add('active'); btnM.setAttribute('aria-selected','true');
+      btnY.classList.remove('active'); btnY.setAttribute('aria-selected','false');
+      priceNum.textContent = '€14';
+      priceSub.innerHTML = 'Billed monthly, cancel anytime';
+    } else {
+      btnY.classList.add('active'); btnY.setAttribute('aria-selected','true');
+      btnM.classList.remove('active'); btnM.setAttribute('aria-selected','false');
+      priceNum.textContent = '€8.25';
+      priceSub.innerHTML = 'Billed <strong>€99/year</strong> — <span class="pro-savings">save 41%</span>';
+    }
+  }
+  btnM.addEventListener('click', () => setBilling('monthly'));
+  btnY.addEventListener('click', () => setBilling('yearly'));
+
+  // Modal
+  const modal = document.getElementById('modal');
+  const openBtn = document.getElementById('join-waitlist');
+  const closeBtn = document.getElementById('modal-close');
+  const form = document.getElementById('waitlist-form');
+  const msg = document.getElementById('wl-msg');
+  const submitBtn = document.getElementById('wl-submit');
+  const formWrap = document.getElementById('modal-form-wrap');
+  const successWrap = document.getElementById('modal-success');
+
+  function openModal() {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => document.getElementById('wl-email').focus(), 100);
+  }
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  // Submit
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    msg.textContent = '';
+    msg.className = 'msg';
+
+    const email = document.getElementById('wl-email').value.trim();
+    const storeName = document.getElementById('wl-store').value.trim();
+
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      msg.textContent = 'Please enter a valid email.';
+      msg.classList.add('err');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting…';
+
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, storeName, source: 'pricing' }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        formWrap.style.display = 'none';
+        successWrap.style.display = 'block';
+      } else {
+        msg.textContent = data.error || 'Something went wrong. Please try again.';
+        msg.classList.add('err');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Notify me when Pro launches';
+      }
+    } catch {
+      msg.textContent = 'Network error. Please try again.';
+      msg.classList.add('err');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Notify me when Pro launches';
+    }
+  });
+</script>
+
+</body>
+</html>

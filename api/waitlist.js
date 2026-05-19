@@ -17,7 +17,9 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" });
 
   // Parse body (Vercel auto-parses JSON if Content-Type is application/json)
-  const email = (req.body?.email ?? "").trim().toLowerCase();
+  const email     = (req.body?.email ?? "").trim().toLowerCase();
+  const storeName = (req.body?.storeName ?? "").trim().slice(0, 120);
+  const source    = (req.body?.source ?? "").trim().slice(0, 40) || "landing";
 
   if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
     return res.status(422).json({ ok: false, error: "Email inválido" });
@@ -44,7 +46,11 @@ export default async function handler(req, res) {
       await fetch(`https://api.resend.com/audiences/${audience}/contacts`, {
         method: "POST",
         headers,
-        body: JSON.stringify({ email, unsubscribed: false }),
+        body: JSON.stringify({
+          email,
+          unsubscribed: false,
+          ...(storeName ? { first_name: storeName } : {}),
+        }),
       });
     } catch (e) {
       console.error("[waitlist] Resend audience error:", e);
@@ -60,8 +66,8 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           from: "CartPinger Waitlist <info@cartpinger.com>",
           to: [notifyTo],
-          subject: `Nueva suscripción: ${email}`,
-          text: `Alguien se ha suscrito al waitlist de CartPinger.\n\nEmail: ${email}\nFecha: ${new Date().toISOString()}\n\nVer todos los contactos → https://resend.com/audiences`,
+          subject: `Nueva suscripción${source !== "landing" ? ` (${source})` : ""}: ${email}`,
+          text: `Alguien se ha suscrito al waitlist de CartPinger.\n\nEmail: ${email}${storeName ? `\nTienda: ${storeName}` : ""}\nOrigen: ${source}\nFecha: ${new Date().toISOString()}\n\nVer todos los contactos → https://resend.com/audiences`,
         }),
       });
     } catch (e) {
