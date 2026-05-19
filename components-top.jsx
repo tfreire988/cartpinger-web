@@ -44,7 +44,7 @@ function WaitlistForm({ size = "md", placeholder = "tu@email.com", cta = "Avísa
     e.preventDefault();
     if (!/^\S+@\S+\.\S+$/.test(email)) { setState("error"); return; }
     setState("sending");
-    fetch("waitlist.php", {
+    fetch("/api/waitlist", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email }),

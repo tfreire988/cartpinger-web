@@ -139,7 +139,7 @@ function WaitlistForm({
       return;
     }
     setState("sending");
-    fetch("/waitlist.php", {
+    fetch("/api/waitlist", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -110,8 +110,8 @@ const prodHtmlEn =
 writeFileSync(path.join(DIST_EN, "index.html"), prodHtmlEn);
 console.log("  en/index.html (production)");
 
-// Copy waitlist.php and .htaccess for deployment
-for (const f of ["waitlist.php", ".htaccess"]) {
+// Copy .htaccess for deployment (waitlist.php not needed — Vercel uses api/waitlist.js)
+for (const f of [".htaccess"]) {
   try {
     const content = readFileSync(path.join(__dir, f));
     writeFileSync(path.join(DIST, f), content);
