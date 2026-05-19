@@ -229,6 +229,8 @@ function Nav() {
   }, "Precio"), /*#__PURE__*/React.createElement("a", {
     href: "#roadmap"
   }, "Roadmap"), /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/"
+  }, "Docs"), /*#__PURE__*/React.createElement("a", {
     href: "https://github.com/tfreire988/whatscom",
     target: "_blank",
     rel: "noopener",
@@ -416,6 +418,18 @@ function Hero() {
     width: "13",
     height: "13"
   }), " Sin SaaS mensual")), /*#__PURE__*/React.createElement("div", {
+    className: "reveal in",
+    "data-delay": "600",
+    style: {
+      marginTop: 14
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/",
+    className: "video-link"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "video-icon",
+    "aria-hidden": "true"
+  }, "\u25B6"), /*#__PURE__*/React.createElement("span", null, "Mira el setup completo en v\xEDdeo \xB7 ", /*#__PURE__*/React.createElement("b", null, "15 min")))), /*#__PURE__*/React.createElement("div", {
     className: "trust reveal in",
     "data-delay": "640"
   }, /*#__PURE__*/React.createElement("a", {
@@ -614,7 +628,10 @@ function Steps() {
     className: "h2"
   }, "Tres pasos. Sin sorpresas."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "El onboarding de Meta Business es donde otros plugins te abandonan. Aqu\xED no.")), /*#__PURE__*/React.createElement("div", {
+  }, "El onboarding de Meta Business es donde otros plugins te abandonan. Aqu\xED no. ", /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/",
+    className: "inline-video-link"
+  }, "\u25B6 Mira el setup completo en v\xEDdeo (15 min)"))), /*#__PURE__*/React.createElement("div", {
     className: "steps"
   }, /*#__PURE__*/React.createElement("div", {
     className: "surface step reveal",

@@ -107,6 +107,7 @@ function Nav() {
           <a href="#producto">Producto</a>
           <a href="#precio">Precio</a>
           <a href="#roadmap">Roadmap</a>
+          <a href="/docs/setup/">Docs</a>
           <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener" aria-label="GitHub (abre en nueva pestaña)" style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
             GitHub <Icon.Ext width="11" height="11"/>
           </a>
@@ -235,6 +236,12 @@ function Hero() {
             <span><Icon.Check className="tick" width="13" height="13"/> GDPR-native en checkout</span>
             <span><Icon.Check className="tick" width="13" height="13"/> BYO-WABA · tu número</span>
             <span><Icon.Check className="tick" width="13" height="13"/> Sin SaaS mensual</span>
+          </div>
+          <div className="reveal in" data-delay="600" style={{ marginTop: 14 }}>
+            <a href="/docs/setup/" className="video-link">
+              <span className="video-icon" aria-hidden="true">▶</span>
+              <span>Mira el setup completo en vídeo · <b>15 min</b></span>
+            </a>
           </div>
           <div className="trust reveal in" data-delay="640">
             <a href="https://github.com/tfreire988/whatscom/actions" target="_blank" rel="noopener" className="ci-badge" aria-label="Estado CI en GitHub Actions">

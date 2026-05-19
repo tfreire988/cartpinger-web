@@ -225,6 +225,8 @@ function Nav() {
   }, "Pricing"), /*#__PURE__*/React.createElement("a", {
     href: "#roadmap"
   }, "Roadmap"), /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/"
+  }, "Docs"), /*#__PURE__*/React.createElement("a", {
     href: "https://github.com/tfreire988/whatscom",
     target: "_blank",
     rel: "noopener",
@@ -412,6 +414,18 @@ function Hero() {
     width: "13",
     height: "13"
   }), " No monthly SaaS")), /*#__PURE__*/React.createElement("div", {
+    className: "reveal in",
+    "data-delay": "600",
+    style: {
+      marginTop: 14
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/",
+    className: "video-link"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "video-icon",
+    "aria-hidden": "true"
+  }, "\u25B6"), /*#__PURE__*/React.createElement("span", null, "Watch the full setup video \xB7 ", /*#__PURE__*/React.createElement("b", null, "15 min")))), /*#__PURE__*/React.createElement("div", {
     className: "trust reveal in",
     "data-delay": "640"
   }, /*#__PURE__*/React.createElement("a", {
@@ -606,7 +620,10 @@ function Steps() {
     className: "h2"
   }, "Three steps. No surprises."), /*#__PURE__*/React.createElement("p", {
     className: "lede"
-  }, "Meta Business onboarding is where other plugins leave you stranded. Not here.")), /*#__PURE__*/React.createElement("div", {
+  }, "Meta Business onboarding is where other plugins leave you stranded. Not here. ", /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/",
+    className: "inline-video-link"
+  }, "\u25B6 Watch the full setup video (15 min)"))), /*#__PURE__*/React.createElement("div", {
     className: "steps"
   }, /*#__PURE__*/React.createElement("div", {
     className: "surface step reveal",

@@ -9,7 +9,7 @@ function Steps() {
       <div className="container">
         <div className="section-hed reveal">
           <h2 className="h2">Three steps. No surprises.</h2>
-          <p className="lede">Meta Business onboarding is where other plugins leave you stranded. Not here.</p>
+          <p className="lede">Meta Business onboarding is where other plugins leave you stranded. Not here. <a href="/docs/setup/" className="inline-video-link">▶ Watch the full setup video (15 min)</a></p>
         </div>
         <div className="steps">
           <div className="surface step reveal" data-delay="100">
