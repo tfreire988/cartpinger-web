@@ -282,7 +282,7 @@ function TechSection() {
           <div className="tech-stack-cards">
             <div className="surface ts-card">
               <div className="ts-label">Runtime</div>
-              <div className="ts-val mono">PHP 8.1+</div>
+              <div className="ts-val mono">PHP 8.2+</div>
               <div className="ts-sub">typed props · enums · PSR-4</div>
             </div>
             <div className="surface ts-card">

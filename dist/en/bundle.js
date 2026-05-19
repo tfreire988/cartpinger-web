@@ -449,7 +449,7 @@ function Logos() {
     name: "Meta Cloud API",
     glyph: "M"
   }, {
-    name: "PHP 8.1+",
+    name: "PHP 8.2+",
     glyph: "PHP"
   }, {
     name: "Composer",
@@ -1089,7 +1089,7 @@ function TechSection() {
     className: "ts-label"
   }, "Runtime"), /*#__PURE__*/React.createElement("div", {
     className: "ts-val mono"
-  }, "PHP 8.1+"), /*#__PURE__*/React.createElement("div", {
+  }, "PHP 8.2+"), /*#__PURE__*/React.createElement("div", {
     className: "ts-sub"
   }, "typed props \xB7 enums \xB7 PSR-4")), /*#__PURE__*/React.createElement("div", {
     className: "surface ts-card"

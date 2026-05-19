@@ -40,7 +40,7 @@ const CMP_ROWS = [
     np: { yes: true },
   },
   { f: "Wizard onboarding Meta",
-    wc: { yes: true, tier: "free", tip: "Documentación detallada en cartpinger.com/docs + soporte directo." },
+    wc: { yes: true, tier: "free", tip: "Documentación detallada en GitHub + soporte directo." },
     rt: { v: "Básico", tip: "Docs escritos, sin vídeo guiado." },
     ai: { yes: true },
     nf: { no: true },

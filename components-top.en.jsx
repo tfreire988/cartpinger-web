@@ -253,7 +253,7 @@ function Logos() {
     { name: "WordPress",         glyph: "W" },
     { name: "WhatsApp Business", icon: true },
     { name: "Meta Cloud API",    glyph: "M" },
-    { name: "PHP 8.1+",          glyph: "PHP" },
+    { name: "PHP 8.2+",          glyph: "PHP" },
     { name: "Composer",          glyph: "{}" },
   ];
   return (
