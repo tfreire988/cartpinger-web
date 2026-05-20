@@ -51,9 +51,9 @@ button { font-family: inherit; }
 img { display: block; max-width: 100%; }
 
 /* ---- Type scale ---- */
-.display { font-size: clamp(44px, 7.4vw, 80px); line-height: 0.98; letter-spacing: -0.03em; font-weight: 600; }
-.h1 { font-size: clamp(36px, 5vw, 56px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 600; }
-.h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 600; }
+.display { font-size: clamp(32px, 7.4vw, 80px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 600; overflow-wrap: break-word; }
+.h1 { font-size: clamp(28px, 5vw, 56px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 600; overflow-wrap: break-word; }
+.h2 { font-size: clamp(24px, 3.4vw, 40px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 600; overflow-wrap: break-word; }
 .h3 { font-size: 24px; line-height: 1.25; letter-spacing: -0.015em; font-weight: 600; }
 .lede { font-size: clamp(17px, 1.5vw, 22px); line-height: 1.5; color: var(--text-2); }
 .micro { font-size: 13px; line-height: 1.5; color: var(--text-3); }
@@ -596,14 +596,19 @@ input[type="range"]::-moz-range-thumb {
 /* ==========================================================
    COMPARE TABLE
    ========================================================== */
-.cmp-wrap { margin-top: 40px; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
-.cmp { width: 100%; border-collapse: collapse; min-width: 880px; font-size: 13.5px; }
-.cmp th, .cmp td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); }
-.cmp th { font-weight: 500; color: var(--text-3); font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; background: var(--surface-1); position: sticky; top: 0; }
-.cmp th:first-child { background: var(--surface-1); }
-.cmp td:first-child { color: var(--text-1); font-weight: 500; position: sticky; left: 0; background: var(--bg); }
+.cmp-wrap { margin-top: 40px; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; -webkit-overflow-scrolling: touch; }
+.cmp { width: 100%; border-collapse: collapse; min-width: 880px; font-size: 13.5px; background: var(--bg); }
+.cmp th, .cmp td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); background-clip: padding-box; }
+.cmp th { font-weight: 500; color: var(--text-3); font-size: 12.5px; letter-spacing: 0.04em; text-transform: uppercase; background: var(--surface-1); position: sticky; top: 0; z-index: 2; }
+.cmp th:first-child { background: var(--surface-1); z-index: 4; left: 0; box-shadow: 6px 0 12px -6px rgba(0,0,0,0.6); }
+.cmp td:first-child { color: var(--text-1); font-weight: 500; position: sticky; left: 0; background: var(--bg); z-index: 3; box-shadow: 6px 0 12px -6px rgba(0,0,0,0.6); }
 .cmp tbody tr:hover td { background: rgba(255,255,255,0.015); }
 .cmp tbody tr:hover td:first-child { background: #0e0e0e; }
+@media (max-width: 720px) {
+  .cmp { min-width: 720px; font-size: 12.5px; }
+  .cmp th, .cmp td { padding: 12px 12px; }
+  .cmp td:first-child, .cmp th:first-child { min-width: 180px; max-width: 200px; }
+}
 .cmp .wcol { background: rgba(37,211,102,0.04); position: relative; }
 .cmp th.wcol { background: rgba(37,211,102,0.07); color: var(--wa); }
 .cmp tbody tr:first-child td.wcol { border-top: 1px solid var(--wa-border); }
