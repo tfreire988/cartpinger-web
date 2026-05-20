@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://cartpinger.com/sitemap.xml
+Sitemap: https://www.cartpinger.com/sitemap.xml
