@@ -88,16 +88,24 @@ function WaitlistForm({ size = "md", placeholder = "tu@email.com", cta = "Avísa
 /* ---------------- Nav ---------------- */
 function Nav() {
   const [scrolled, setScrolled] = React.useState(false);
+  const [menuOpen, setMenuOpen] = React.useState(false);
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  React.useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    const onKey = (e) => { if (e.key === "Escape") setMenuOpen(false); };
+    window.addEventListener("keydown", onKey);
+    return () => { document.body.style.overflow = ""; window.removeEventListener("keydown", onKey); };
+  }, [menuOpen]);
+  const close = () => setMenuOpen(false);
   return (
     <header className={"nav" + (scrolled ? " scrolled" : "")}>
       <div className="container nav-inner">
-        <a href="#top" className="brand">
+        <a href="#top" className="brand" onClick={close}>
           <span className="brand-mark" aria-hidden="true">
             <Icon.Whatsapp style={{ color: "#04220f" }}/>
           </span>
@@ -118,9 +126,30 @@ function Nav() {
             <a href="/en/" className="lang-link" onClick={() => sessionStorage.setItem('cp-lang','en')}>EN</a>
             <button disabled title="Próximamente">PT-BR</button>
           </div>
-          <a href="#waitlist" className="btn btn-primary btn-sm">Solicitar Beta</a>
+          <a href="#waitlist" className="btn btn-primary btn-sm nav-cta-btn">Solicitar Beta</a>
+          <button className="nav-burger" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} onClick={() => setMenuOpen(o => !o)}>
+            <span className={"burger-icon" + (menuOpen ? " open" : "")}><span/><span/><span/></span>
+          </button>
         </div>
       </div>
+      <div className={"nav-drawer" + (menuOpen ? " open" : "")} role="dialog" aria-label="Menú móvil" aria-hidden={!menuOpen}>
+        <nav className="drawer-links" aria-label="Móvil">
+          <a href="#producto" onClick={close}>Producto</a>
+          <a href="#precio" onClick={close}>Precio</a>
+          <a href="#roadmap" onClick={close}>Roadmap</a>
+          <a href="/docs/setup/" onClick={close}>Docs</a>
+          <a href="/pricing/" onClick={close}>Pricing</a>
+          <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener" onClick={close}>GitHub ↗</a>
+          <div className="drawer-divider"/>
+          <a href="#waitlist" className="btn btn-primary" onClick={close} style={{ width: "100%", justifyContent: "center" }}>Solicitar Beta</a>
+          <div className="drawer-lang">
+            <button className="active" aria-current="true">ES</button>
+            <a href="/en/" onClick={() => sessionStorage.setItem('cp-lang','en')}>EN</a>
+            <button disabled title="Próximamente">PT-BR</button>
+          </div>
+        </nav>
+      </div>
+      <div className={"nav-backdrop" + (menuOpen ? " open" : "")} onClick={close} aria-hidden="true"/>
     </header>
   );
 }

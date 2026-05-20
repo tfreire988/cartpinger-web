@@ -265,6 +265,12 @@
     .pricing-nav .brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--wa); display: inline-flex; align-items: center; justify-content: center; color: #04220f; font-weight: 700; }
     .pricing-nav .links a { color: var(--text-2); margin-left: 24px; font-size: 14.5px; transition: color 160ms; }
     .pricing-nav .links a:hover { color: var(--text-1); }
+    @media (max-width: 560px) {
+      .pricing-nav { flex-direction: column; gap: 12px; padding: 16px; }
+      .pricing-nav .links { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; }
+      .pricing-nav .links a { margin-left: 0; }
+      .pricing-hed h1 { font-size: 32px; }
+    }
   </style>
 </head>
 <body>

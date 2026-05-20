@@ -193,6 +193,7 @@ function WaitlistForm({
 }
 function Nav() {
   const [scrolled, setScrolled] = React.useState(false);
+  const [menuOpen, setMenuOpen] = React.useState(false);
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     onScroll();
@@ -201,13 +202,26 @@ function Nav() {
     });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  React.useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    const onKey = e => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [menuOpen]);
+  const close = () => setMenuOpen(false);
   return /*#__PURE__*/React.createElement("header", {
     className: "nav" + (scrolled ? " scrolled" : "")
   }, /*#__PURE__*/React.createElement("div", {
     className: "container nav-inner"
   }, /*#__PURE__*/React.createElement("a", {
     href: "/en/",
-    className: "brand"
+    className: "brand",
+    onClick: close
   }, /*#__PURE__*/React.createElement("span", {
     className: "brand-mark",
     "aria-hidden": "true"
@@ -259,8 +273,70 @@ function Nav() {
     title: "Coming soon"
   }, "PT-BR")), /*#__PURE__*/React.createElement("a", {
     href: "#waitlist",
-    className: "btn btn-primary btn-sm"
-  }, "Request Beta"))));
+    className: "btn btn-primary btn-sm nav-cta-btn"
+  }, "Request Beta"), /*#__PURE__*/React.createElement("button", {
+    className: "nav-burger",
+    "aria-label": menuOpen ? "Close menu" : "Open menu",
+    "aria-expanded": menuOpen,
+    onClick: () => setMenuOpen(o => !o)
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "burger-icon" + (menuOpen ? " open" : "")
+  }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null))))), /*#__PURE__*/React.createElement("div", {
+    className: "nav-drawer" + (menuOpen ? " open" : ""),
+    role: "dialog",
+    "aria-label": "Mobile menu",
+    "aria-hidden": !menuOpen
+  }, /*#__PURE__*/React.createElement("nav", {
+    className: "drawer-links",
+    "aria-label": "Mobile"
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "#producto",
+    onClick: close
+  }, "Product"), /*#__PURE__*/React.createElement("a", {
+    href: "#precio",
+    onClick: close
+  }, "Pricing"), /*#__PURE__*/React.createElement("a", {
+    href: "#roadmap",
+    onClick: close
+  }, "Roadmap"), /*#__PURE__*/React.createElement("a", {
+    href: "/docs/setup/",
+    onClick: close
+  }, "Docs"), /*#__PURE__*/React.createElement("a", {
+    href: "/pricing/",
+    onClick: close
+  }, "Pricing page"), /*#__PURE__*/React.createElement("a", {
+    href: "https://github.com/tfreire988/whatscom",
+    target: "_blank",
+    rel: "noopener",
+    onClick: close
+  }, "GitHub \u2197"), /*#__PURE__*/React.createElement("div", {
+    className: "drawer-divider"
+  }), /*#__PURE__*/React.createElement("a", {
+    href: "#waitlist",
+    className: "btn btn-primary",
+    onClick: close,
+    style: {
+      width: "100%",
+      justifyContent: "center"
+    }
+  }, "Request Beta"), /*#__PURE__*/React.createElement("div", {
+    className: "drawer-lang"
+  }, /*#__PURE__*/React.createElement("button", {
+    onClick: () => {
+      sessionStorage.setItem('cp-lang', 'es');
+      location.href = '/';
+    }
+  }, "ES"), /*#__PURE__*/React.createElement("button", {
+    className: "active",
+    "aria-current": "true"
+  }, "EN"), /*#__PURE__*/React.createElement("button", {
+    disabled: true,
+    title: "Coming soon"
+  }, "PT-BR")))), /*#__PURE__*/React.createElement("div", {
+    className: "nav-backdrop" + (menuOpen ? " open" : ""),
+    onClick: close,
+    "aria-hidden": "true"
+  }));
 }
 function HeroTitle() {
   const words = "One WhatsApp. One hour later. Cart recovered.".split(" ");
