@@ -103,35 +103,37 @@ function Nav() {
   }, [menuOpen]);
   const close = () => setMenuOpen(false);
   return (
-    <header className={"nav" + (scrolled ? " scrolled" : "")}>
-      <div className="container nav-inner">
-        <a href="#top" className="brand" onClick={close}>
-          <span className="brand-mark" aria-hidden="true">
-            <Icon.Whatsapp style={{ color: "#04220f" }}/>
-          </span>
-          <span>CartPinger</span>
-        </a>
-        <nav className="nav-links" aria-label="Principal">
-          <a href="#producto">Producto</a>
-          <a href="#precio">Precio</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="/docs/setup/">Docs</a>
-          <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener" aria-label="GitHub (abre en nueva pestaña)" style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-            GitHub <Icon.Ext width="11" height="11"/>
+    <React.Fragment>
+      <header className={"nav" + (scrolled ? " scrolled" : "")}>
+        <div className="container nav-inner">
+          <a href="#top" className="brand" onClick={close}>
+            <span className="brand-mark" aria-hidden="true">
+              <Icon.Whatsapp style={{ color: "#04220f" }}/>
+            </span>
+            <span>CartPinger</span>
           </a>
-        </nav>
-        <div className="nav-cta">
-          <div className="lang" role="group" aria-label="Idioma">
-            <button className="active" aria-current="true">ES</button>
-            <a href="/en/" className="lang-link" onClick={() => sessionStorage.setItem('cp-lang','en')}>EN</a>
-            <button disabled title="Próximamente">PT-BR</button>
+          <nav className="nav-links" aria-label="Principal">
+            <a href="#producto">Producto</a>
+            <a href="#precio">Precio</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="/docs/setup/">Docs</a>
+            <a href="https://github.com/tfreire988/whatscom" target="_blank" rel="noopener" aria-label="GitHub (abre en nueva pestaña)" style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
+              GitHub <Icon.Ext width="11" height="11"/>
+            </a>
+          </nav>
+          <div className="nav-cta">
+            <div className="lang" role="group" aria-label="Idioma">
+              <button className="active" aria-current="true">ES</button>
+              <a href="/en/" className="lang-link" onClick={() => sessionStorage.setItem('cp-lang','en')}>EN</a>
+              <button disabled title="Próximamente">PT-BR</button>
+            </div>
+            <a href="#waitlist" className="btn btn-primary btn-sm nav-cta-btn">Solicitar Beta</a>
+            <button className="nav-burger" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} onClick={() => setMenuOpen(o => !o)}>
+              <span className={"burger-icon" + (menuOpen ? " open" : "")}><span/><span/><span/></span>
+            </button>
           </div>
-          <a href="#waitlist" className="btn btn-primary btn-sm nav-cta-btn">Solicitar Beta</a>
-          <button className="nav-burger" aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"} aria-expanded={menuOpen} onClick={() => setMenuOpen(o => !o)}>
-            <span className={"burger-icon" + (menuOpen ? " open" : "")}><span/><span/><span/></span>
-          </button>
         </div>
-      </div>
+      </header>
       <div className={"nav-drawer" + (menuOpen ? " open" : "")} role="dialog" aria-label="Menú móvil" aria-hidden={!menuOpen}>
         <nav className="drawer-links" aria-label="Móvil">
           <a href="#producto" onClick={close}>Producto</a>
@@ -150,7 +152,7 @@ function Nav() {
         </nav>
       </div>
       <div className={"nav-backdrop" + (menuOpen ? " open" : "")} onClick={close} aria-hidden="true"/>
-    </header>
+    </React.Fragment>
   );
 }
 

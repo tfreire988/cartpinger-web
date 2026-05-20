@@ -218,7 +218,7 @@ function Nav() {
     };
   }, [menuOpen]);
   const close = () => setMenuOpen(false);
-  return /*#__PURE__*/React.createElement("header", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("header", {
     className: "nav" + (scrolled ? " scrolled" : "")
   }, /*#__PURE__*/React.createElement("div", {
     className: "container nav-inner"
@@ -283,7 +283,7 @@ function Nav() {
     onClick: () => setMenuOpen(o => !o)
   }, /*#__PURE__*/React.createElement("span", {
     className: "burger-icon" + (menuOpen ? " open" : "")
-  }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null))))), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null), /*#__PURE__*/React.createElement("span", null)))))), /*#__PURE__*/React.createElement("div", {
     className: "nav-drawer" + (menuOpen ? " open" : ""),
     role: "dialog",
     "aria-label": "Men\xFA m\xF3vil",
